@@ -1,6 +1,9 @@
 import { Hero } from "@/components/hero";
 import { SelectedWork } from "@/components/selected-work";
 import { CurrentlyBuilding } from "@/components/currently-building";
+import { About } from "@/components/about";
+import { Experience } from "@/components/experience";
+import { Skills } from "@/components/skills";
 
 export default function HomePage() {
   return (
@@ -8,6 +11,10 @@ export default function HomePage() {
       <Hero />
       <SelectedWork />
       <CurrentlyBuilding />
+      <About />
+      <Experience />
+      <Skills />
     </div>
   );
 }
+
