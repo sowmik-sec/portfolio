@@ -54,3 +54,83 @@ export const SELECTED_PROJECTS: SelectedProject[] = [
     caseStudyUrl: "/projects/children-of-the-ummah",
   },
 ];
+
+export interface CurrentlyBuildingProject {
+  id: string;
+  number: string;
+  title: string;
+  category: string;
+  status: string;
+  statusVariant: "warning" | "info" | "success";
+  concept: string;
+  architectureHighlights: string[];
+  coreModules: string[];
+  technologies: string[];
+  caseStudyUrl: string;
+  githubUrl?: string;
+  statusNote: string;
+}
+
+export const CURRENTLY_BUILDING_PROJECTS: CurrentlyBuildingProject[] = [
+  {
+    id: "skillbento",
+    number: "01",
+    title: "SKILLBENTO",
+    category: "Multi-tenant learning & community platform",
+    status: "In Development",
+    statusVariant: "warning",
+    concept:
+      "A multi-tenant learning and community platform engineered for creator academies, technical bootcamps, and educational hubs. Architected with strict tenant isolation, high-throughput Go backend services, and modular creator services.",
+    architectureHighlights: [
+      "High-performance Go backend",
+      "MongoDB tenant-partitioned collections",
+      "Middleware-enforced tenant isolation",
+      "Goroutine concurrency model",
+    ],
+    coreModules: [
+      "Course Management",
+      "Community Forums",
+      "Event Management",
+      "Appointment Scheduling",
+      "Payments & Subscriptions",
+    ],
+    technologies: ["Go", "MongoDB", "Next.js", "TypeScript", "Docker"],
+    caseStudyUrl: "/projects/skillbento",
+    statusNote:
+      "Active architectural design & backend prototyping. Strictly focused on systems design; no production launch or user metrics claimed.",
+  },
+  {
+    id: "paw-pals-rescue",
+    number: "02",
+    title: "PAW PALS RESCUE",
+    category: "Pet adoption & rescue platform",
+    status: "Client Project · Active Development",
+    statusVariant: "info",
+    concept:
+      "A client platform designed to streamline pet adoption workflows, rescue shelter onboarding, and medical donation campaigns for vulnerable animals. Documented strictly from confirmed codebase features.",
+    architectureHighlights: [
+      "Filterable adoption directory (GET /pets)",
+      "Adoption inquiry workflow & status tracking",
+      "Pet detail views with medical & behavioral data",
+      "Stripe-integrated veterinary donation appeals",
+    ],
+    coreModules: [
+      "Adoption Listings & Filters",
+      "Pet Detail Profiles",
+      "Adoption Inquiry Modal",
+      "Donation Campaigns Ledger",
+    ],
+    technologies: [
+      "React",
+      "Tailwind CSS",
+      "TanStack Query",
+      "Firebase Auth",
+      "Stripe",
+    ],
+    caseStudyUrl: "/projects/paw-pals-rescue",
+    githubUrl: "https://github.com/sowmik-sec/paw-pals-rescue-client",
+    statusNote:
+      "Client codebase in active development. All documented features are directly verified from the open-source client repository.",
+  },
+];
+
