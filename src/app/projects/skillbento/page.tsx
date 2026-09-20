@@ -4,20 +4,70 @@ import { CaseStudyHeader } from "@/components/case-study/case-study-header";
 import { CaseStudySection } from "@/components/case-study/case-study-section";
 import { SkillbentoArchitectureVisual } from "@/components/case-study/visual-diagrams";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://ahsanhabib.dev";
+
 export const metadata: Metadata = {
-  title: "Skillbento System Architecture — Md. Ahsan Habib",
+  title: "Skillbento System Architecture",
   description:
     "System architecture and engineering design for Skillbento: a multi-tenant learning and community platform in active development with a Go backend and MongoDB.",
+  alternates: {
+    canonical: "/projects/skillbento",
+  },
   openGraph: {
+    type: "article",
+    url: "/projects/skillbento",
     title: "Skillbento System Architecture — Md. Ahsan Habib",
     description:
       "Architectural deep dive into Skillbento: multi-tenant SaaS isolation, high-performance Go backend services, MongoDB partitioning, and modular learning ecosystem.",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Skillbento Multi-Tenant System Architecture Case Study",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Skillbento System Architecture — Md. Ahsan Habib",
+    description:
+      "Architectural deep dive into Skillbento: multi-tenant SaaS isolation, high-performance Go backend services, and modular learning ecosystem.",
+    images: ["/opengraph-image"],
   },
 };
 
 export default function SkillbentoCaseStudyPage() {
+  const jsonLdArticle = {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    headline: "Skillbento Multi-Tenant System Architecture Case Study",
+    description:
+      "Architectural deep dive into Skillbento: multi-tenant SaaS isolation, high-performance Go backend services, MongoDB partitioning, and modular learning ecosystem.",
+    author: {
+      "@type": "Person",
+      name: "Md. Ahsan Habib",
+      url: siteUrl,
+    },
+    url: `${siteUrl}/projects/skillbento`,
+    about: [
+      "Go (Golang)",
+      "MongoDB",
+      "Multi-Tenant Architecture",
+      "Next.js",
+      "TypeScript",
+      "SaaS Design",
+    ],
+  };
+
   return (
     <article className="py-8 sm:py-12 md:py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLdArticle).replace(/</g, "\\u003c"),
+        }}
+      />
       {/* Back Link / Breadcrumb */}
       <CaseStudyNav backHref="/#work" backLabel="Back to Selected Work" />
 

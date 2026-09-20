@@ -38,6 +38,8 @@ export const About: FC = () => {
               alt="Md. Ahsan Habib — Full Stack Developer"
               width={240}
               height={240}
+              sizes="(max-width: 640px) 192px, 224px"
+              loading="lazy"
               className="aspect-square h-auto w-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.02] motion-reduce:transform-none"
               priority={false}
             />

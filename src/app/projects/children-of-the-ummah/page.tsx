@@ -4,20 +4,69 @@ import { CaseStudyHeader } from "@/components/case-study/case-study-header";
 import { CaseStudySection } from "@/components/case-study/case-study-section";
 import { ProjectVisual } from "@/components/project-visual";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://ahsanhabib.dev";
+
 export const metadata: Metadata = {
-  title: "Children of the Ummah Case Study — Md. Ahsan Habib",
+  title: "Children of the Ummah Case Study",
   description:
     "Engineering case study for Children of the Ummah: an international humanitarian charity donation platform with multi-currency checkout, custom Stripe integration, and recurring subscriptions.",
+  alternates: {
+    canonical: "/projects/children-of-the-ummah",
+  },
   openGraph: {
+    type: "article",
+    url: "/projects/children-of-the-ummah",
     title: "Children of the Ummah Case Study — Md. Ahsan Habib",
     description:
       "Deep dive into architecting resilient international donation infrastructure: multi-currency processing (GBP, USD, EUR), Stripe custom payment elements, recurring subscriptions, and production reliability.",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Children of the Ummah Engineering Case Study",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Children of the Ummah Case Study — Md. Ahsan Habib",
+    description:
+      "Deep dive into architecting resilient international donation infrastructure: multi-currency processing (GBP, USD, EUR), Stripe custom payment elements, and recurring subscriptions.",
+    images: ["/opengraph-image"],
   },
 };
 
 export default function ChildrenOfTheUmmahCaseStudyPage() {
+  const jsonLdArticle = {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    headline: "Children of the Ummah Engineering Case Study",
+    description:
+      "Deep dive into architecting resilient international donation infrastructure: multi-currency processing (GBP, USD, EUR), Stripe custom payment elements, recurring subscriptions, and production reliability.",
+    author: {
+      "@type": "Person",
+      name: "Md. Ahsan Habib",
+      url: siteUrl,
+    },
+    url: `${siteUrl}/projects/children-of-the-ummah`,
+    about: [
+      "Stripe Payments",
+      "Multi-Currency Checkout",
+      "Next.js",
+      "TypeScript",
+      "Humanitarian Charity Platform",
+    ],
+  };
+
   return (
     <article className="py-8 sm:py-12 md:py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLdArticle).replace(/</g, "\\u003c"),
+        }}
+      />
       {/* Back Link / Breadcrumb */}
       <CaseStudyNav backHref="/#work" backLabel="Back to Selected Work" />
 

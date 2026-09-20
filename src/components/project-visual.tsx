@@ -370,26 +370,20 @@ function ChildrenOfTheUmmahVisual() {
           {/* Right Column: Interactive Multi-Currency Donation Module */}
           <div className="rounded-xl border border-border bg-surface p-5 shadow-lg transition-transform duration-300 ease-out group-hover:scale-[1.01] motion-reduce:transform-none lg:col-span-7">
             {/* Frequency Tabs */}
-            <div className="flex rounded-lg border border-border bg-surface-elevated p-1 text-xs font-medium">
-              <button
-                type="button"
-                className="flex-1 rounded-md bg-surface py-2 text-center font-semibold text-text-primary shadow-2xs"
-              >
+            <div className="flex rounded-lg border border-border bg-surface-elevated p-1 text-xs font-medium" aria-hidden="true">
+              <span className="flex-1 rounded-md bg-surface py-2 text-center font-semibold text-text-primary shadow-2xs">
                 One-Time Gift
-              </button>
-              <button
-                type="button"
-                className="flex-1 rounded-md py-2 text-center text-text-muted hover:text-text-primary"
-              >
+              </span>
+              <span className="flex-1 rounded-md py-2 text-center text-text-muted">
                 Monthly Recurring
-              </button>
+              </span>
             </div>
 
             {/* Amount Selection Grid */}
             <div className="mt-4">
-              <label className="text-[11px] font-mono uppercase tracking-wider text-text-muted">
+              <span className="block text-[11px] font-mono uppercase tracking-wider text-text-muted">
                 Select Donation Amount (GBP)
-              </label>
+              </span>
               <div className="mt-2 grid grid-cols-4 gap-2">
                 {["£25", "£50", "£100", "£250"].map((amt, idx) => (
                   <div

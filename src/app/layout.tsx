@@ -14,10 +14,76 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://ahsanhabib.dev";
+
 export const metadata: Metadata = {
-  title: "Md. Ahsan Habib — Full Stack Developer",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Md. Ahsan Habib — Full Stack Developer",
+    template: "%s — Md. Ahsan Habib",
+  },
   description:
     "Full Stack Developer building fast, scalable web products and SaaS platforms from idea to production.",
+  applicationName: "Md. Ahsan Habib Portfolio",
+  authors: [{ name: "Md. Ahsan Habib", url: "https://github.com/sowmik-sec" }],
+  creator: "Md. Ahsan Habib",
+  publisher: "Md. Ahsan Habib",
+  keywords: [
+    "Md. Ahsan Habib",
+    "Ahsan Habib",
+    "Full Stack Developer",
+    "Software Engineer",
+    "Next.js",
+    "TypeScript",
+    "React",
+    "Go",
+    "Tailwind CSS",
+    "MongoDB",
+    "Stripe",
+    "SaaS Platform",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "/",
+    siteName: "Md. Ahsan Habib — Full Stack Developer",
+    title: "Md. Ahsan Habib — Full Stack Developer",
+    description:
+      "Full Stack Developer building fast, scalable web products and SaaS platforms from idea to production.",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Md. Ahsan Habib — Full Stack Developer Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Md. Ahsan Habib — Full Stack Developer",
+    description:
+      "Full Stack Developer building fast, scalable web products and SaaS platforms from idea to production.",
+    images: ["/opengraph-image"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
+  manifest: "/manifest.webmanifest",
 };
 
 export default function RootLayout({
@@ -25,6 +91,42 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const jsonLdPerson = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Md. Ahsan Habib",
+    jobTitle: "Full Stack Developer",
+    url: siteUrl,
+    sameAs: [
+      "https://github.com/sowmik-sec",
+      "https://www.linkedin.com/in/md-ahsan-habib-18569b21a/",
+    ],
+    knowsAbout: [
+      "Full Stack Development",
+      "Next.js",
+      "TypeScript",
+      "React",
+      "Go",
+      "Tailwind CSS",
+      "MongoDB",
+      "Stripe",
+      "Software Architecture",
+    ],
+  };
+
+  const jsonLdWebSite = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Md. Ahsan Habib Portfolio",
+    url: siteUrl,
+    description:
+      "Full Stack Developer building fast, scalable web products and SaaS platforms from idea to production.",
+    author: {
+      "@type": "Person",
+      name: "Md. Ahsan Habib",
+    },
+  };
+
   return (
     <html
       lang="en"
@@ -33,6 +135,18 @@ export default function RootLayout({
     >
       <head>
         <ThemeScript />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLdPerson).replace(/</g, "\\u003c"),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLdWebSite).replace(/</g, "\\u003c"),
+          }}
+        />
       </head>
       <body className="flex min-h-full flex-col bg-background text-foreground antialiased selection:bg-accent selection:text-accent-foreground">
         {/* Skip to content link for accessibility */}
@@ -47,7 +161,8 @@ export default function RootLayout({
 
         <main
           id="main-content"
-          className="mx-auto flex w-full max-w-5xl flex-1 flex-col px-4 py-8 sm:px-6 sm:py-12 md:px-8 lg:px-12"
+          tabIndex={-1}
+          className="mx-auto flex w-full max-w-5xl flex-1 flex-col px-4 py-8 outline-none focus:outline-hidden sm:px-6 sm:py-12 md:px-8 lg:px-12"
         >
           {children}
         </main>

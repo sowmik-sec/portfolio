@@ -4,20 +4,69 @@ import { CaseStudyHeader } from "@/components/case-study/case-study-header";
 import { CaseStudySection } from "@/components/case-study/case-study-section";
 import { PawPalsRescueVisual } from "@/components/case-study/visual-diagrams";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://ahsanhabib.dev";
+
 export const metadata: Metadata = {
-  title: "Paw Pals Rescue Case Study — Md. Ahsan Habib",
+  title: "Paw Pals Rescue Case Study",
   description:
     "Engineering case study for Paw Pals Rescue Client: a pet donation and animal adoption platform built with React, Tailwind CSS, TanStack Query, and Firebase Authentication.",
+  alternates: {
+    canonical: "/projects/paw-pals-rescue",
+  },
   openGraph: {
+    type: "article",
+    url: "/projects/paw-pals-rescue",
     title: "Paw Pals Rescue Case Study — Md. Ahsan Habib",
     description:
       "Deep dive into the verified codebase of Paw Pals Rescue client: adoption directory, pet detail view, application/filter forms, donation campaigns, and TanStack Query state caching.",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Paw Pals Rescue Engineering Case Study",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Paw Pals Rescue Case Study — Md. Ahsan Habib",
+    description:
+      "Deep dive into the verified codebase of Paw Pals Rescue client: adoption directory, pet detail view, application/filter forms, and donation campaigns.",
+    images: ["/opengraph-image"],
   },
 };
 
 export default function PawPalsRescueCaseStudyPage() {
+  const jsonLdArticle = {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    headline: "Paw Pals Rescue Engineering Case Study",
+    description:
+      "Deep dive into the verified codebase of Paw Pals Rescue client: adoption directory, pet detail view, application/filter forms, donation campaigns, and TanStack Query state caching.",
+    author: {
+      "@type": "Person",
+      name: "Md. Ahsan Habib",
+      url: siteUrl,
+    },
+    url: `${siteUrl}/projects/paw-pals-rescue`,
+    about: [
+      "React",
+      "Tailwind CSS",
+      "TanStack Query",
+      "Firebase Auth",
+      "Animal Adoption Platform",
+    ],
+  };
+
   return (
     <article className="py-8 sm:py-12 md:py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLdArticle).replace(/</g, "\\u003c"),
+        }}
+      />
       {/* Back Link / Breadcrumb */}
       <CaseStudyNav backHref="/#work" backLabel="Back to Selected Work" />
 

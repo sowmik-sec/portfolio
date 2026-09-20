@@ -101,9 +101,9 @@ export const SelectedWork: FC = () => {
 
                 {/* Key Capabilities Pills */}
                 <div>
-                  <h5 className="font-mono text-xs uppercase tracking-wider text-text-muted">
+                  <h4 className="font-mono text-xs uppercase tracking-wider text-text-muted">
                     Engineering Focus &amp; Core Systems
-                  </h5>
+                  </h4>
                   <div className="mt-3 flex flex-wrap gap-2">
                     {project.capabilities.map((capability) => (
                       <span
@@ -121,9 +121,9 @@ export const SelectedWork: FC = () => {
               <div className="flex flex-col justify-between gap-6 border-t border-border/40 pt-6 lg:col-span-4 lg:border-t-0 lg:border-l lg:border-border/60 lg:pl-8 lg:pt-0">
                 {/* Tech Stack */}
                 <div>
-                  <h5 className="font-mono text-xs uppercase tracking-wider text-text-muted">
+                  <h4 className="font-mono text-xs uppercase tracking-wider text-text-muted">
                     Technology
-                  </h5>
+                  </h4>
                   <ul className="mt-3 space-y-1.5 font-mono text-xs text-text-primary">
                     {project.technologies.map((tech) => (
                       <li key={tech} className="flex items-center gap-2">

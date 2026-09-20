@@ -4,20 +4,69 @@ import { CaseStudyHeader } from "@/components/case-study/case-study-header";
 import { CaseStudySection } from "@/components/case-study/case-study-section";
 import { ProjectVisual } from "@/components/project-visual";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://ahsanhabib.dev";
+
 export const metadata: Metadata = {
-  title: "Pixoree Case Study — Md. Ahsan Habib",
+  title: "Pixoree Case Study",
   description:
     "Engineering case study for Pixoree: an interactive browser-based graphic design tool with Fabric.js, Next.js, and TypeScript.",
+  alternates: {
+    canonical: "/projects/pixoree",
+  },
   openGraph: {
+    type: "article",
+    url: "/projects/pixoree",
     title: "Pixoree Case Study — Md. Ahsan Habib",
     description:
       "Deep dive into building an interactive browser-based graphic design engine with Fabric.js, object transformations, layers, undo/redo state history, and client-side export.",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Pixoree Interactive Graphic Design Engine Case Study",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pixoree Case Study — Md. Ahsan Habib",
+    description:
+      "Deep dive into building an interactive browser-based graphic design engine with Fabric.js, object transformations, layers, undo/redo state history, and client-side export.",
+    images: ["/opengraph-image"],
   },
 };
 
 export default function PixoreeCaseStudyPage() {
+  const jsonLdArticle = {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    headline: "Pixoree Interactive Graphic Design Engine Case Study",
+    description:
+      "Deep dive into building an interactive browser-based graphic design engine with Fabric.js, object transformations, layers, undo/redo state history, and client-side export.",
+    author: {
+      "@type": "Person",
+      name: "Md. Ahsan Habib",
+      url: siteUrl,
+    },
+    url: `${siteUrl}/projects/pixoree`,
+    about: [
+      "Fabric.js",
+      "Canvas 2D",
+      "Next.js",
+      "TypeScript",
+      "Graphic Design Tool",
+    ],
+  };
+
   return (
     <article className="py-8 sm:py-12 md:py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLdArticle).replace(/</g, "\\u003c"),
+        }}
+      />
       {/* Back Link / Breadcrumb */}
       <CaseStudyNav backHref="/#work" backLabel="Back to Selected Work" />
 
