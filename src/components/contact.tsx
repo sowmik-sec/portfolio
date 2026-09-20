@@ -1,4 +1,5 @@
 import type { FC } from "react";
+import { ScrollReveal } from "./scroll-reveal";
 
 export const Contact: FC = () => {
   return (
@@ -8,7 +9,7 @@ export const Contact: FC = () => {
       className="relative border-t border-border/70 py-16 sm:py-24 md:py-32"
     >
       {/* Editorial Header */}
-      <div className="max-w-3xl">
+      <ScrollReveal className="max-w-3xl">
         <span className="font-mono text-xs font-semibold uppercase tracking-wider text-accent">
           Direct Channel · Get In Touch
         </span>
@@ -24,11 +25,11 @@ export const Contact: FC = () => {
           for your team—I am open to full-time engineering roles, contracts, and
           technical consultations.
         </p>
-      </div>
+      </ScrollReveal>
 
       {/* Main Action Block: Direct, high-contrast, form-free interaction */}
-      <div className="mt-10 sm:mt-12">
-        <div className="rounded-2xl border border-border bg-surface p-6 shadow-xs sm:p-8 md:p-10">
+      <ScrollReveal delay={80} className="mt-10 sm:mt-12">
+        <div className="rounded-2xl border border-border bg-surface p-6 shadow-xs transition-all duration-200 hover:border-border/90 sm:p-8 md:p-10">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
             {/* Direct Email Callout */}
             <div className="space-y-2">
@@ -38,14 +39,14 @@ export const Contact: FC = () => {
               <div>
                 <a
                   href="mailto:sowmik.sec@gmail.com"
-                  className="group inline-flex items-center gap-3 text-xl font-bold tracking-tight text-text-primary transition-colors hover:text-accent sm:text-2xl md:text-3xl"
+                  className="group inline-flex items-center gap-3 text-xl font-bold tracking-tight text-text-primary transition-colors duration-200 hover:text-accent active:scale-[0.99] focus-visible:outline-2 focus-visible:outline-accent sm:text-2xl md:text-3xl"
                   aria-label="Send email to sowmik.sec@gmail.com"
                 >
-                  <span className="underline decoration-border decoration-2 underline-offset-4 transition-colors group-hover:decoration-accent">
+                  <span className="underline decoration-border decoration-2 underline-offset-4 transition-colors duration-200 group-hover:decoration-accent">
                     sowmik.sec@gmail.com
                   </span>
                   <svg
-                    className="h-5 w-5 text-text-muted transition-transform duration-200 group-hover:translate-x-1 group-hover:text-accent motion-reduce:transform-none sm:h-6 sm:w-6"
+                    className="h-5 w-5 text-text-muted transition-transform duration-200 ease-out group-hover:translate-x-1.5 group-hover:text-accent motion-reduce:transform-none sm:h-6 sm:w-6"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="none"
@@ -70,11 +71,11 @@ export const Contact: FC = () => {
               <a
                 href="/Md.%20Ahsan%20Habib%20Resume.pdf"
                 download="Md_Ahsan_Habib_Resume.pdf"
-                className="inline-flex w-full items-center justify-center gap-2.5 rounded-lg bg-text-primary px-6 py-3.5 text-sm font-semibold text-background shadow-xs transition-colors hover:opacity-90 active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:w-auto"
+                className="group inline-flex w-full items-center justify-center gap-2.5 rounded-lg bg-text-primary px-6 py-3.5 text-sm font-semibold text-background shadow-xs transition-all duration-200 hover:opacity-90 active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:w-auto"
                 aria-label="Download Md. Ahsan Habib's résumé in PDF format"
               >
                 <svg
-                  className="h-4 w-4 stroke-current"
+                  className="h-4 w-4 stroke-current transition-transform duration-200 ease-out group-hover:translate-y-0.5 motion-reduce:transform-none"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="none"
@@ -103,7 +104,7 @@ export const Contact: FC = () => {
                 href="https://github.com/sowmik-sec"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-md border border-border bg-surface-elevated/70 px-4 py-2.5 text-xs font-semibold text-text-primary transition-colors hover:border-text-primary/30 hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:text-sm"
+                className="inline-flex items-center gap-2 rounded-md border border-border bg-surface-elevated/70 px-4 py-2.5 text-xs font-semibold text-text-primary transition-all duration-200 hover:border-text-primary/30 hover:text-accent hover:shadow-xs active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:text-sm"
                 aria-label="Visit Ahsan's GitHub profile (opens in new tab)"
               >
                 <svg
@@ -129,7 +130,7 @@ export const Contact: FC = () => {
                 href="https://www.linkedin.com/in/md-ahsan-habib-18569b21a/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-md border border-border bg-surface-elevated/70 px-4 py-2.5 text-xs font-semibold text-text-primary transition-colors hover:border-text-primary/30 hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:text-sm"
+                className="inline-flex items-center gap-2 rounded-md border border-border bg-surface-elevated/70 px-4 py-2.5 text-xs font-semibold text-text-primary transition-all duration-200 hover:border-text-primary/30 hover:text-accent hover:shadow-xs active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:text-sm"
                 aria-label="Connect with Ahsan on LinkedIn (opens in new tab)"
               >
                 <svg
@@ -148,7 +149,7 @@ export const Contact: FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      </ScrollReveal>
     </section>
   );
 };

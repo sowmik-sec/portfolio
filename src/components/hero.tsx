@@ -1,4 +1,5 @@
 import type { FC } from "react";
+import { ScrollReveal } from "./scroll-reveal";
 
 export const Hero: FC = () => {
   return (
@@ -9,7 +10,7 @@ export const Hero: FC = () => {
     >
       <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-8 xl:gap-12">
         {/* Dominant editorial column (Headline, Narrative, Actions) */}
-        <div className="flex flex-col lg:col-span-8">
+        <ScrollReveal className="flex flex-col lg:col-span-8">
           {/* Subtle identity / role kicker */}
           <div className="flex items-center gap-3">
             <span
@@ -41,11 +42,11 @@ export const Hero: FC = () => {
             {/* Primary CTA */}
             <a
               href="#work"
-              className="inline-flex items-center justify-center rounded-md bg-text-primary px-5 py-3 text-sm font-semibold text-background shadow-xs transition-colors hover:opacity-90 active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              className="group inline-flex items-center justify-center rounded-md bg-text-primary px-5 py-3 text-sm font-semibold text-background shadow-xs transition-all duration-200 hover:opacity-90 active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               <span>View my work</span>
               <svg
-                className="ml-2 h-4 w-4 stroke-current transition-transform duration-200 group-hover:translate-y-0.5 motion-reduce:transform-none"
+                className="ml-2 h-4 w-4 stroke-current transition-transform duration-200 ease-out group-hover:translate-y-0.5 motion-reduce:transform-none"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="none"
@@ -62,10 +63,10 @@ export const Hero: FC = () => {
             <a
               href="/Md.%20Ahsan%20Habib%20Resume.pdf"
               download="Md_Ahsan_Habib_Resume.pdf"
-              className="inline-flex items-center justify-center rounded-md border border-border bg-surface px-5 py-3 text-sm font-medium text-text-primary shadow-2xs transition-colors hover:bg-surface-elevated hover:border-border/80 active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              className="group inline-flex items-center justify-center rounded-md border border-border bg-surface px-5 py-3 text-sm font-medium text-text-primary shadow-2xs transition-all duration-200 hover:bg-surface-elevated hover:border-border/90 active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               <svg
-                className="mr-2 h-4 w-4 stroke-current text-text-muted"
+                className="mr-2 h-4 w-4 stroke-current text-text-muted transition-transform duration-200 ease-out group-hover:translate-y-0.5 motion-reduce:transform-none"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="none"
@@ -81,11 +82,12 @@ export const Hero: FC = () => {
               <span>Download résumé</span>
             </a>
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* Subtle, non-competing asymmetric visual element */}
-        <div
-          className="flex flex-col justify-between rounded-xl border border-border/70 bg-surface/60 p-6 backdrop-blur-xs lg:col-span-4 lg:mt-3"
+        <ScrollReveal
+          delay={80}
+          className="flex flex-col justify-between rounded-xl border border-border/70 bg-surface/60 p-6 backdrop-blur-xs transition-colors duration-200 hover:border-border lg:col-span-4 lg:mt-3"
           aria-hidden="true"
         >
           <div className="space-y-4">
@@ -122,7 +124,7 @@ export const Hero: FC = () => {
               </span>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

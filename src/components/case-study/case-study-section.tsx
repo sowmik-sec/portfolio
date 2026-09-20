@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { ScrollReveal } from "../scroll-reveal";
 
 interface CaseStudySectionProps {
   id: string;
@@ -18,7 +19,8 @@ export function CaseStudySection({
   className = "",
 }: CaseStudySectionProps) {
   return (
-    <section
+    <ScrollReveal
+      as="section"
       id={id}
       aria-labelledby={`${id}-heading`}
       className={`border-t border-border/60 pt-10 sm:pt-14 ${className}`}
@@ -43,6 +45,6 @@ export function CaseStudySection({
       </div>
 
       <div className="mt-6 space-y-6 sm:mt-8">{children}</div>
-    </section>
+    </ScrollReveal>
   );
 }

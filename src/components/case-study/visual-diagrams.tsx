@@ -44,15 +44,15 @@ export function SkillbentoArchitectureVisual() {
               <span className="font-mono text-[10px] text-accent">Subdomain / Custom Domain Routing</span>
             </div>
             <div className="mt-2 grid grid-cols-1 gap-2.5 sm:grid-cols-3">
-              <div className="rounded-lg border border-border bg-surface-elevated/60 p-3 text-center">
+              <div className="rounded-lg border border-border bg-surface-elevated/60 p-3 text-center transition-all duration-150 hover:border-border/90 hover:bg-surface-elevated">
                 <p className="font-mono text-xs font-semibold text-text-primary">tenant-a.skillbento.com</p>
                 <p className="text-[11px] text-text-secondary">Creator A Academy</p>
               </div>
-              <div className="rounded-lg border border-border bg-surface-elevated/60 p-3 text-center">
+              <div className="rounded-lg border border-border bg-surface-elevated/60 p-3 text-center transition-all duration-150 hover:border-border/90 hover:bg-surface-elevated">
                 <p className="font-mono text-xs font-semibold text-text-primary">tenant-b.skillbento.com</p>
                 <p className="text-[11px] text-text-secondary">Engineering Hub</p>
               </div>
-              <div className="rounded-lg border border-border bg-surface-elevated/60 p-3 text-center">
+              <div className="rounded-lg border border-border bg-surface-elevated/60 p-3 text-center transition-all duration-150 hover:border-border/90 hover:bg-surface-elevated">
                 <p className="font-mono text-xs font-semibold text-text-primary">academy.customdomain.org</p>
                 <p className="text-[11px] text-text-secondary">CNAME Custom Host</p>
               </div>
@@ -215,7 +215,7 @@ export function PawPalsRescueVisual() {
         {/* Mock Pet Cards Grid */}
         <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {/* Card 1: Available Pet */}
-          <div className="flex flex-col justify-between rounded-lg border border-border bg-surface p-4 shadow-xs">
+          <div className="group/pet flex flex-col justify-between rounded-lg border border-border bg-surface p-4 shadow-xs transition-all duration-200 hover:border-border/90 hover:shadow-sm">
             <div>
               <div className="flex items-start justify-between">
                 <div>
@@ -232,7 +232,7 @@ export function PawPalsRescueVisual() {
             </div>
             <div className="mt-4 flex items-center justify-between border-t border-border/50 pt-3">
               <span className="font-mono text-[11px] text-text-muted">ID: #pet-104</span>
-              <span className="rounded bg-accent/10 px-2.5 py-1 text-xs font-semibold text-accent">
+              <span className="rounded bg-accent/10 px-2.5 py-1 text-xs font-semibold text-accent transition-all duration-150 group-hover/pet:bg-accent group-hover/pet:text-accent-foreground">
                 Adopt Milo →
               </span>
             </div>

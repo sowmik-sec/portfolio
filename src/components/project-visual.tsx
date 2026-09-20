@@ -150,7 +150,7 @@ function PixoreeVisual() {
           </div>
 
           {/* Interactive Document Artboard */}
-          <div className="relative aspect-4/3 w-full max-w-sm rounded-lg border border-border bg-surface p-5 shadow-lg transition-transform duration-300 group-hover:scale-[1.01] sm:max-w-md md:max-w-lg">
+          <div className="relative aspect-4/3 w-full max-w-sm rounded-lg border border-border bg-surface p-5 shadow-lg transition-transform duration-300 ease-out group-hover:scale-[1.01] motion-reduce:transform-none sm:max-w-md md:max-w-lg">
             {/* Certificate Decorative Border */}
             <div className="relative flex h-full flex-col justify-between border-2 border-dashed border-accent/30 p-4 sm:p-6">
               {/* Artboard Header */}
@@ -368,7 +368,7 @@ function ChildrenOfTheUmmahVisual() {
           </div>
 
           {/* Right Column: Interactive Multi-Currency Donation Module */}
-          <div className="rounded-xl border border-border bg-surface p-5 shadow-lg lg:col-span-7">
+          <div className="rounded-xl border border-border bg-surface p-5 shadow-lg transition-transform duration-300 ease-out group-hover:scale-[1.01] motion-reduce:transform-none lg:col-span-7">
             {/* Frequency Tabs */}
             <div className="flex rounded-lg border border-border bg-surface-elevated p-1 text-xs font-medium">
               <button

@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import Link from "next/link";
 import { CURRENTLY_BUILDING_PROJECTS } from "@/data/projects";
+import { ScrollReveal } from "./scroll-reveal";
 
 export const CurrentlyBuilding: FC = () => {
   return (
@@ -10,7 +11,7 @@ export const CurrentlyBuilding: FC = () => {
       className="relative border-t border-border/70 py-16 sm:py-24 md:py-32"
     >
       {/* Section Header */}
-      <div className="flex flex-col gap-2 border-b border-border/70 pb-6 sm:flex-row sm:items-baseline sm:justify-between">
+      <ScrollReveal className="flex flex-col gap-2 border-b border-border/70 pb-6 sm:flex-row sm:items-baseline sm:justify-between">
         <div>
           <div className="flex items-center gap-2">
             <span className="font-mono text-xs font-semibold uppercase tracking-wider text-accent">
@@ -30,10 +31,10 @@ export const CurrentlyBuilding: FC = () => {
         <p className="font-mono text-xs text-text-muted">
           Systems Design &amp; In-Progress Projects
         </p>
-      </div>
+      </ScrollReveal>
 
       {/* Editorial Framing Notice */}
-      <div className="mt-8 rounded-lg border border-border/70 bg-surface-elevated/40 p-4 text-xs text-text-secondary sm:flex sm:items-center sm:justify-between sm:gap-4">
+      <ScrollReveal delay={40} className="mt-8 rounded-lg border border-border/70 bg-surface-elevated/40 p-4 text-xs text-text-secondary sm:flex sm:items-center sm:justify-between sm:gap-4">
         <div className="flex items-center gap-2.5">
           <span className="flex h-2 w-2 rounded-full bg-amber-500 shrink-0" aria-hidden="true" />
           <p>
@@ -44,16 +45,18 @@ export const CurrentlyBuilding: FC = () => {
         <span className="mt-2 block font-mono text-[11px] text-text-muted sm:mt-0 shrink-0">
           In Active Development
         </span>
-      </div>
+      </ScrollReveal>
 
       {/* In-Progress Projects Grid */}
       <div className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-10">
-        {CURRENTLY_BUILDING_PROJECTS.map((project) => (
-          <article
+        {CURRENTLY_BUILDING_PROJECTS.map((project, index) => (
+          <ScrollReveal
+            as="article"
             key={project.id}
             id={`building-${project.id}`}
+            delay={index * 80}
             aria-labelledby={`building-title-${project.id}`}
-            className="group relative flex flex-col justify-between rounded-xl border border-border bg-surface p-6 shadow-xs transition-colors hover:border-border/90 hover:bg-surface/90 sm:p-8"
+            className="group relative flex flex-col justify-between rounded-xl border border-border bg-surface p-6 shadow-xs transition-all duration-200 ease-out hover:border-border hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 motion-reduce:transform-none sm:p-8"
           >
             {/* Top Section: Header, Concept, Architecture */}
             <div>
@@ -127,7 +130,7 @@ export const CurrentlyBuilding: FC = () => {
                     {project.coreModules.map((mod) => (
                       <span
                         key={mod}
-                        className="inline-flex items-center rounded-md border border-border/70 bg-surface-elevated/70 px-2.5 py-1 text-xs text-text-secondary"
+                        className="inline-flex items-center rounded-md border border-border/70 bg-surface-elevated/70 px-2.5 py-1 text-xs text-text-secondary transition-colors duration-150 hover:border-border hover:text-text-primary"
                       >
                         {mod}
                       </span>
@@ -146,7 +149,7 @@ export const CurrentlyBuilding: FC = () => {
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="inline-flex items-center rounded bg-surface-elevated px-2 py-0.5 font-mono text-[11px] text-text-primary"
+                      className="inline-flex items-center rounded bg-surface-elevated px-2 py-0.5 font-mono text-[11px] text-text-primary transition-colors duration-150 hover:bg-surface-muted"
                     >
                       {tech}
                     </span>
@@ -163,7 +166,7 @@ export const CurrentlyBuilding: FC = () => {
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <Link
                   href={project.caseStudyUrl}
-                  className="group inline-flex items-center gap-1.5 text-xs font-semibold text-text-primary hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:text-sm"
+                  className="group/link inline-flex items-center gap-1.5 text-xs font-semibold text-text-primary transition-colors duration-200 hover:text-accent active:translate-x-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:text-sm"
                 >
                   <span>
                     {project.id === "skillbento"
@@ -171,7 +174,7 @@ export const CurrentlyBuilding: FC = () => {
                       : "Read client case study"}
                   </span>
                   <svg
-                    className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1 motion-reduce:transform-none"
+                    className="h-3.5 w-3.5 transition-transform duration-200 ease-out group-hover/link:translate-x-1.5 motion-reduce:transform-none"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="none"
@@ -191,12 +194,12 @@ export const CurrentlyBuilding: FC = () => {
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group inline-flex items-center gap-1 text-xs font-medium text-text-muted hover:text-text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                    className="group/gh inline-flex items-center gap-1 text-xs font-medium text-text-muted transition-colors duration-200 hover:text-text-primary active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                     aria-label={`View ${project.title} source code on GitHub (opens in new tab)`}
                   >
                     <span>GitHub repository</span>
                     <svg
-                      className="h-3 w-3 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 motion-reduce:transform-none"
+                      className="h-3 w-3 transition-transform duration-200 ease-out group-hover/gh:translate-x-0.5 group-hover/gh:-translate-y-0.5 motion-reduce:transform-none"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       fill="none"
@@ -213,7 +216,7 @@ export const CurrentlyBuilding: FC = () => {
                 )}
               </div>
             </div>
-          </article>
+          </ScrollReveal>
         ))}
       </div>
     </section>

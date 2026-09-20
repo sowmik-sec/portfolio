@@ -93,7 +93,7 @@ export function CaseStudyHeader({
             {techStack.map((tech) => (
               <span
                 key={tech}
-                className="inline-flex items-center rounded-md border border-border bg-surface-elevated/70 px-2 py-0.5 font-mono text-xs text-text-primary"
+                className="inline-flex items-center rounded-md border border-border bg-surface-elevated/70 px-2 py-0.5 font-mono text-xs text-text-primary transition-colors duration-150 hover:bg-surface-muted"
               >
                 {tech}
               </span>
@@ -108,11 +108,11 @@ export function CaseStudyHeader({
               href={externalLink.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-md bg-text-primary px-4 py-2 text-xs font-semibold text-background transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              className="group inline-flex items-center gap-1.5 rounded-md bg-text-primary px-4 py-2 text-xs font-semibold text-background shadow-xs transition-all duration-200 hover:opacity-90 active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               <span>{externalLink.label}</span>
               <svg
-                className="h-3.5 w-3.5"
+                className="h-3.5 w-3.5 transition-transform duration-200 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5 motion-reduce:transform-none"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="none"
@@ -133,10 +133,10 @@ export function CaseStudyHeader({
               href={repoLink.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-md border border-border bg-surface px-4 py-2 text-xs font-semibold text-text-primary transition-colors hover:border-border/80 hover:bg-surface-elevated focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              className="group inline-flex items-center gap-1.5 rounded-md border border-border bg-surface px-4 py-2 text-xs font-semibold text-text-primary shadow-2xs transition-all duration-200 hover:border-border/90 hover:bg-surface-elevated active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               <svg
-                className="h-3.5 w-3.5 text-text-muted"
+                className="h-3.5 w-3.5 text-text-muted transition-colors duration-200 group-hover:text-text-primary"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"

@@ -2,29 +2,36 @@
 
 export function ThemeToggle() {
   function toggleTheme() {
-    const isDark = document.documentElement.classList.contains("dark");
+    const root = document.documentElement;
+    root.classList.add("theme-transitioning");
+
+    const isDark = root.classList.contains("dark");
     if (isDark) {
-      document.documentElement.classList.remove("dark");
-      document.documentElement.setAttribute("data-theme", "light");
+      root.classList.remove("dark");
+      root.setAttribute("data-theme", "light");
       localStorage.setItem("theme", "light");
     } else {
-      document.documentElement.classList.add("dark");
-      document.documentElement.setAttribute("data-theme", "dark");
+      root.classList.add("dark");
+      root.setAttribute("data-theme", "dark");
       localStorage.setItem("theme", "dark");
     }
+
+    window.setTimeout(() => {
+      root.classList.remove("theme-transitioning");
+    }, 280);
   }
 
   return (
     <button
       type="button"
       onClick={toggleTheme}
-      className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border bg-surface text-text-secondary transition-colors hover:bg-surface-elevated hover:text-text-primary focus-visible:outline-2 focus-visible:outline-accent"
+      className="relative inline-flex h-9 w-9 items-center justify-center rounded-md border border-border bg-surface text-text-secondary shadow-2xs transition-all duration-200 hover:border-border/90 hover:bg-surface-elevated hover:text-text-primary active:scale-95 focus-visible:outline-2 focus-visible:outline-accent"
       aria-label="Toggle color theme"
       title="Toggle color theme"
     >
-      {/* Sun icon: visible when .dark is present */}
+      {/* Sun icon: visible and rotated into place in dark mode */}
       <svg
-        className="hidden h-4 w-4 stroke-current [.dark_&]:block"
+        className="absolute h-4 w-4 stroke-current transition-all duration-300 ease-out rotate-90 scale-0 opacity-0 [.dark_&]:rotate-0 [.dark_&]:scale-100 [.dark_&]:opacity-100 motion-reduce:transition-none"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="none"
@@ -43,9 +50,9 @@ export function ThemeToggle() {
         <path d="m6.34 17.66-1.41 1.41" />
         <path d="m19.07 4.93-1.41 1.41" />
       </svg>
-      {/* Moon icon: visible when .dark is absent */}
+      {/* Moon icon: visible and rotated into place in light mode */}
       <svg
-        className="block h-4 w-4 stroke-current [.dark_&]:hidden"
+        className="absolute h-4 w-4 stroke-current transition-all duration-300 ease-out rotate-0 scale-100 opacity-100 [.dark_&]:-rotate-90 [.dark_&]:scale-0 [.dark_&]:opacity-0 motion-reduce:transition-none"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="none"

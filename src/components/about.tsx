@@ -1,5 +1,6 @@
 import type { FC } from "react";
 import Image from "next/image";
+import { ScrollReveal } from "./scroll-reveal";
 
 export const About: FC = () => {
   return (
@@ -9,7 +10,7 @@ export const About: FC = () => {
       className="relative border-t border-border/70 py-16 sm:py-24 md:py-32"
     >
       {/* Section Header */}
-      <div className="flex flex-col gap-2 border-b border-border/70 pb-6 sm:flex-row sm:items-baseline sm:justify-between">
+      <ScrollReveal className="flex flex-col gap-2 border-b border-border/70 pb-6 sm:flex-row sm:items-baseline sm:justify-between">
         <div>
           <span className="font-mono text-xs font-semibold uppercase tracking-wider text-accent">
             Profile &amp; Background
@@ -24,20 +25,20 @@ export const About: FC = () => {
         <p className="font-mono text-xs text-text-muted">
           Full Stack Developer &amp; Systems Builder
         </p>
-      </div>
+      </ScrollReveal>
 
       {/* Main Editorial Content Container */}
       <div className="mt-10 grid grid-cols-1 items-start gap-10 lg:grid-cols-12 lg:gap-12">
         {/* Left Column: Modest Professional Headshot */}
-        <div className="flex flex-col items-center sm:items-start lg:col-span-4">
-          <div className="group relative w-48 sm:w-56 overflow-hidden rounded-2xl border border-border/80 bg-[#F3F4F6] shadow-xs transition-colors hover:border-border dark:bg-[#1A1D24]">
+        <ScrollReveal delay={0} className="flex flex-col items-center sm:items-start lg:col-span-4">
+          <div className="group relative w-48 sm:w-56 overflow-hidden rounded-2xl border border-border/80 bg-[#F3F4F6] shadow-xs transition-all duration-300 hover:border-border hover:shadow-md dark:bg-[#1A1D24]">
             {/* Note: Can be replaced with actual photo in public/images/headshot.jpg */}
             <Image
               src="/images/headshot.svg"
               alt="Md. Ahsan Habib — Full Stack Developer"
               width={240}
               height={240}
-              className="aspect-square h-auto w-full object-cover transition-transform duration-300 group-hover:scale-[1.02] motion-reduce:transform-none"
+              className="aspect-square h-auto w-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.02] motion-reduce:transform-none"
               priority={false}
             />
           </div>
@@ -50,10 +51,10 @@ export const About: FC = () => {
               Dhaka, Bangladesh · Remote Worldwide
             </span>
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* Right Column: Editorial Narrative & Capabilities */}
-        <div className="space-y-6 lg:col-span-8">
+        <ScrollReveal delay={80} className="space-y-6 lg:col-span-8">
           <div className="space-y-4 text-base leading-relaxed text-text-secondary sm:text-lg sm:leading-relaxed">
             <p>
               I am a <strong className="font-semibold text-text-primary">Full Stack Developer</strong> dedicated to turning product ideas into resilient, production-ready web applications and SaaS platforms. My engineering approach balances visual craft with architectural rigor—delivering software that is fast, maintainable, and dependable under load.
@@ -73,7 +74,7 @@ export const About: FC = () => {
                 href="https://github.com/sowmik-sec"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-md border border-border bg-surface px-4 py-2 text-xs font-semibold text-text-primary shadow-2xs transition-colors hover:border-text-primary/30 hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:text-sm"
+                className="inline-flex items-center gap-2 rounded-md border border-border bg-surface px-4 py-2 text-xs font-semibold text-text-primary shadow-2xs transition-all duration-200 hover:border-text-primary/30 hover:text-accent hover:shadow-xs active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:text-sm"
                 aria-label="Visit Ahsan's GitHub profile (opens in new tab)"
               >
                 <svg
@@ -96,7 +97,7 @@ export const About: FC = () => {
                 href="https://www.linkedin.com/in/md-ahsan-habib-18569b21a/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-md border border-border bg-surface px-4 py-2 text-xs font-semibold text-text-primary shadow-2xs transition-colors hover:border-text-primary/30 hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:text-sm"
+                className="inline-flex items-center gap-2 rounded-md border border-border bg-surface px-4 py-2 text-xs font-semibold text-text-primary shadow-2xs transition-all duration-200 hover:border-text-primary/30 hover:text-accent hover:shadow-xs active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:text-sm"
                 aria-label="Connect with Ahsan on LinkedIn (opens in new tab)"
               >
                 <svg
@@ -112,7 +113,7 @@ export const About: FC = () => {
               </a>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

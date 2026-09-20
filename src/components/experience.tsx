@@ -1,5 +1,6 @@
 import type { FC } from "react";
 import { CURRENT_ROLE, EDUCATION_HISTORY } from "@/data/experience";
+import { ScrollReveal } from "./scroll-reveal";
 
 export const Experience: FC = () => {
   return (
@@ -9,7 +10,7 @@ export const Experience: FC = () => {
       className="relative border-t border-border/70 py-16 sm:py-24 md:py-32"
     >
       {/* Section Header */}
-      <div className="flex flex-col gap-2 border-b border-border/70 pb-6 sm:flex-row sm:items-baseline sm:justify-between">
+      <ScrollReveal className="flex flex-col gap-2 border-b border-border/70 pb-6 sm:flex-row sm:items-baseline sm:justify-between">
         <div>
           <span className="font-mono text-xs font-semibold uppercase tracking-wider text-accent">
             Trajectory
@@ -24,12 +25,15 @@ export const Experience: FC = () => {
         <p className="font-mono text-xs text-text-muted">
           Professional Context &amp; Academic Foundation
         </p>
-      </div>
+      </ScrollReveal>
 
       {/* Balanced Two-Column Restrained Grid */}
       <div className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12">
         {/* Column 1: Experience */}
-        <div className="flex flex-col justify-between rounded-xl border border-border bg-surface p-6 shadow-2xs sm:p-8">
+        <ScrollReveal
+          delay={0}
+          className="flex flex-col justify-between rounded-xl border border-border bg-surface p-6 shadow-2xs transition-all duration-200 hover:border-border/90 hover:shadow-xs sm:p-8"
+        >
           <div>
             <div className="flex items-center justify-between border-b border-border/50 pb-4">
               <span className="font-mono text-xs font-semibold uppercase tracking-wider text-accent">
@@ -63,17 +67,20 @@ export const Experience: FC = () => {
               {CURRENT_ROLE.technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="inline-flex items-center rounded bg-surface-elevated px-2.5 py-1 font-mono text-xs font-medium text-text-primary"
+                  className="inline-flex items-center rounded bg-surface-elevated px-2.5 py-1 font-mono text-xs font-medium text-text-primary transition-colors duration-150 hover:bg-surface-muted"
                 >
                   {tech}
                 </span>
               ))}
             </div>
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* Column 2: Education */}
-        <div className="flex flex-col justify-between rounded-xl border border-border bg-surface p-6 shadow-2xs sm:p-8">
+        <ScrollReveal
+          delay={80}
+          className="flex flex-col justify-between rounded-xl border border-border bg-surface p-6 shadow-2xs transition-all duration-200 hover:border-border/90 hover:shadow-xs sm:p-8"
+        >
           <div>
             <div className="flex items-center justify-between border-b border-border/50 pb-4">
               <span className="font-mono text-xs font-semibold uppercase tracking-wider text-accent">
@@ -133,7 +140,7 @@ export const Experience: FC = () => {
               <span>Sylhet, Bangladesh</span>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );
