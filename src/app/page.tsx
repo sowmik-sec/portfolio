@@ -4,6 +4,8 @@ import { CurrentlyBuilding } from "@/components/currently-building";
 import { About } from "@/components/about";
 import { Experience } from "@/components/experience";
 import { Skills } from "@/components/skills";
+import { Contact } from "@/components/contact";
+import { Footer } from "@/components/footer";
 
 export default function HomePage() {
   return (
@@ -14,6 +16,8 @@ export default function HomePage() {
       <About />
       <Experience />
       <Skills />
+      <Contact />
+      <Footer />
     </div>
   );
 }
