@@ -43,7 +43,7 @@ export const Footer: FC = () => {
             <Link
               key={link.label}
               href={link.href}
-              className="transition-colors duration-200 hover:text-text-primary active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              className="inline-flex min-h-[44px] items-center py-1 transition-colors duration-200 hover:text-text-primary active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               {link.label}
             </Link>
@@ -57,7 +57,7 @@ export const Footer: FC = () => {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-colors duration-200 hover:text-text-primary active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              className="inline-flex min-h-[44px] items-center py-1 transition-colors duration-200 hover:text-text-primary active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               {link.label}
             </a>

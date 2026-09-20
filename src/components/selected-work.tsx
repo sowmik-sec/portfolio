@@ -139,7 +139,7 @@ export const SelectedWork: FC = () => {
                   <div>
                     <Link
                       href={project.caseStudyUrl}
-                      className="group inline-flex items-center text-sm font-semibold text-text-primary transition-colors duration-200 hover:text-accent active:translate-x-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                      className="group inline-flex min-h-[44px] items-center text-sm font-semibold text-text-primary transition-colors duration-200 hover:text-accent active:translate-x-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                     >
                       <span>View case study</span>
                       <svg
@@ -164,7 +164,7 @@ export const SelectedWork: FC = () => {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group inline-flex items-center text-xs font-medium text-text-muted transition-colors duration-200 hover:text-text-primary active:translate-x-0.5 focus-visible:outline-2 focus-visible:outline-accent"
+                      className="group inline-flex min-h-[44px] items-center text-xs font-medium text-text-muted transition-colors duration-200 hover:text-text-primary active:translate-x-0.5 focus-visible:outline-2 focus-visible:outline-accent"
                     >
                       <span>Visit live product</span>
                       <svg

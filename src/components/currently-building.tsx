@@ -166,7 +166,7 @@ export const CurrentlyBuilding: FC = () => {
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <Link
                   href={project.caseStudyUrl}
-                  className="group/link inline-flex items-center gap-1.5 text-xs font-semibold text-text-primary transition-colors duration-200 hover:text-accent active:translate-x-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:text-sm"
+                  className="group/link inline-flex min-h-[44px] items-center gap-1.5 text-xs font-semibold text-text-primary transition-colors duration-200 hover:text-accent active:translate-x-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:text-sm"
                 >
                   <span>
                     {project.id === "skillbento"
@@ -194,7 +194,7 @@ export const CurrentlyBuilding: FC = () => {
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group/gh inline-flex items-center gap-1 text-xs font-medium text-text-muted transition-colors duration-200 hover:text-text-primary active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                    className="group/gh inline-flex min-h-[44px] items-center gap-1 text-xs font-medium text-text-muted transition-colors duration-200 hover:text-text-primary active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                     aria-label={`View ${project.title} source code on GitHub (opens in new tab)`}
                   >
                     <span>GitHub repository</span>

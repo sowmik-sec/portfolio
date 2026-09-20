@@ -76,7 +76,7 @@ export const About: FC = () => {
                 href="https://github.com/sowmik-sec"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-md border border-border bg-surface px-4 py-2 text-xs font-semibold text-text-primary shadow-2xs transition-all duration-200 hover:border-text-primary/30 hover:text-accent hover:shadow-xs active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:text-sm"
+                className="inline-flex min-h-[44px] items-center gap-2 rounded-md border border-border bg-surface px-4 py-2 text-xs font-semibold text-text-primary shadow-2xs transition-all duration-200 hover:border-text-primary/30 hover:text-accent hover:shadow-xs active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:text-sm"
                 aria-label="Visit Ahsan's GitHub profile (opens in new tab)"
               >
                 <svg
@@ -99,7 +99,7 @@ export const About: FC = () => {
                 href="https://www.linkedin.com/in/md-ahsan-habib-18569b21a/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-md border border-border bg-surface px-4 py-2 text-xs font-semibold text-text-primary shadow-2xs transition-all duration-200 hover:border-text-primary/30 hover:text-accent hover:shadow-xs active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:text-sm"
+                className="inline-flex min-h-[44px] items-center gap-2 rounded-md border border-border bg-surface px-4 py-2 text-xs font-semibold text-text-primary shadow-2xs transition-all duration-200 hover:border-text-primary/30 hover:text-accent hover:shadow-xs active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:text-sm"
                 aria-label="Connect with Ahsan on LinkedIn (opens in new tab)"
               >
                 <svg

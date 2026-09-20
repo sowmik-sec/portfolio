@@ -25,7 +25,7 @@ export function ThemeToggle() {
     <button
       type="button"
       onClick={toggleTheme}
-      className="relative inline-flex h-9 w-9 items-center justify-center rounded-md border border-border bg-surface text-text-secondary shadow-2xs transition-all duration-200 hover:border-border/90 hover:bg-surface-elevated hover:text-text-primary active:scale-95 focus-visible:outline-2 focus-visible:outline-accent"
+      className="relative inline-flex h-11 w-11 min-h-[44px] min-w-[44px] sm:h-9 sm:w-9 sm:min-h-0 sm:min-w-0 items-center justify-center rounded-md border border-border bg-surface text-text-secondary shadow-2xs transition-all duration-200 hover:border-border/90 hover:bg-surface-elevated hover:text-text-primary active:scale-95 focus-visible:outline-2 focus-visible:outline-accent"
       aria-label="Toggle color theme"
       title="Toggle color theme"
     >

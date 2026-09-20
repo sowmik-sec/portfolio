@@ -42,7 +42,7 @@ export const Hero: FC = () => {
             {/* Primary CTA */}
             <a
               href="#work"
-              className="group inline-flex items-center justify-center rounded-md bg-text-primary px-5 py-3 text-sm font-semibold text-background shadow-xs transition-all duration-200 hover:opacity-90 active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              className="group inline-flex min-h-[44px] items-center justify-center rounded-md bg-text-primary px-5 py-3 text-sm font-semibold text-background shadow-xs transition-all duration-200 hover:opacity-90 active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               <span>View my work</span>
               <svg
@@ -63,7 +63,7 @@ export const Hero: FC = () => {
             <a
               href="/Md.%20Ahsan%20Habib%20Resume.pdf"
               download="Md_Ahsan_Habib_Resume.pdf"
-              className="group inline-flex items-center justify-center rounded-md border border-border bg-surface px-5 py-3 text-sm font-medium text-text-primary shadow-2xs transition-all duration-200 hover:bg-surface-elevated hover:border-border/90 active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              className="group inline-flex min-h-[44px] items-center justify-center rounded-md border border-border bg-surface px-5 py-3 text-sm font-medium text-text-primary shadow-2xs transition-all duration-200 hover:bg-surface-elevated hover:border-border/90 active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               <svg
                 className="mr-2 h-4 w-4 stroke-current text-text-muted transition-transform duration-200 ease-out group-hover:translate-y-0.5 motion-reduce:transform-none"

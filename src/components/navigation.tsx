@@ -53,7 +53,7 @@ export function Navigation() {
         {/* Name / Logo Link */}
         <Link
           href="/"
-          className="text-base font-semibold tracking-tight text-text-primary transition-all duration-200 hover:text-accent active:scale-95 focus-visible:outline-2 focus-visible:outline-accent"
+          className="inline-flex min-h-[44px] items-center text-base font-semibold tracking-tight text-text-primary transition-all duration-200 hover:text-accent active:scale-95 focus-visible:outline-2 focus-visible:outline-accent"
           aria-label="Ahsan — Home"
         >
           Ahsan
@@ -70,7 +70,7 @@ export function Navigation() {
               <Link
                 key={item.label}
                 href={item.href}
-                className={`relative rounded-md px-2.5 py-1 text-sm font-medium transition-all duration-200 hover:bg-surface-elevated hover:text-text-primary active:scale-95 focus-visible:outline-2 focus-visible:outline-accent ${
+                className={`relative inline-flex min-h-[44px] items-center rounded-md px-2.5 py-1 text-sm font-medium transition-all duration-200 hover:bg-surface-elevated hover:text-text-primary active:scale-95 focus-visible:outline-2 focus-visible:outline-accent ${
                   isActive
                     ? "bg-surface-elevated/70 text-text-primary font-semibold"
                     : "text-text-secondary"
