@@ -51,7 +51,7 @@ export const About: FC = () => {
         <ScrollReveal delay={80} className="space-y-6 lg:col-span-8">
           <div className="space-y-4 text-lead text-text-secondary">
             <p>
-              I&apos;m a <strong className="font-semibold text-text-primary">Full Stack Developer</strong> who turns product ideas into working web applications and SaaS platforms — software that is fast, maintainable, and dependable under load.
+              I&apos;m a <strong className="font-semibold text-text-primary">Full Stack Developer</strong> who turns product ideas into working web applications and SaaS platforms — software that is fast, maintainable, and built to last.
             </p>
             <p>
               Shipping <strong className="text-text-primary">Pixoree</strong> (a browser-based design canvas built on Fabric.js) and <strong className="text-text-primary">Children of the Ummah</strong> (an international donation platform with multi-currency Stripe checkouts) taught me the whole product lifecycle: data modeling, backend services, and responsive, accessible interfaces.

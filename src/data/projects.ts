@@ -86,7 +86,7 @@ export const CURRENTLY_BUILDING_PROJECTS: CurrentlyBuildingProject[] = [
     category: "Multi-tenant learning & community platform",
     status: "In Development",
     concept:
-      "A multi-tenant learning and community platform engineered for creator academies, technical bootcamps, and educational hubs. Architected with strict tenant isolation, high-throughput Go backend services, and modular creator services.",
+      "A multi-tenant learning and community platform for creator academies, technical bootcamps, and educational hubs. Built around strict tenant isolation, a high-throughput Go backend, and modular domain services.",
     architectureHighlights: [
       "High-performance Go backend",
       "MongoDB tenant-partitioned collections",

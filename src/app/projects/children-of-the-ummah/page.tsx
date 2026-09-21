@@ -74,7 +74,7 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
       {/* Case Study Header */}
       <CaseStudyHeader
         title="Children of the Ummah"
-        tagline="A humanitarian giving platform with localized multi-currency checkouts, automated recurring monthly contributions, and a carefully hardened Stripe payment flow."
+        tagline="A humanitarian giving platform with localized multi-currency checkouts, automated recurring monthly contributions, and a carefully built Stripe payment flow."
         category="Humanitarian Platform"
         status="Shipped"
         role="Full Stack Developer"
@@ -161,7 +161,7 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
               A major source of abandoned donation carts for international charities is forcing global donors to pay in a single foreign currency. When a US or European donor encounters British Pounds without clear conversion, banks often charge unexpected foreign exchange fees and flagging algorithms decline the transaction.
             </p>
             <p>
-              To solve this, Children of the Ummah implements a seamless multi-currency presentation and checkout engine:
+              To solve this, Children of the Ummah runs a multi-currency presentation and checkout engine:
             </p>
           </div>
 
@@ -286,7 +286,7 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
                 </h3>
               </div>
               <p className="mt-3 text-xs leading-relaxed text-text-secondary">
-                Architected via <strong>Stripe Subscriptions &amp; Customers API</strong>. Creates a persistent customer record with automated monthly renewal schedules, recurring gift aid tagging, and proactive card expiration reminders.
+                Built on <strong>Stripe Subscriptions &amp; Customers API</strong>. Creates a persistent customer record with automated monthly renewal schedules, recurring gift aid tagging, and proactive card expiration reminders.
               </p>
               <ul className="mt-4 space-y-1.5 font-mono text-xs text-text-muted">
                 <li>• Automated monthly billing runs</li>
@@ -306,7 +306,7 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
         >
           <div className="max-w-3xl space-y-4 text-base leading-relaxed text-text-secondary sm:text-lg sm:leading-relaxed">
             <p>
-              Payment systems in charity environments carry high stakes: a dropped donation during a television or social media telethon is lost humanitarian support. The production infrastructure has robust fail-safes:
+              Payment systems in charity environments carry high stakes: a dropped donation during a television or social media telethon is lost humanitarian support. The production infrastructure has fail-safes at each step:
             </p>
           </div>
 
@@ -376,7 +376,7 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
           <div className="mt-6 rounded-lg border border-border/70 bg-surface-elevated/40 p-5">
             <h3 className="text-sm font-bold text-text-primary">Engineering Takeaways</h3>
             <p className="mt-2 text-xs leading-relaxed text-text-secondary sm:text-sm">
-              Building international charity donation infrastructure demands a relentless focus on trust, multi-currency clarity, and bulletproof payment error handling. By eliminating friction and preserving high reliability under traffic spikes, Children of the Ummah provides a secure lifeline for vulnerable children and communities worldwide.
+              Building international charity donation infrastructure demands close attention to trust, multi-currency clarity, and reliable payment error handling. By eliminating friction and holding steady under traffic spikes, Children of the Ummah provides a secure lifeline for vulnerable children and communities worldwide.
             </p>
           </div>
         </CaseStudySection>

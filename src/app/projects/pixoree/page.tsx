@@ -267,7 +267,7 @@ export default function PixoreeCaseStudyPage() {
           id="history"
           badge="State Management"
           title="Undo / Redo History Architecture"
-          subtitle="Robust timeline navigation with immutable state serialization."
+          subtitle="Timeline navigation with immutable state serialization."
         >
           <div className="max-w-3xl space-y-4 text-base leading-relaxed text-text-secondary sm:text-lg sm:leading-relaxed">
             <p>

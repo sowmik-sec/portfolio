@@ -367,7 +367,7 @@ export default function SkillbentoCaseStudyPage() {
           <div className="mt-6 rounded-lg border border-border/70 bg-surface-elevated/40 p-5">
             <h3 className="text-sm font-bold text-text-primary">Architectural Takeaways</h3>
             <p className="mt-2 text-xs leading-relaxed text-text-secondary sm:text-sm">
-              Designing Skillbento around Go and MongoDB provides a rock-solid foundation for multi-tenancy. By architecting strict boundary middleware and modular service boundaries early, the platform avoids the technical debt commonly encountered when scaling multi-tenant SaaS systems.
+              Designing Skillbento around Go and MongoDB provides a solid foundation for multi-tenancy. By putting strict boundary middleware and modular service boundaries in place early, the platform avoids the technical debt commonly encountered when scaling multi-tenant SaaS systems.
             </p>
           </div>
         </CaseStudySection>
