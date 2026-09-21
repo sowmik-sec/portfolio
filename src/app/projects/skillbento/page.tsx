@@ -74,30 +74,22 @@ export default function SkillbentoCaseStudyPage() {
       {/* Case Study Header */}
       <CaseStudyHeader
         title="Skillbento"
-        tagline="Multi-tenant learning and community ecosystem architected for concurrent creator workflows, high-throughput Go backend services, and scalable tenant isolation."
+        tagline="A multi-tenant learning and community platform in active development — Go backend services, MongoDB tenant partitioning, and modular creator services."
         category="Learning &amp; Community SaaS"
-        statusBadge={{
-          label: "In Development",
-          variant: "warning",
-        }}
+        status="In Development"
         role="System Architect &amp; Full Stack Developer"
         timeline="Active System Design &amp; Backend Prototyping"
         techStack={["Go (Golang)", "MongoDB", "Next.js", "TypeScript", "Docker", "Tailwind CSS"]}
       />
 
-      {/* Development Status Notice Banner */}
-      <div className="mt-8 rounded-lg border border-amber-500/30 bg-amber-500/5 p-4 sm:p-5">
-        <div className="flex items-start gap-3">
-          <span className="mt-0.5 flex h-2 w-2 rounded-full bg-amber-500 shrink-0" aria-hidden="true" />
-          <div className="space-y-1">
-            <h2 className="text-sm font-bold text-text-primary">
-              Project Status: Architectural &amp; Backend Development
-            </h2>
-            <p className="text-xs leading-relaxed text-text-secondary">
-              This case study presents the system design, domain modeling, and multi-tenant infrastructure for Skillbento. It represents an in-progress architectural build rather than a finished commercial launch. No live production metrics or user counts are claimed.
-            </p>
-          </div>
-        </div>
+      {/* Development Status Notice */}
+      <div className="mt-8 border-l-2 border-accent pl-5 sm:pl-6">
+        <h2 className="text-sm font-bold text-text-primary">
+          Project Status: Architectural &amp; Backend Development
+        </h2>
+        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-text-secondary">
+          This case study presents the system design, domain modeling, and multi-tenant infrastructure for Skillbento. It represents an in-progress architectural build rather than a finished commercial launch. No live production metrics or user counts are claimed.
+        </p>
       </div>
 
       {/* Architectural System Visual Preview */}
@@ -110,7 +102,7 @@ export default function SkillbentoCaseStudyPage() {
         {/* Section 1: System Context & The Problem Space */}
         <CaseStudySection
           id="architectural-thesis"
-          badge="Architectural Thesis"
+          badge="Concept"
           title="The Multi-Tenant Creator Platform Challenge"
           subtitle="Consolidating fragmented learning, community, and scheduling tools into a unified, high-performance platform."
         >
@@ -119,7 +111,7 @@ export default function SkillbentoCaseStudyPage() {
               Educators, technical bootcamps, and digital communities currently assemble their operational stack across disparate SaaS point solutions: one platform for video course hosting, another for forum discussions, a third for calendaring and appointments, and external tools for payments.
             </p>
             <p>
-              This fragmentation causes synchronization headaches, redundant user authentication, and high subscription overhead. <strong>Skillbento</strong> is architected as an all-in-one multi-tenant SaaS platform where every creator or institution operates their own isolated, branded academy while sharing a unified, cloud-native backend engine.
+              This fragmentation causes synchronization headaches, redundant user authentication, and high subscription overhead. <strong>Skillbento</strong> is designed as an all-in-one multi-tenant SaaS platform where every creator or institution operates their own isolated, branded academy while sharing a unified, cloud-native backend engine.
             </p>
           </div>
 
@@ -163,7 +155,7 @@ export default function SkillbentoCaseStudyPage() {
               While Node.js and Next.js provide an exceptional front-end user experience, a multi-tenant platform handling high-frequency video progress beacons, live forum websockets, and concurrent scheduling locks requires predictable low-latency computation.
             </p>
             <p>
-              The core API and business logic are engineered in <strong>Go (Golang)</strong>:
+              The core API and business logic are written in <strong>Go (Golang)</strong>:
             </p>
           </div>
 
@@ -344,7 +336,7 @@ export default function SkillbentoCaseStudyPage() {
           id="tech-stack"
           badge="Specifications"
           title="Technology Stack &amp; Development Roadmap"
-          subtitle="Engineered for scalability, testability, and decoupled deployment."
+          subtitle="Designed for scalability, testability, and decoupled deployment."
         >
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <div className="rounded-lg border border-border bg-surface p-4">

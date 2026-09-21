@@ -3,6 +3,7 @@ import { CaseStudyNav } from "@/components/case-study/case-study-nav";
 import { CaseStudyHeader } from "@/components/case-study/case-study-header";
 import { CaseStudySection } from "@/components/case-study/case-study-section";
 import { ProjectVisual } from "@/components/project-visual";
+import { StatCallout } from "@/components/stat-callout";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://ahsanhabib.dev";
 
@@ -73,13 +74,10 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
       {/* Case Study Header */}
       <CaseStudyHeader
         title="Children of the Ummah"
-        tagline="Production humanitarian giving platform engineered with localized multi-currency checkouts, automated recurring monthly contributions, and bank-grade Stripe payment pipelines."
+        tagline="A humanitarian giving platform with localized multi-currency checkouts, automated recurring monthly contributions, and a carefully hardened Stripe payment flow."
         category="Humanitarian Platform"
-        statusBadge={{
-          label: "Production Infrastructure",
-          variant: "success",
-        }}
-        role="Lead Full Stack Developer"
+        status="Shipped"
+        role="Full Stack Developer"
         timeline="Shipped &amp; Maintained"
         techStack={["Next.js", "TypeScript", "Stripe", "MongoDB", "React", "Tailwind CSS"]}
         externalLink={{
@@ -93,6 +91,15 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
         <ProjectVisual
           projectId="children-of-the-ummah"
           projectTitle="Children of the Ummah"
+        />
+      </div>
+
+      {/* Verified Project Metric (PRD §12: project metric, if verified) */}
+      <div className="mt-12 sm:mt-16">
+        <StatCallout
+          value="£43,000+"
+          caption="processed in donations"
+          detail="≈ 7.3M BDT · GBP / USD / EUR"
         />
       </div>
 
@@ -193,7 +200,7 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
           id="stripe-integration"
           badge="Security &amp; Checkout"
           title="Stripe Custom Forms &amp; Headless Payment Pipeline"
-          subtitle="Bank-grade security and frictionless one-page donation flows."
+          subtitle="Secure tokenized payments and frictionless one-page donation flows."
         >
           <div className="max-w-3xl space-y-4 text-base leading-relaxed text-text-secondary sm:text-lg sm:leading-relaxed">
             <p>
@@ -273,7 +280,7 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
 
             <div className="rounded-lg border border-border bg-surface p-6">
               <div className="flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-emerald-500" />
+                <span className="h-2.5 w-2.5 rounded-full bg-accent/50" />
                 <h3 className="text-base font-bold text-text-primary">
                   Recurring Monthly Sponsorships
                 </h3>
@@ -299,7 +306,7 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
         >
           <div className="max-w-3xl space-y-4 text-base leading-relaxed text-text-secondary sm:text-lg sm:leading-relaxed">
             <p>
-              Payment systems in charity environments carry high stakes: a dropped donation during a television or social media telethon is lost humanitarian support. The production infrastructure was engineered with robust fail-safes:
+              Payment systems in charity environments carry high stakes: a dropped donation during a television or social media telethon is lost humanitarian support. The production infrastructure has robust fail-safes:
             </p>
           </div>
 

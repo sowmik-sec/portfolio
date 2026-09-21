@@ -73,13 +73,10 @@ export default function PixoreeCaseStudyPage() {
       {/* Case Study Header */}
       <CaseStudyHeader
         title="Pixoree"
-        tagline="A direct-manipulation graphic design platform engineered for creating certificates, resumes, social media graphics, and marketing assets in the browser."
+        tagline="A direct-manipulation graphic design platform for creating certificates, resumes, social media graphics, and marketing assets in the browser."
         category="Interactive Design Platform"
-        statusBadge={{
-          label: "Shipped Application",
-          variant: "success",
-        }}
-        role="Lead Full Stack Developer"
+        status="Shipped"
+        role="Developer &amp; Maintainer"
         timeline="Shipped &amp; Maintained"
         techStack={["Next.js", "TypeScript", "React", "Fabric.js", "MongoDB"]}
         externalLink={{

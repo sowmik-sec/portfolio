@@ -75,10 +75,7 @@ export default function PawPalsRescueCaseStudyPage() {
         title="Paw Pals Rescue"
         tagline="An animal rescue, adoption, and pet healthcare fundraising client built with React, TanStack Query, Tailwind CSS, and Firebase Authentication."
         category="Open Source Web Client"
-        statusBadge={{
-          label: "Verified Codebase",
-          variant: "success",
-        }}
+        status="In Development"
         role="Frontend Engineer"
         timeline="Open Source Codebase"
         techStack={[
@@ -107,7 +104,7 @@ export default function PawPalsRescueCaseStudyPage() {
         {/* Section 1: Overview & Verified Project Purpose */}
         <CaseStudySection
           id="project-overview"
-          badge="Verified Scope"
+          badge="Scope"
           title="Connecting Rescues, Adopters &amp; Healthcare Donors"
           subtitle="Documenting only confirmed capabilities verified directly from the open-source repository."
         >
@@ -151,7 +148,7 @@ export default function PawPalsRescueCaseStudyPage() {
         {/* Section 2: Verified Feature — Adoption Directory & Filtering */}
         <CaseStudySection
           id="adoption-directory"
-          badge="Verified Feature"
+          badge="Feature"
           title="Adoption Directory &amp; Status Filtering"
           subtitle="Browsing available rescues with responsive filters and real-time state caching."
         >
@@ -194,7 +191,7 @@ export default function PawPalsRescueCaseStudyPage() {
         {/* Section 3: Verified Feature — Pet Detail View & Adoption Workflow */}
         <CaseStudySection
           id="adoption-workflow"
-          badge="Verified Feature"
+          badge="Feature"
           title="Pet Detail View &amp; Adoption Request Lifecycle"
           subtitle="Submitting formal adoption inquiries and tracking application status."
         >
@@ -246,7 +243,7 @@ export default function PawPalsRescueCaseStudyPage() {
         {/* Section 4: Verified Feature — Donation Campaigns */}
         <CaseStudySection
           id="donation-campaigns"
-          badge="Verified Feature"
+          badge="Feature"
           title="Pet Donation Campaigns &amp; Personal Ledger"
           subtitle="Crowdfunding veterinary care, surgery, and food supplies via Stripe."
         >
