@@ -37,7 +37,7 @@ export const Footer: FC = () => {
         {/* Navigation & External Links */}
         <nav
           aria-label="Footer Navigation"
-          className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs font-medium text-text-secondary sm:text-sm"
+          className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium text-text-secondary"
         >
           {FOOTER_NAV_LINKS.map((link) => (
             <Link
