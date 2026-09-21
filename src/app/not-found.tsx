@@ -17,15 +17,9 @@ export default function NotFound() {
       className="flex flex-1 flex-col items-center justify-center py-16 text-center sm:py-24 md:py-32"
     >
       {/* Category / Status Kicker */}
-      <div className="flex items-center gap-2">
-        <span
-          className="inline-block h-2 w-2 rounded-full bg-amber-500"
-          aria-hidden="true"
-        />
-        <p className="font-mono text-xs uppercase tracking-wider text-accent">
-          404 Error · Page Missing
-        </p>
-      </div>
+      <p className="font-mono text-xs uppercase tracking-wider text-accent">
+        404 Error · Page Missing
+      </p>
 
       {/* Main Headline */}
       <h1

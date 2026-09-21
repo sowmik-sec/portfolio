@@ -24,66 +24,36 @@ export default async function Image() {
           fontFamily: "system-ui, -apple-system, sans-serif",
         }}
       >
-        {/* Top Header */}
-        <div
+        {/* Top label */}
+        <span
           style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
+            fontSize: 22,
+            color: "#94A3B8",
+            letterSpacing: "0.08em",
+            textTransform: "uppercase",
+            fontFamily: "monospace",
           }}
         >
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "12px",
-            }}
-          >
-            <div
-              style={{
-                width: "14px",
-                height: "14px",
-                borderRadius: "50%",
-                backgroundColor: "#10B981",
-              }}
-            />
-            <span
-              style={{
-                fontSize: 22,
-                color: "#94A3B8",
-                letterSpacing: "0.08em",
-                textTransform: "uppercase",
-                fontFamily: "monospace",
-              }}
-            >
-              Md. Ahsan Habib · Portfolio
-            </span>
-          </div>
-
-          <span
-            style={{
-              fontSize: 18,
-              color: "#3B82F6",
-              backgroundColor: "rgba(59, 130, 246, 0.12)",
-              padding: "6px 16px",
-              borderRadius: "9999px",
-              fontFamily: "monospace",
-              border: "1px solid rgba(59, 130, 246, 0.3)",
-            }}
-          >
-            Production Ready
-          </span>
-        </div>
+          Md. Ahsan Habib · Portfolio
+        </span>
 
         {/* Central Editorial Narrative */}
         <div
           style={{
             display: "flex",
             flexDirection: "column",
-            gap: "20px",
+            gap: "24px",
             maxWidth: "1020px",
           }}
         >
+          {/* One accent gesture */}
+          <div
+            style={{
+              width: "56px",
+              height: "4px",
+              backgroundColor: "#4ADE80",
+            }}
+          />
           <h1
             style={{
               fontSize: 58,
@@ -104,7 +74,7 @@ export default async function Image() {
               margin: 0,
             }}
           >
-            Full Stack Developer specializing in SaaS platforms, complex interactive web applications, and resilient backend architecture.
+            Full-stack developer at Deadlock Soft. I take products from data model to deployed app — SaaS platforms, canvas tools, payment systems.
           </p>
         </div>
 
@@ -121,7 +91,7 @@ export default async function Image() {
           <div
             style={{
               display: "flex",
-              gap: "16px",
+              gap: "12px",
             }}
           >
             {["Next.js", "TypeScript", "React", "Go", "Tailwind CSS", "MongoDB", "Stripe"].map(
