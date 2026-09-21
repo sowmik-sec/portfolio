@@ -10,28 +10,20 @@ export const About: FC = () => {
       className="relative border-t border-border/70 py-16 sm:py-24 md:py-32"
     >
       {/* Section Header */}
-      <ScrollReveal className="flex flex-col gap-2 border-b border-border/70 pb-6 sm:flex-row sm:items-baseline sm:justify-between">
-        <div>
-          <span className="font-mono text-xs font-semibold uppercase tracking-wider text-accent">
-            Profile &amp; Background
-          </span>
-          <h2
-            id="about-title"
-            className="mt-1 text-2xl font-extrabold tracking-tight text-text-primary sm:text-3xl md:text-4xl"
-          >
-            About Ahsan
-          </h2>
-        </div>
-        <p className="font-mono text-xs text-text-muted">
-          Full Stack Developer &amp; Systems Builder
-        </p>
+      <ScrollReveal>
+        <h2
+          id="about-title"
+          className="text-title font-semibold text-text-primary"
+        >
+          About Ahsan
+        </h2>
       </ScrollReveal>
 
       {/* Main Editorial Content Container */}
       <div className="mt-10 grid grid-cols-1 items-start gap-10 lg:grid-cols-12 lg:gap-12">
         {/* Left Column: Modest Professional Headshot */}
         <ScrollReveal delay={0} className="flex flex-col items-center sm:items-start lg:col-span-4">
-          <div className="group relative w-48 sm:w-56 overflow-hidden rounded-2xl border border-border/80 bg-[#F3F4F6] shadow-xs transition-all duration-300 hover:border-border hover:shadow-md dark:bg-[#1A1D24]">
+          <div className="w-48 sm:w-56 overflow-hidden rounded-lg bg-surface-muted">
             {/* Note: Can be replaced with actual photo in public/images/headshot.jpg */}
             <Image
               src="/images/headshot.svg"
@@ -40,7 +32,7 @@ export const About: FC = () => {
               height={240}
               sizes="(max-width: 640px) 192px, 224px"
               loading="lazy"
-              className="aspect-square h-auto w-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.02] motion-reduce:transform-none"
+              className="aspect-square h-auto w-full object-cover"
               priority={false}
             />
           </div>
@@ -55,32 +47,32 @@ export const About: FC = () => {
           </div>
         </ScrollReveal>
 
-        {/* Right Column: Editorial Narrative & Capabilities */}
+        {/* Right Column: Editorial Narrative */}
         <ScrollReveal delay={80} className="space-y-6 lg:col-span-8">
-          <div className="space-y-4 text-base leading-relaxed text-text-secondary sm:text-lg sm:leading-relaxed">
+          <div className="space-y-4 text-lead text-text-secondary">
             <p>
-              I am a <strong className="font-semibold text-text-primary">Full Stack Developer</strong> dedicated to turning product ideas into resilient, production-ready web applications and SaaS platforms. My engineering approach balances visual craft with architectural rigor—delivering software that is fast, maintainable, and dependable under load.
+              I&apos;m a <strong className="font-semibold text-text-primary">Full Stack Developer</strong> who turns product ideas into working web applications and SaaS platforms — software that is fast, maintainable, and dependable under load.
             </p>
             <p>
-              Over the course of shipping applications like <strong className="text-text-primary">Pixoree</strong> (a browser-based graphic canvas engine built on Fabric.js) and <strong className="text-text-primary">Children of the Ummah</strong> (an international donation platform handling multi-currency Stripe checkouts), I have developed a deep appreciation for the entire product lifecycle: from data modeling and distributed backend services to responsive, accessible client interfaces.
+              Shipping <strong className="text-text-primary">Pixoree</strong> (a browser-based design canvas built on Fabric.js) and <strong className="text-text-primary">Children of the Ummah</strong> (an international donation platform with multi-currency Stripe checkouts) taught me the whole product lifecycle: data modeling, backend services, and responsive, accessible interfaces.
             </p>
             <p>
-              Currently, I engineer production web applications at <strong className="font-semibold text-text-primary">Deadlock Soft</strong>, working with Next.js, TypeScript, Go, Tailwind, and MongoDB to deliver scalable client systems.
+              Currently at <strong className="font-semibold text-text-primary">Deadlock Soft</strong>, I build production web applications with Next.js, TypeScript, Go, Tailwind, and MongoDB.
             </p>
           </div>
 
           {/* Social / External Links */}
           <div className="pt-2">
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center gap-x-8 gap-y-2">
               <a
                 href="https://github.com/sowmik-sec"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-[44px] items-center gap-2 rounded-md border border-border bg-surface px-4 py-2 text-xs font-semibold text-text-primary shadow-2xs transition-all duration-200 hover:border-text-primary/30 hover:text-accent hover:shadow-xs active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:text-sm"
+                className="inline-flex min-h-[44px] items-center gap-2 text-sm font-medium text-text-primary underline decoration-border underline-offset-8 transition-colors duration-200 hover:decoration-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                 aria-label="Visit Ahsan's GitHub profile (opens in new tab)"
               >
                 <svg
-                  className="h-4 w-4"
+                  className="h-4 w-4 text-text-muted"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
@@ -92,18 +84,18 @@ export const About: FC = () => {
                   />
                 </svg>
                 <span>GitHub</span>
-                <span className="font-mono text-[10px] text-text-muted">@sowmik-sec</span>
+                <span className="font-mono text-[11px] text-text-muted">@sowmik-sec</span>
               </a>
 
               <a
                 href="https://www.linkedin.com/in/md-ahsan-habib-18569b21a/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-[44px] items-center gap-2 rounded-md border border-border bg-surface px-4 py-2 text-xs font-semibold text-text-primary shadow-2xs transition-all duration-200 hover:border-text-primary/30 hover:text-accent hover:shadow-xs active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:text-sm"
+                className="inline-flex min-h-[44px] items-center gap-2 text-sm font-medium text-text-primary underline decoration-border underline-offset-8 transition-colors duration-200 hover:decoration-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                 aria-label="Connect with Ahsan on LinkedIn (opens in new tab)"
               >
                 <svg
-                  className="h-4 w-4 text-[#0A66C2]"
+                  className="h-4 w-4 text-text-muted"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
@@ -111,7 +103,7 @@ export const About: FC = () => {
                   <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
                 </svg>
                 <span>LinkedIn</span>
-                <span className="font-mono text-[10px] text-text-muted">md-ahsan-habib</span>
+                <span className="font-mono text-[11px] text-text-muted">md-ahsan-habib</span>
               </a>
             </div>
           </div>
