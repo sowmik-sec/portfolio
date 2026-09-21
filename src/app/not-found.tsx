@@ -71,7 +71,7 @@ export default function NotFound() {
         <span className="font-mono text-[11px] font-semibold uppercase tracking-wider text-text-muted">
           Looking for a case study?
         </span>
-        <ul className="mt-3 divide-y divide-border/50 text-xs">
+        <ul className="mt-3 divide-y divide-border/50 text-sm">
           <li>
             <Link
               href="/projects/pixoree"

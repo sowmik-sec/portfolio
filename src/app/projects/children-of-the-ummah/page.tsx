@@ -126,7 +126,7 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
               <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-text-primary">
                 Multi-Currency
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 Native processing in British Pounds (GBP), US Dollars (USD), and Euros (EUR) to eliminate foreign transaction surprises.
               </p>
             </div>
@@ -134,7 +134,7 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
               <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-text-primary">
                 Custom Checkout Forms
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 Headless payment flows built on Stripe Elements, eliminating offsite redirect drops and reinforcing donor trust.
               </p>
             </div>
@@ -142,7 +142,7 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
               <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-text-primary">
                 Automated Retries &amp; Webhooks
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 Idempotent event consumers handling edge-case network dropouts, subscription renewals, and instant receipt dispatch.
               </p>
             </div>
@@ -213,7 +213,7 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
               <h3 className="font-mono text-sm font-bold text-text-primary">
                 PCI DSS Level 1 Compliance
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 Card numbers, expiration dates, and CVCs are tokenized directly within isolated Stripe iframes. The application server never sees, transmits, or stores raw card data, eliminating PCI scope and keeping the infrastructure secure.
               </p>
             </div>
@@ -222,7 +222,7 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
               <h3 className="font-mono text-sm font-bold text-text-primary">
                 Dynamic 3D Secure 2 (SCA)
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 Strong Customer Authentication (SCA) triggers modal bank challenges only when required by regional fraud rules, preventing unnecessary verification barriers on low-risk transactions while ensuring complete regulatory compliance.
               </p>
             </div>
@@ -231,7 +231,7 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
               <h3 className="font-mono text-sm font-bold text-text-primary">
                 Custom Donation Amount Inputs
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 In addition to pre-configured tiers, a sanitized custom input allows donors to contribute exact sums. Client and server validation guarantees minimum threshold enforcement to prevent card testing bot attacks.
               </p>
             </div>
@@ -240,7 +240,7 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
               <h3 className="font-mono text-sm font-bold text-text-primary">
                 Digital Wallet Support
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 Integrated payment request buttons enable one-tap donations via Apple Pay and Google Pay on supported mobile devices, reducing donation checkout times to under 10 seconds.
               </p>
             </div>
@@ -268,7 +268,7 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
                   One-Off Emergency Contributions
                 </h3>
               </div>
-              <p className="mt-3 text-xs leading-relaxed text-text-secondary">
+              <p className="mt-3 text-sm leading-relaxed text-text-secondary">
                 Executes via instantaneous <strong>Stripe Payment Intents</strong>. Ideal for immediate disaster response appeals, Ramadan giving, and ad-hoc emergency medical interventions. The transaction completes in a single synchronous cycle.
               </p>
               <ul className="mt-4 space-y-1.5 font-mono text-xs text-text-muted">
@@ -285,7 +285,7 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
                   Recurring Monthly Sponsorships
                 </h3>
               </div>
-              <p className="mt-3 text-xs leading-relaxed text-text-secondary">
+              <p className="mt-3 text-sm leading-relaxed text-text-secondary">
                 Built on <strong>Stripe Subscriptions &amp; Customers API</strong>. Creates a persistent customer record with automated monthly renewal schedules, recurring gift aid tagging, and proactive card expiration reminders.
               </p>
               <ul className="mt-4 space-y-1.5 font-mono text-xs text-text-muted">
@@ -351,31 +351,31 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
             <div className="rounded-lg border border-border bg-surface p-4">
               <span className="font-mono text-xs font-semibold text-accent">Payment Gateway</span>
               <p className="mt-1 font-bold text-text-primary">Stripe API</p>
-              <p className="mt-1 text-xs text-text-muted">Elements, Payment Intents &amp; Subscriptions</p>
+              <p className="text-sm text-text-muted">Elements, Payment Intents &amp; Subscriptions</p>
             </div>
 
             <div className="rounded-lg border border-border bg-surface p-4">
               <span className="font-mono text-xs font-semibold text-accent">Framework</span>
               <p className="mt-1 font-bold text-text-primary">Next.js &amp; TypeScript</p>
-              <p className="mt-1 text-xs text-text-muted">Type-safe full-stack routes &amp; SSR</p>
+              <p className="text-sm text-text-muted">Type-safe full-stack routes &amp; SSR</p>
             </div>
 
             <div className="rounded-lg border border-border bg-surface p-4">
               <span className="font-mono text-xs font-semibold text-accent">Database</span>
               <p className="mt-1 font-bold text-text-primary">MongoDB</p>
-              <p className="mt-1 text-xs text-text-muted">Donor records, audit logs &amp; campaigns</p>
+              <p className="text-sm text-text-muted">Donor records, audit logs &amp; campaigns</p>
             </div>
 
             <div className="rounded-lg border border-border bg-surface p-4">
               <span className="font-mono text-xs font-semibold text-accent">Styling</span>
               <p className="mt-1 font-bold text-text-primary">Tailwind CSS</p>
-              <p className="mt-1 text-xs text-text-muted">Responsive mobile checkout UI</p>
+              <p className="text-sm text-text-muted">Responsive mobile checkout UI</p>
             </div>
           </div>
 
           <div className="mt-6 rounded-lg border border-border/70 bg-surface-elevated/40 p-5">
             <h3 className="text-sm font-bold text-text-primary">Engineering Takeaways</h3>
-            <p className="mt-2 text-xs leading-relaxed text-text-secondary sm:text-sm">
+            <p className="text-sm leading-relaxed text-text-secondary">
               Building international charity donation infrastructure demands close attention to trust, multi-currency clarity, and reliable payment error handling. By eliminating friction and holding steady under traffic spikes, Children of the Ummah provides a secure lifeline for vulnerable children and communities worldwide.
             </p>
           </div>

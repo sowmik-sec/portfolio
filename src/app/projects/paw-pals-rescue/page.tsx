@@ -122,7 +122,7 @@ export default function PawPalsRescueCaseStudyPage() {
               <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-text-primary">
                 Adoption Directory
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 Filterable directory powered by <code className="font-mono text-accent">GET /pets</code> with verified status indicators (Available vs. Adopted).
               </p>
             </div>
@@ -130,7 +130,7 @@ export default function PawPalsRescueCaseStudyPage() {
               <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-text-primary">
                 Adoption Workflow
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 Detailed animal profiles with direct adoption inquiry forms and status transition endpoints (<code className="font-mono text-accent">PATCH /make-adopted/:id</code>).
               </p>
             </div>
@@ -138,7 +138,7 @@ export default function PawPalsRescueCaseStudyPage() {
               <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-text-primary">
                 Donation Campaigns
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 Verified crowdfunding campaigns for pet surgeries and nutrition, with donor statistics and user donation ledgers.
               </p>
             </div>
@@ -206,7 +206,7 @@ export default function PawPalsRescueCaseStudyPage() {
               <h3 className="font-mono text-sm font-bold text-text-primary">
                 In-Depth Animal Biography
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 Displays complete medical history, temperament, behavioral compatibility (with children and other pets), and specific shelter care requirements.
               </p>
             </div>
@@ -215,7 +215,7 @@ export default function PawPalsRescueCaseStudyPage() {
               <h3 className="font-mono text-sm font-bold text-text-primary">
                 Adoption Request Submission
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 Authenticated users can submit a formal adoption inquiry through a validated modal form, capturing household details, contact phone, and living arrangements.
               </p>
             </div>
@@ -224,7 +224,7 @@ export default function PawPalsRescueCaseStudyPage() {
               <h3 className="font-mono text-sm font-bold text-text-primary">
                 Status Tracking Workflow
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 Adopters can check the status of their pending adoption inquiries directly in their user dashboard.
               </p>
             </div>
@@ -233,7 +233,7 @@ export default function PawPalsRescueCaseStudyPage() {
               <h3 className="font-mono text-sm font-bold text-text-primary">
                 Marking As Adopted (`PATCH /make-adopted/:id`)
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 Shelter managers or rescue caretakers can mark a pet as officially adopted with a single click, instantly updating the pet status across the entire directory.
               </p>
             </div>
@@ -322,31 +322,31 @@ export default function PawPalsRescueCaseStudyPage() {
             <div className="rounded-lg border border-border bg-surface p-4">
               <span className="font-mono text-xs font-semibold text-accent">Frontend UI</span>
               <p className="mt-1 font-bold text-text-primary">React &amp; Tailwind</p>
-              <p className="mt-1 text-xs text-text-muted">Component-driven architecture</p>
+              <p className="text-sm text-text-muted">Component-driven architecture</p>
             </div>
 
             <div className="rounded-lg border border-border bg-surface p-4">
               <span className="font-mono text-xs font-semibold text-accent">Data Fetching</span>
               <p className="mt-1 font-bold text-text-primary">TanStack Query + Axios</p>
-              <p className="mt-1 text-xs text-text-muted">Cached asynchronous data layer</p>
+              <p className="text-sm text-text-muted">Cached asynchronous data layer</p>
             </div>
 
             <div className="rounded-lg border border-border bg-surface p-4">
               <span className="font-mono text-xs font-semibold text-accent">Authentication</span>
               <p className="mt-1 font-bold text-text-primary">Firebase Auth</p>
-              <p className="mt-1 text-xs text-text-muted">Secure user sessions</p>
+              <p className="text-sm text-text-muted">Secure user sessions</p>
             </div>
 
             <div className="rounded-lg border border-border bg-surface p-4">
               <span className="font-mono text-xs font-semibold text-accent">Backend &amp; DB</span>
               <p className="mt-1 font-bold text-text-primary">Node.js + Express + MongoDB</p>
-              <p className="mt-1 text-xs text-text-muted">REST API &amp; data persistence</p>
+              <p className="text-sm text-text-muted">REST API &amp; data persistence</p>
             </div>
           </div>
 
           <div className="mt-6 rounded-lg border border-border/70 bg-surface-elevated/40 p-5">
             <h3 className="text-sm font-bold text-text-primary">Verified Code Highlights</h3>
-            <p className="mt-2 text-xs leading-relaxed text-text-secondary sm:text-sm">
+            <p className="text-sm leading-relaxed text-text-secondary">
               All architectural points, API endpoints, and features documented in this case study are strictly validated against the public GitHub repository at{" "}
               <a
                 href="https://github.com/sowmik-sec/paw-pals-rescue-client"

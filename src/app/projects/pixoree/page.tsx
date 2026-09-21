@@ -113,7 +113,7 @@ export default function PixoreeCaseStudyPage() {
               <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-text-primary">
                 Direct Manipulation
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 Sub-pixel coordinate manipulation, freeform rotation, and contextual resize handles directly on canvas elements.
               </p>
             </div>
@@ -121,7 +121,7 @@ export default function PixoreeCaseStudyPage() {
               <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-text-primary">
                 Layer Hierarchy
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 Arbitrary z-index ordering, grouping, locking, and visibility controls mirrored across UI panels and the canvas.
               </p>
             </div>
@@ -129,7 +129,7 @@ export default function PixoreeCaseStudyPage() {
               <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-text-primary">
                 Client-Side Export
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 Lossless rasterization to high-DPI PNG/JPEG and structured vector/PDF generation without backend bottlenecks.
               </p>
             </div>
@@ -200,7 +200,7 @@ export default function PixoreeCaseStudyPage() {
               <h3 className="font-mono text-sm font-bold text-text-primary">
                 Transform Handles &amp; Bounding Boxes
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 Custom-rendered corner and edge handles offer uniform scaling, vertical/horizontal stretching, and an offset rotation pin. Visual guidelines and coordinate badges display real-time pixel dimensions (`w: 320px · h: 36px`) during transformation.
               </p>
             </div>
@@ -209,7 +209,7 @@ export default function PixoreeCaseStudyPage() {
               <h3 className="font-mono text-sm font-bold text-text-primary">
                 Constrained Scaling &amp; Proportions
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 Vector logos and signatures automatically preserve aspect ratio during corner drags, preventing image distortion. Text objects dynamically calculate wrapping boundaries and font scale factors when adjusted.
               </p>
             </div>
@@ -218,7 +218,7 @@ export default function PixoreeCaseStudyPage() {
               <h3 className="font-mono text-sm font-bold text-text-primary">
                 Freeform Rotation with Center Snapping
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 Users can smoothly rotate any canvas object through 360 degrees. Angular velocity dampening and magnetic snaps at 0°, 45°, 90°, 180°, and 270° allow easy alignment back to horizontal and vertical baselines.
               </p>
             </div>
@@ -227,7 +227,7 @@ export default function PixoreeCaseStudyPage() {
               <h3 className="font-mono text-sm font-bold text-text-primary">
                 Direct-Manipulation Drag &amp; Drop
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 New shapes, badges, and user-uploaded imagery can be dragged directly from external file systems or internal asset libraries onto the canvas artboard, automatically placing them under the cursor with computed local offsets.
               </p>
             </div>
@@ -282,19 +282,19 @@ export default function PixoreeCaseStudyPage() {
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
               <div>
                 <span className="font-mono text-xs font-bold text-accent">01. Snapshot Debouncing</span>
-                <p className="mt-1 text-xs text-text-secondary">
+                <p className="text-sm text-text-secondary">
                   High-frequency actions (like continuous slider color adjustments or dragging) debounce snapshot commits until the mouse release event, preventing the history stack from filling with micro-steps.
                 </p>
               </div>
               <div>
                 <span className="font-mono text-xs font-bold text-accent">02. JSON Serialization</span>
-                <p className="mt-1 text-xs text-text-secondary">
+                <p className="text-sm text-text-secondary">
                   Each committed step serializes the active canvas objects into a lightweight JSON schema. Non-serializable runtime listeners are decoupled from the document payload.
                 </p>
               </div>
               <div>
                 <span className="font-mono text-xs font-bold text-accent">03. Bounded Stack Window</span>
-                <p className="mt-1 text-xs text-text-secondary">
+                <p className="text-sm text-text-secondary">
                   History is capped at a sliding window of 50 actions to preserve browser memory and eliminate memory leaks during extended, multi-hour editing sessions.
                 </p>
               </div>
@@ -348,7 +348,7 @@ export default function PixoreeCaseStudyPage() {
               <h3 className="font-mono text-sm font-bold text-text-primary">
                 Multi-DPI PNG &amp; JPEG Rasterization
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 The canvas generates an offscreen rendering surface at the target print resolution (up to 300 DPI / 4K dimensions). It renders all vector paths and text with high sub-pixel precision before streaming the final PNG/JPEG blob via `HTMLCanvasElement.toBlob()`.
               </p>
             </div>
@@ -357,7 +357,7 @@ export default function PixoreeCaseStudyPage() {
               <h3 className="font-mono text-sm font-bold text-text-primary">
                 Print-Ready PDF Generation
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 For formal certificates and resumes, Pixoree composites vector geometries into standard PDF document containers with embedded web fonts and metadata, ensuring flawless reproduction when sent to professional commercial printers.
               </p>
             </div>
@@ -375,31 +375,31 @@ export default function PixoreeCaseStudyPage() {
             <div className="rounded-lg border border-border bg-surface p-4">
               <span className="font-mono text-xs font-semibold text-accent">Engine &amp; UI</span>
               <p className="mt-1 font-bold text-text-primary">Fabric.js 5.3 + React</p>
-              <p className="mt-1 text-xs text-text-muted">Canvas rendering &amp; component state</p>
+              <p className="text-sm text-text-muted">Canvas rendering &amp; component state</p>
             </div>
 
             <div className="rounded-lg border border-border bg-surface p-4">
               <span className="font-mono text-xs font-semibold text-accent">Framework</span>
               <p className="mt-1 font-bold text-text-primary">Next.js &amp; TypeScript</p>
-              <p className="mt-1 text-xs text-text-muted">Type-safe routing &amp; optimization</p>
+              <p className="text-sm text-text-muted">Type-safe routing &amp; optimization</p>
             </div>
 
             <div className="rounded-lg border border-border bg-surface p-4">
               <span className="font-mono text-xs font-semibold text-accent">Storage</span>
               <p className="mt-1 font-bold text-text-primary">MongoDB</p>
-              <p className="mt-1 text-xs text-text-muted">Template &amp; user asset catalog</p>
+              <p className="text-sm text-text-muted">Template &amp; user asset catalog</p>
             </div>
 
             <div className="rounded-lg border border-border bg-surface p-4">
               <span className="font-mono text-xs font-semibold text-accent">Styling</span>
               <p className="mt-1 font-bold text-text-primary">Tailwind CSS</p>
-              <p className="mt-1 text-xs text-text-muted">Responsive toolbar &amp; inspector HUD</p>
+              <p className="text-sm text-text-muted">Responsive toolbar &amp; inspector HUD</p>
             </div>
           </div>
 
           <div className="mt-6 rounded-lg border border-border/70 bg-surface-elevated/40 p-5">
             <h3 className="text-sm font-bold text-text-primary">Engineering Takeaways</h3>
-            <p className="mt-2 text-xs leading-relaxed text-text-secondary sm:text-sm">
+            <p className="text-sm leading-relaxed text-text-secondary">
               Pixoree demonstrates that complex desktop-grade creative workflows can run entirely inside the modern web browser. By decoupling high-frequency canvas physics from declarative React state updates, Pixoree achieves native-feeling 60fps performance and zero server rendering overhead.
             </p>
           </div>

@@ -120,7 +120,7 @@ export default function SkillbentoCaseStudyPage() {
               <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-text-primary">
                 High Concurrency
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 Lightweight Goroutines handling concurrent student requests and live WebSocket event streams with minimal memory overhead.
               </p>
             </div>
@@ -128,7 +128,7 @@ export default function SkillbentoCaseStudyPage() {
               <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-text-primary">
                 Strict Tenant Isolation
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 Middleware-driven tenant partitioning ensuring absolute zero data leakage across separate organizational accounts.
               </p>
             </div>
@@ -136,7 +136,7 @@ export default function SkillbentoCaseStudyPage() {
               <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-text-primary">
                 Domain Modularity
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 Decoupled services for Courses, Community, Events, Scheduling, and Billing orchestrated under clean interfaces.
               </p>
             </div>
@@ -207,7 +207,7 @@ export default function SkillbentoCaseStudyPage() {
               <h3 className="font-mono text-sm font-bold text-text-primary">
                 Compound Indexes for Tenant Isolation
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 Every query-intensive collection enforces a leading compound index on <code className="font-mono text-accent">&#123; tenant_id: 1, entity_id: 1 &#125;</code>. This guarantees that all queries execute against an isolated index partition, preventing full-collection scans.
               </p>
             </div>
@@ -216,7 +216,7 @@ export default function SkillbentoCaseStudyPage() {
               <h3 className="font-mono text-sm font-bold text-text-primary">
                 Polymorphic Course Curriculums
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 Lessons require diverse formats: video embeds, rich text articles, interactive code snippets, and download attachments. MongoDB&apos;s schema flexibility allows nested subdocuments without requiring costly relational JOIN operations.
               </p>
             </div>
@@ -225,7 +225,7 @@ export default function SkillbentoCaseStudyPage() {
               <h3 className="font-mono text-sm font-bold text-text-primary">
                 Threaded Community Discussion Modeling
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 Forum topics use a materialized path tree pattern. Nested replies store parent lineage paths, allowing the backend to fetch an entire threaded tree in a single query while preserving chronological reply ordering.
               </p>
             </div>
@@ -234,7 +234,7 @@ export default function SkillbentoCaseStudyPage() {
               <h3 className="font-mono text-sm font-bold text-text-primary">
                 Optimistic Locking for Booking Slots
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 Appointment booking slots maintain a version field. Atomic update operations (<code className="font-mono text-accent">findOneAndUpdate</code> with version predicates) eliminate race conditions and double-booking bugs during simultaneous user checkouts.
               </p>
             </div>
@@ -280,7 +280,7 @@ export default function SkillbentoCaseStudyPage() {
                 <span className="font-mono text-xs font-bold text-accent">01</span>
                 <h3 className="font-bold text-text-primary">Course Management</h3>
               </div>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 Curriculum hierarchy (Modules, Chapters, Lessons), prerequisite gating, video progress tracking beacons, and automated completion certificates.
               </p>
             </div>
@@ -291,7 +291,7 @@ export default function SkillbentoCaseStudyPage() {
                 <span className="font-mono text-xs font-bold text-accent">02</span>
                 <h3 className="font-bold text-text-primary">Community Forums</h3>
               </div>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 Channel-based categorized discussions, threaded comments, markdown rendering, instructor pin badges, and moderation flags.
               </p>
             </div>
@@ -302,7 +302,7 @@ export default function SkillbentoCaseStudyPage() {
                 <span className="font-mono text-xs font-bold text-accent">03</span>
                 <h3 className="font-bold text-text-primary">Event Management</h3>
               </div>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 Live workshop scheduling, attendee registration limits, automated reminder notifications, and calendar invite file generation.
               </p>
             </div>
@@ -313,7 +313,7 @@ export default function SkillbentoCaseStudyPage() {
                 <span className="font-mono text-xs font-bold text-accent">04</span>
                 <h3 className="font-bold text-text-primary">Appointment Scheduling</h3>
               </div>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 Creator availability windows, timezone reconciliation between mentor and student, booking buffer periods, and one-on-one session links.
               </p>
             </div>
@@ -324,7 +324,7 @@ export default function SkillbentoCaseStudyPage() {
                 <span className="font-mono text-xs font-bold text-accent">05</span>
                 <h3 className="font-bold text-text-primary">Multi-Tenant Payments &amp; Subscriptions</h3>
               </div>
-              <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 Stripe Connect integration enabling creators to connect custom payout bank accounts, sell tiered recurring memberships, and offer one-time course bundle checkouts with platform application fee distribution.
               </p>
             </div>
@@ -342,31 +342,31 @@ export default function SkillbentoCaseStudyPage() {
             <div className="rounded-lg border border-border bg-surface p-4">
               <span className="font-mono text-xs font-semibold text-accent">Backend Core</span>
               <p className="mt-1 font-bold text-text-primary">Go (Golang)</p>
-              <p className="mt-1 text-xs text-text-muted">High-throughput micro-services</p>
+              <p className="text-sm text-text-muted">High-throughput micro-services</p>
             </div>
 
             <div className="rounded-lg border border-border bg-surface p-4">
               <span className="font-mono text-xs font-semibold text-accent">Database</span>
               <p className="mt-1 font-bold text-text-primary">MongoDB</p>
-              <p className="mt-1 text-xs text-text-muted">Tenant-partitioned collections</p>
+              <p className="text-sm text-text-muted">Tenant-partitioned collections</p>
             </div>
 
             <div className="rounded-lg border border-border bg-surface p-4">
               <span className="font-mono text-xs font-semibold text-accent">Frontend Client</span>
               <p className="mt-1 font-bold text-text-primary">Next.js &amp; TypeScript</p>
-              <p className="mt-1 text-xs text-text-muted">RSC-first multi-tenant UI</p>
+              <p className="text-sm text-text-muted">RSC-first multi-tenant UI</p>
             </div>
 
             <div className="rounded-lg border border-border bg-surface p-4">
               <span className="font-mono text-xs font-semibold text-accent">Infrastructure</span>
               <p className="mt-1 font-bold text-text-primary">Docker &amp; Containers</p>
-              <p className="mt-1 text-xs text-text-muted">Reproducible local &amp; cloud stacks</p>
+              <p className="text-sm text-text-muted">Reproducible local &amp; cloud stacks</p>
             </div>
           </div>
 
           <div className="mt-6 rounded-lg border border-border/70 bg-surface-elevated/40 p-5">
             <h3 className="text-sm font-bold text-text-primary">Architectural Takeaways</h3>
-            <p className="mt-2 text-xs leading-relaxed text-text-secondary sm:text-sm">
+            <p className="text-sm leading-relaxed text-text-secondary">
               Designing Skillbento around Go and MongoDB provides a solid foundation for multi-tenancy. By putting strict boundary middleware and modular service boundaries in place early, the platform avoids the technical debt commonly encountered when scaling multi-tenant SaaS systems.
             </p>
           </div>
