@@ -162,7 +162,7 @@ export default function RootLayout({
         <main
           id="main-content"
           tabIndex={-1}
-          className="mx-auto flex w-full max-w-5xl flex-1 flex-col px-4 py-8 outline-none focus:outline-hidden sm:px-6 sm:py-12 md:px-8 lg:px-12"
+          className="mx-auto flex w-full max-w-6xl flex-1 flex-col px-4 py-8 outline-none focus:outline-hidden sm:px-6 sm:py-12 md:px-8 lg:px-12"
         >
           {children}
         </main>

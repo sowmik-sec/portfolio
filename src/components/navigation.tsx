@@ -49,7 +49,7 @@ export function Navigation() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-md transition-colors duration-200">
-      <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12">
         {/* Name / Logo Link */}
         <Link
           href="/"

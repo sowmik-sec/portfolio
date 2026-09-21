@@ -3,7 +3,7 @@
 @variant dark (&:where(.dark, .dark *));
 
 :root {
-  /* Light mode palette (warm off-white, editorial typography, hairline boundaries) */
+  /* Light mode palette (warm off-white paper, near-black ink, one restrained green accent) */
   --background: #FBFBFA;
   --surface: #FFFFFF;
   --surface-elevated: #F4F4F1;
@@ -14,9 +14,9 @@
   --text-primary: #111213;
   --text-secondary: #4B5563;
   --text-muted: #5B6575;
-  --accent: #2563EB;
-  --accent-hover: #1D4ED8;
-  --accent-muted: #DBEAFE;
+  --accent: #166534;
+  --accent-hover: #14532D;
+  --accent-muted: #DCFCE7;
   --accent-foreground: #FFFFFF;
 }
 
@@ -32,10 +32,10 @@
   --text-primary: #F4F5F6;
   --text-secondary: #9CA3AF;
   --text-muted: #94A3B8;
-  --accent: #3B82F6;
-  --accent-hover: #60A5FA;
-  --accent-muted: #1E293B;
-  --accent-foreground: #FFFFFF;
+  --accent: #4ADE80;
+  --accent-hover: #86EFAC;
+  --accent-muted: #052E16;
+  --accent-foreground: #0B0C0E;
 }
 
 @theme inline {
@@ -55,7 +55,35 @@
   --color-text-muted: var(--text-muted);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /*
+   * Fluid editorial type scale.
+   * Typography is the primary visual element of this design — display sizes
+   * for hero/section statements, a modest lead size for body copy.
+   */
+  --text-display: clamp(2.75rem, 1.6rem + 5.2vw, 6rem);
+  --text-display--line-height: 1.02;
+  --text-display--letter-spacing: -0.03em;
+
+  --text-title: clamp(2rem, 1.4rem + 2.4vw, 3.25rem);
+  --text-title--line-height: 1.08;
+  --text-title--letter-spacing: -0.02em;
+
+  --text-stat: clamp(2.75rem, 2rem + 3.5vw, 4.75rem);
+  --text-stat--line-height: 1.05;
+  --text-stat--letter-spacing: -0.02em;
+
+  --text-lead: clamp(1.0625rem, 1rem + 0.4vw, 1.25rem);
+  --text-lead--line-height: 1.6;
 }
+
+/*
+ * Micro-typography rules (repo-wide conventions):
+ * - Monospace is reserved for genuine technical micro-labels (index numbers,
+ *   status labels, technology lists) — never for marketing copy.
+ * - Arbitrary font sizes floor at text-[11px]; text-[8px]/[9px]/[10px] are banned.
+ * - Body copy is text-base or larger; use text-lead for section descriptions.
+ */
 
 html {
   scroll-behavior: smooth;
