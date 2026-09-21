@@ -69,7 +69,6 @@ export interface CurrentlyBuildingProject {
   title: string;
   category: string;
   status: string;
-  statusVariant: "warning" | "info" | "success";
   concept: string;
   architectureHighlights: string[];
   coreModules: string[];
@@ -86,7 +85,6 @@ export const CURRENTLY_BUILDING_PROJECTS: CurrentlyBuildingProject[] = [
     title: "SKILLBENTO",
     category: "Multi-tenant learning & community platform",
     status: "In Development",
-    statusVariant: "warning",
     concept:
       "A multi-tenant learning and community platform engineered for creator academies, technical bootcamps, and educational hubs. Architected with strict tenant isolation, high-throughput Go backend services, and modular creator services.",
     architectureHighlights: [
@@ -113,7 +111,6 @@ export const CURRENTLY_BUILDING_PROJECTS: CurrentlyBuildingProject[] = [
     title: "PAW PALS RESCUE",
     category: "Pet adoption & rescue platform",
     status: "Client Project · Active Development",
-    statusVariant: "info",
     concept:
       "A client platform designed to streamline pet adoption workflows, rescue shelter onboarding, and medical donation campaigns for vulnerable animals. Documented strictly from confirmed codebase features.",
     architectureHighlights: [
