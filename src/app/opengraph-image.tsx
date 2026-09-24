@@ -1,4 +1,6 @@
 import { ImageResponse } from "next/og";
+import { readFile } from "node:fs/promises";
+import path from "node:path";
 
 export const runtime = "nodejs";
 
@@ -9,7 +11,38 @@ export const size = {
 };
 export const contentType = "image/png";
 
+// Studio palette — ink on gallery paper, no decoration beyond the
+// registration marks that frame the card as an artboard.
+const ink = "#17181C";
+const secondary = "#494B52";
+const muted = "#63656D";
+
+async function loadFonts() {
+  const fontsDir = path.join(process.cwd(), "src", "assets", "fonts");
+  const [regular, italic] = await Promise.all([
+    readFile(path.join(fontsDir, "InstrumentSerif-Regular.ttf")),
+    readFile(path.join(fontsDir, "InstrumentSerif-Italic.ttf")),
+  ]);
+  return [
+    {
+      name: "Instrument Serif",
+      data: regular,
+      style: "normal" as const,
+      weight: 400 as const,
+    },
+    {
+      name: "Instrument Serif",
+      data: italic,
+      style: "italic" as const,
+      weight: 400 as const,
+    },
+  ];
+}
+
 export default async function Image() {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://ahsanhabib.dev";
+  const domain = siteUrl.replace(/^https?:\/\//, "").replace(/\/$/, "");
+
   return new ImageResponse(
     (
       <div
@@ -19,115 +52,85 @@ export default async function Image() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          backgroundColor: "#0B0C0E",
-          padding: "64px 72px",
-          fontFamily: "system-ui, -apple-system, sans-serif",
+          backgroundColor: "#F7F6F3",
+          padding: "104px 112px",
+          fontFamily: "Instrument Serif",
+          color: ink,
         }}
       >
-        {/* Top label */}
-        <span
-          style={{
-            fontSize: 22,
-            color: "#94A3B8",
-            letterSpacing: "0.08em",
-            textTransform: "uppercase",
-            fontFamily: "monospace",
-          }}
-        >
-          Md. Ahsan Habib · Portfolio
-        </span>
-
-        {/* Central Editorial Narrative */}
+        {/* Registration marks — the card is the artboard */}
         <div
           style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "24px",
-            maxWidth: "1020px",
+            position: "absolute",
+            top: 56,
+            left: 56,
+            width: 30,
+            height: 30,
+            borderTop: `2px solid ${secondary}`,
+            borderLeft: `2px solid ${secondary}`,
           }}
-        >
-          {/* One accent gesture */}
-          <div
-            style={{
-              width: "56px",
-              height: "4px",
-              backgroundColor: "#4ADE80",
-            }}
-          />
-          <h1
-            style={{
-              fontSize: 58,
-              fontWeight: 800,
-              color: "#F4F5F6",
-              lineHeight: 1.15,
-              letterSpacing: "-0.03em",
-              margin: 0,
-            }}
-          >
-            I build fast, scalable web products from idea to production.
-          </h1>
-          <p
-            style={{
-              fontSize: 26,
-              color: "#9CA3AF",
-              lineHeight: 1.45,
-              margin: 0,
-            }}
-          >
-            Full-stack developer at Deadlock Soft. I take products from data model to deployed app — SaaS platforms, canvas tools, payment systems.
-          </p>
-        </div>
-
-        {/* Footer Meta Row */}
+        />
         <div
           style={{
+            position: "absolute",
+            top: 56,
+            right: 56,
+            width: 30,
+            height: 30,
+            borderTop: `2px solid ${secondary}`,
+            borderRight: `2px solid ${secondary}`,
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            bottom: 56,
+            left: 56,
+            width: 30,
+            height: 30,
+            borderBottom: `2px solid ${secondary}`,
+            borderLeft: `2px solid ${secondary}`,
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            bottom: 56,
+            right: 56,
+            width: 30,
+            height: 30,
+            borderBottom: `2px solid ${secondary}`,
+            borderRight: `2px solid ${secondary}`,
+          }}
+        />
+
+        {/* Role line */}
+        <p style={{ fontSize: 30, color: muted, margin: 0 }}>
+          Full Stack Developer
+        </p>
+
+        {/* The statement — the name */}
+        <h1
+          style={{
+            fontSize: 108,
+            lineHeight: 1.02,
+            letterSpacing: "-0.01em",
+            margin: 0,
             display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            borderTop: "1px solid #23272F",
-            paddingTop: "28px",
           }}
         >
-          <div
-            style={{
-              display: "flex",
-              gap: "12px",
-            }}
-          >
-            {["Next.js", "TypeScript", "React", "Go", "Tailwind CSS", "MongoDB", "Stripe"].map(
-              (tech) => (
-                <span
-                  key={tech}
-                  style={{
-                    fontSize: 16,
-                    color: "#F4F5F6",
-                    backgroundColor: "#1A1D22",
-                    padding: "6px 14px",
-                    borderRadius: "6px",
-                    border: "1px solid #23272F",
-                    fontFamily: "monospace",
-                  }}
-                >
-                  {tech}
-                </span>
-              )
-            )}
-          </div>
+          Md. Ahsan Habib
+        </h1>
 
-          <span
-            style={{
-              fontSize: 18,
-              color: "#6B7280",
-              fontFamily: "monospace",
-            }}
-          >
-            ahsanhabib.dev
-          </span>
-        </div>
+        {/* Availability line */}
+        <p style={{ fontSize: 26, color: secondary, margin: 0 }}>
+          {domain} — Dhaka, Bangladesh, remote worldwide
+        </p>
       </div>
     ),
     {
       ...size,
+      fonts: await loadFonts(),
     }
   );
 }
