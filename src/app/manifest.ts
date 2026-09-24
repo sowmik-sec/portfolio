@@ -8,12 +8,20 @@ export default function manifest(): MetadataRoute.Manifest {
       "Full Stack Developer building fast, scalable web products and SaaS platforms from idea to production.",
     start_url: "/",
     display: "standalone",
-    background_color: "#FBFBFA",
-    theme_color: "#166534",
+    // Studio palette: gallery paper + ink. Green stays a live-state
+    // accent, so the browser chrome tint is ink.
+    background_color: "#F7F6F3",
+    theme_color: "#17181C",
     icons: [
       {
-        src: "/favicon.ico",
+        src: "/icon.svg",
         sizes: "any",
+        type: "image/svg+xml",
+        purpose: "any",
+      },
+      {
+        src: "/favicon.ico",
+        sizes: "16x16 32x32 48x48",
         type: "image/x-icon",
       },
     ],
