@@ -18,18 +18,17 @@ export const About: FC = () => {
 
       {/* Main Content */}
       <div className="mt-12 grid grid-cols-1 items-start gap-10 sm:mt-16 lg:grid-cols-12 lg:gap-12">
-        {/* Left Column: framed headshot with caption plate */}
+        {/* Left Column: framed portrait with caption plate */}
         <figure className="flex flex-col items-center lg:col-span-4 lg:items-start">
           <div className="w-48 overflow-hidden border border-border bg-surface-muted sm:w-56">
-            {/* Note: Can be replaced with actual photo in public/images/headshot.jpg */}
             <Image
-              src="/images/headshot.svg"
-              alt="Md. Ahsan Habib — Full Stack Developer"
-              width={240}
-              height={240}
+              src="/images/headshot.jpg"
+              alt="Illustrated portrait of Md. Ahsan Habib — Full Stack Developer"
+              width={540}
+              height={720}
               sizes="(max-width: 640px) 192px, 224px"
               loading="lazy"
-              className="aspect-square h-auto w-full object-cover"
+              className="aspect-[3/4] h-auto w-full object-cover"
               priority={false}
             />
           </div>

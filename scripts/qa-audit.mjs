@@ -91,10 +91,13 @@ function runAudit() {
   const resumeSize = fs.existsSync(resumePath) ? fs.statSync(resumePath).size : 0;
   assert(resumeSize > 50000, `Résumé file is non-empty (${(resumeSize / 1024).toFixed(1)} KB)`);
 
-  const headshotPath = path.join(publicDir, "images", "headshot.svg");
-  assert(fs.existsSync(headshotPath), "Headshot file exists at 'public/images/headshot.svg'");
-  const headshotContent = fs.existsSync(headshotPath) ? fs.readFileSync(headshotPath, "utf-8") : "";
-  assert(headshotContent.includes("<svg") && headshotContent.includes("</svg>"), "Headshot is valid SVG");
+  const headshotPath = path.join(publicDir, "images", "headshot.jpg");
+  assert(fs.existsSync(headshotPath), "Headshot file exists at 'public/images/headshot.jpg'");
+  const headshotBuffer = fs.existsSync(headshotPath) ? fs.readFileSync(headshotPath) : Buffer.alloc(0);
+  assert(
+    headshotBuffer.length > 20000 && headshotBuffer[0] === 0xff && headshotBuffer[1] === 0xd8,
+    "Headshot is a valid, non-empty JPEG (>20 KB)"
+  );
 
   const faviconPath = path.join(publicDir, "favicon.ico");
   const faviconExists = fs.existsSync(faviconPath) || fs.existsSync(path.join(rootDir, "src", "app", "favicon.ico"));
@@ -254,7 +257,7 @@ function runAudit() {
     "DoD 5: Project case studies exist for important work"
   );
   assert(
-    homeHtml.includes("/images/headshot.svg") && !homeHtml.includes("hero-headshot"),
+    homeHtml.includes("/images/headshot.jpg") && !homeHtml.includes("hero-headshot"),
     "DoD 6: Headshot appears in About section, not dominating hero"
   );
   assert(
