@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import Link from "next/link";
 import { CURRENTLY_BUILDING_PROJECTS } from "@/data/projects";
+import { LedgerRow } from "./ledger-row";
 
 export const CurrentlyBuilding: FC = () => {
   return (
@@ -12,7 +13,7 @@ export const CurrentlyBuilding: FC = () => {
       {/* Section Header */}
       <h2
         id="currently-building-title"
-        className="font-serif text-title text-text-primary"
+        className="text-title font-semibold text-text-primary"
       >
         Currently Building
       </h2>
@@ -29,86 +30,84 @@ export const CurrentlyBuilding: FC = () => {
             aria-labelledby={`building-title-${project.id}`}
             className="border-t border-border py-12 last:border-b sm:py-16"
           >
-            {/* Status */}
-            <p className="text-[13px] font-medium text-text-muted">
-              {project.status}
-            </p>
-
-            {/* Title & Category */}
-            <h3
-              id={`building-title-${project.id}`}
-              className="mt-3 font-serif text-3xl tracking-[0.02em] text-text-primary sm:text-4xl"
-            >
-              {project.title}
-            </h3>
+            {/* Title row */}
+            <div className="flex flex-col gap-1.5 sm:flex-row sm:items-baseline sm:justify-between">
+              <h3
+                id={`building-title-${project.id}`}
+                className="text-2xl font-semibold tracking-tight text-text-primary sm:text-3xl"
+              >
+                {project.title}
+              </h3>
+              <p className="text-[13px] text-text-muted">{project.status}</p>
+            </div>
             <p className="mt-2 text-[15px] text-text-secondary">
               {project.category}
             </p>
 
-            {/* Concept Narrative */}
-            <p className="mt-6 max-w-3xl text-lead text-text-secondary">
-              {project.concept}
-            </p>
+            {/* Spec rows */}
+            <div className="mt-8 space-y-6">
+              <LedgerRow label="Concept">
+                <p className="max-w-3xl text-lead text-text-secondary">
+                  {project.concept}
+                </p>
+              </LedgerRow>
 
-            {/* Architecture & Modules */}
-            <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-12">
-              <div>
-                <h4 className="text-[13px] font-medium text-text-muted">
-                  Architecture &amp; Systems
-                </h4>
-                <p className="mt-3 max-w-md text-sm leading-relaxed text-text-secondary">
+              <LedgerRow label="Architecture">
+                <p className="max-w-2xl text-sm leading-relaxed text-text-secondary">
                   {project.architectureHighlights.join(", ")}
                 </p>
-              </div>
+              </LedgerRow>
 
-              <div>
-                <h4 className="text-[13px] font-medium text-text-muted">
-                  {project.id === "skillbento"
-                    ? "Core Platform Modules"
-                    : "Confirmed Client Features"}
-                </h4>
-                <p className="mt-3 max-w-md text-sm leading-relaxed text-text-secondary">
+              <LedgerRow
+                label={
+                  project.id === "skillbento"
+                    ? "Modules"
+                    : "Client features"
+                }
+              >
+                <p className="max-w-2xl text-sm leading-relaxed text-text-secondary">
                   {project.coreModules.join(", ")}
                 </p>
-              </div>
-            </div>
+              </LedgerRow>
 
-            {/* Technologies, Scope Note, and Action Links */}
-            <div className="mt-10 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-              <div className="max-w-xl">
+              <LedgerRow label="Stack">
                 <p className="text-sm text-text-primary">
                   {project.technologies.join(", ")}
                 </p>
-                <p className="mt-3 text-[13px] leading-relaxed text-text-muted">
+              </LedgerRow>
+
+              <LedgerRow label="Note">
+                <p className="max-w-xl text-[13px] leading-relaxed text-text-muted">
                   {project.statusNote}
                 </p>
-              </div>
+              </LedgerRow>
 
-              {/* Actions */}
-              <div className="flex flex-wrap items-center gap-x-8 gap-y-2 sm:shrink-0">
-                <Link
-                  href={project.caseStudyUrl}
-                  className="link-draw inline-flex min-h-[44px] items-center text-sm font-semibold text-text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-                >
-                  <span>
-                    {project.id === "skillbento"
-                      ? "Explore system architecture"
-                      : "Read client case study"}
-                  </span>
-                </Link>
-
-                {project.githubUrl && (
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="link-draw inline-flex min-h-[44px] items-center text-sm font-medium text-text-secondary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-                    aria-label={`View ${project.title} source code on GitHub (opens in new tab)`}
+              <LedgerRow label="Case study">
+                <div className="flex flex-wrap items-center gap-x-8 gap-y-2">
+                  <Link
+                    href={project.caseStudyUrl}
+                    className="link-draw inline-flex min-h-[44px] items-center text-sm font-semibold text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                   >
-                    <span>GitHub repository</span>
-                  </a>
-                )}
-              </div>
+                    <span>
+                      {project.id === "skillbento"
+                        ? "Explore system architecture"
+                        : "Read client case study"}
+                    </span>
+                  </Link>
+
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-draw inline-flex min-h-[44px] items-center text-sm font-medium text-text-secondary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                      aria-label={`View ${project.title} source code on GitHub (opens in new tab)`}
+                    >
+                      <span>GitHub repository</span>
+                    </a>
+                  )}
+                </div>
+              </LedgerRow>
             </div>
           </article>
         ))}

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { SELECTED_PROJECTS } from "@/data/projects";
 import { ProjectVisual } from "./project-visual";
 import { StatCallout } from "./stat-callout";
-import { Artboard } from "./artboard";
+import { LedgerRow } from "./ledger-row";
 
 export const SelectedWork: FC = () => {
   return (
@@ -15,13 +15,13 @@ export const SelectedWork: FC = () => {
       {/* Section Header */}
       <h2
         id="selected-work-title"
-        className="font-serif text-title text-text-primary"
+        className="text-title font-semibold text-text-primary"
       >
         Selected Work
       </h2>
 
       {/* Projects */}
-      <div className="mt-16 space-y-28 sm:mt-20 sm:space-y-40">
+      <div className="mt-16 space-y-24 sm:mt-20 sm:space-y-32">
         {SELECTED_PROJECTS.map((project) => (
           <article
             key={project.id}
@@ -34,7 +34,7 @@ export const SelectedWork: FC = () => {
               <div>
                 <h3
                   id={`project-title-${project.id}`}
-                  className="font-serif text-title tracking-[0.02em] text-text-primary"
+                  className="text-title font-semibold tracking-tight text-text-primary"
                 >
                   {project.title}
                 </h3>
@@ -71,15 +71,17 @@ export const SelectedWork: FC = () => {
               </a>
             </div>
 
-            {/* Framed product visual with spec-plate caption */}
-            <div className="mt-10 sm:mt-12">
-              <Artboard
-                label={`${project.title} interface preview`}
-                caption={project.technologies.join(", ")}
-              >
-                <ProjectVisual projectId={project.id} projectTitle={project.title} />
-              </Artboard>
+            {/* Product visual on a plain plate */}
+            <div className="mt-10 border border-border bg-surface sm:mt-12">
+              <ProjectVisual projectId={project.id} projectTitle={project.title} />
             </div>
+
+            {/* Stack caption row */}
+            <LedgerRow label="Stack" className="mt-3">
+              <p className="text-[13px] leading-6 text-text-muted">
+                {project.technologies.join(", ")}
+              </p>
+            </LedgerRow>
 
             {/* Project Metric (verified products only) */}
             {project.metric ? (
@@ -92,32 +94,28 @@ export const SelectedWork: FC = () => {
               </div>
             ) : null}
 
-            {/* Narrative & Capabilities */}
-            <div className="mt-12 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
-              <p className="text-lead text-text-secondary lg:col-span-7">
-                {project.description}
-              </p>
+            {/* Spec rows */}
+            <div className="mt-12 space-y-8 border-t border-border pt-8 sm:mt-16">
+              <LedgerRow label="Scope">
+                <p className="max-w-2xl text-lead text-text-secondary">
+                  {project.description}
+                </p>
+              </LedgerRow>
 
-              <div className="flex flex-col justify-between gap-10 lg:col-span-5">
-                <div>
-                  <h4 className="text-[13px] font-medium text-text-muted">
-                    What it does
-                  </h4>
-                  <p className="mt-3 text-base leading-relaxed text-text-secondary">
-                    {project.capabilities.join(", ")}
-                  </p>
-                </div>
+              <LedgerRow label="What it does">
+                <p className="max-w-2xl text-base leading-relaxed text-text-secondary">
+                  {project.capabilities.join(", ")}
+                </p>
+              </LedgerRow>
 
-                {/* Case Study CTA */}
-                <div>
-                  <Link
-                    href={project.caseStudyUrl}
-                    className="link-draw inline-flex min-h-[44px] items-center text-base font-semibold text-text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-                  >
-                    <span>View case study</span>
-                  </Link>
-                </div>
-              </div>
+              <LedgerRow label="Case study">
+                <Link
+                  href={project.caseStudyUrl}
+                  className="link-draw inline-flex min-h-[44px] items-center text-sm font-semibold text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                >
+                  <span>View case study</span>
+                </Link>
+              </LedgerRow>
             </div>
           </article>
         ))}

@@ -138,7 +138,7 @@ function PixoreeVisual() {
                 <p className="font-mono text-[11px] uppercase tracking-widest text-text-muted">
                   Certificate of Excellence
                 </p>
-                <h4 className="mt-1 font-serif text-sm font-bold text-text-primary sm:text-base md:text-lg">
+                <h4 className="mt-1 text-sm font-bold text-text-primary sm:text-base md:text-lg">
                   Advanced Full-Stack Engineering
                 </h4>
               </div>
@@ -244,7 +244,7 @@ function ChildrenOfTheUmmahVisual() {
                 Emergency Relief Appeal
               </p>
 
-              <h4 className="mt-3 font-serif text-lg font-bold text-text-primary sm:text-xl">
+              <h4 className="mt-3 text-lg font-bold text-text-primary sm:text-xl">
                 Global Orphan Care &amp; Clean Water Projects
               </h4>
 

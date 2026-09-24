@@ -3,40 +3,40 @@
 @variant dark (&:where(.dark, .dark *));
 
 :root {
-  /* Light mode palette (gallery white walls, neutral ink, one deep green reserved
-     for "live" states — hover, focus, verified figures, active layers) */
-  --background: #F7F6F3;
+  /* Light mode palette (true paper, graphite ink, deep green as ledger ink —
+     the color of rules, numerals, and keyed emphasis) */
+  --background: #FCFCFB;
   --surface: #FFFFFF;
-  --surface-elevated: #F0EFEA;
-  --surface-muted: #E9E8E2;
-  --border: #E1E0D9;
-  --border-subtle: #EBEAE4;
-  --foreground: #17181C;
-  --text-primary: #17181C;
-  --text-secondary: #494B52;
-  --text-muted: #63656D;
+  --surface-elevated: #F5F5F2;
+  --surface-muted: #EDEDE9;
+  --border: #E1E7E2;
+  --border-subtle: #ECF0EC;
+  --foreground: #16181A;
+  --text-primary: #16181A;
+  --text-secondary: #474A4E;
+  --text-muted: #5F6368;
   --accent: #166534;
   --accent-hover: #14532D;
-  --accent-muted: #E4EFE6;
+  --accent-muted: #E3EFE7;
   --accent-foreground: #FFFFFF;
 }
 
 .dark {
-  /* Dark mode palette (gallery charcoal with a faint green cast, lit green accent) */
-  --background: #131412;
-  --surface: #1A1B19;
-  --surface-elevated: #22231F;
-  --surface-muted: #2A2B26;
-  --border: #2A2C27;
-  --border-subtle: #1E1F1C;
-  --foreground: #EFEEE9;
-  --text-primary: #EFEEE9;
-  --text-secondary: #A3A49D;
-  --text-muted: #888A82;
-  --accent: #61C08B;
-  --accent-hover: #86D3A6;
-  --accent-muted: #142A1D;
-  --accent-foreground: #0E1811;
+  /* Dark mode palette (graphite-green black, lit green for keyed emphasis) */
+  --background: #101211;
+  --surface: #171918;
+  --surface-elevated: #1E211F;
+  --surface-muted: #262A27;
+  --border: #262B27;
+  --border-subtle: #1A1D1B;
+  --foreground: #F2F3F1;
+  --text-primary: #F2F3F1;
+  --text-secondary: #A2A6A0;
+  --text-muted: #868A86;
+  --accent: #5FC98F;
+  --accent-hover: #8AD9AC;
+  --accent-muted: #12281A;
+  --accent-foreground: #0D1810;
 }
 
 @theme inline {
@@ -54,40 +54,39 @@
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
   --color-text-muted: var(--text-muted);
-  --font-sans: var(--font-instrument-sans);
-  --font-serif: var(--font-instrument-serif);
+  --font-sans: var(--font-schibsted);
+  --font-serif: var(--font-schibsted);
   --font-mono: var(--font-geist-mono);
 
   /*
-   * Fluid type scale. Instrument Serif carries display sizes (it is light at
-   * weight 400, so display sizes run slightly larger than the old grotesk);
-   * Instrument Sans carries body, labels, and UI.
+   * Fluid type scale. One grotesk carries everything — display sizes run
+   * semibold with tight tracking; figures set with tabular numerals.
    */
-  --text-display: clamp(2.875rem, 1.6rem + 5.4vw, 6.25rem);
-  --text-display--line-height: 1.04;
-  --text-display--letter-spacing: -0.015em;
+  --text-display: clamp(2.75rem, 1.7rem + 4.8vw, 5.5rem);
+  --text-display--line-height: 1.02;
+  --text-display--letter-spacing: -0.035em;
 
-  --text-title: clamp(2.125rem, 1.55rem + 2.4vw, 3.375rem);
-  --text-title--line-height: 1.1;
-  --text-title--letter-spacing: -0.01em;
+  --text-title: clamp(1.875rem, 1.4rem + 2.1vw, 2.875rem);
+  --text-title--line-height: 1.08;
+  --text-title--letter-spacing: -0.025em;
 
-  --text-stat: clamp(2.5rem, 1.9rem + 3vw, 4.25rem);
+  --text-stat: clamp(2.25rem, 1.7rem + 2.8vw, 3.75rem);
   --text-stat--line-height: 1.05;
-  --text-stat--letter-spacing: -0.01em;
+  --text-stat--letter-spacing: -0.02em;
 
   --text-lead: clamp(1.0625rem, 1rem + 0.35vw, 1.21875rem);
-  --text-lead--line-height: 1.65;
+  --text-lead--line-height: 1.6;
 }
 
 /*
  * Micro-typography rules (repo-wide conventions):
- * - Instrument Serif is display-only (hero/section statements, project titles,
- *   stat figures, the contact email) — never below ~2rem, never for body copy.
- * - Labels are sentence case, small, and sans — no uppercase, no letter-spacing,
+ * - One grotesk (Schibsted Grotesk) carries display, body, and labels.
+ * - Labels are sentence case, small, sans — no uppercase, no letter-spacing,
  *   no monospace eyebrows.
+ * - Figures and metadata set with tabular numerals (tabular-nums).
  * - Lists join with commas, not middle dots.
- * - Monospace is reserved for genuine technical strings inside product mockups
- *   and code identifiers — never for marketing copy or labels.
+ * - Monospace is reserved for genuine technical strings inside product
+ *   mockups and the case-study pages — never for labels or marketing copy.
  * - Arbitrary font sizes floor at text-[11px]; text-[8px]/[9px]/[10px] are banned.
  * - Body copy is text-base or larger; use text-lead for section descriptions.
  */
@@ -141,9 +140,8 @@ body {
 }
 
 /*
- * Active-layer underline: a neutral hairline rests under the link; on hover or
- * focus the green layer draws over it from the left — the same green a canvas
- * editor gives a selected object.
+ * Ledger keyed link: a neutral hairline rests under the link; on hover or
+ * focus the green ink draws over it from the left. Quick and matter-of-fact.
  */
 .link-draw {
   background-image:
@@ -152,7 +150,7 @@ body {
   background-size: 0% 2px, 100% 1px;
   background-position: left bottom;
   background-repeat: no-repeat;
-  transition: background-size 320ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition: background-size 200ms cubic-bezier(0.16, 1, 0.3, 1);
   padding-bottom: 0.05em;
 }
 

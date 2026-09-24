@@ -7,14 +7,11 @@ export const Contact: FC = () => {
       aria-labelledby="contact-title"
       className="relative scroll-mt-24 py-20 sm:py-28 md:py-36"
     >
-      {/* Editorial Closing Statement */}
+      {/* Closing Statement */}
       <div className="max-w-4xl">
-        {/* Single decorative gesture: a short live-green rule */}
-        <span className="block h-px w-16 bg-accent" aria-hidden="true" />
-
         <h2
           id="contact-title"
-          className="mt-8 font-serif text-display text-text-primary"
+          className="text-display font-semibold text-text-primary"
         >
           Have something worth building?
         </h2>
@@ -31,7 +28,7 @@ export const Contact: FC = () => {
       <div className="mt-12 sm:mt-16">
         <a
           href="mailto:sowmik-sec@gmail.com"
-          className="link-draw inline-flex min-h-[44px] flex-wrap items-center font-serif text-[clamp(1.5rem,1.1rem+2.7vw,3.5rem)] leading-tight text-text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+          className="link-draw inline-flex min-h-[44px] flex-wrap items-center text-[clamp(1.625rem,1.15rem+2.4vw,3.25rem)] font-semibold tracking-tight leading-tight text-text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
           aria-label="Send email to sowmik-sec@gmail.com"
         >
           sowmik-sec@gmail.com

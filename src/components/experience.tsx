@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import { CURRENT_ROLE, EDUCATION_HISTORY } from "@/data/experience";
 import { SKILL_CATEGORIES } from "@/data/skills";
+import { LedgerRow } from "./ledger-row";
 
 export const Experience: FC = () => {
   return (
@@ -12,71 +13,66 @@ export const Experience: FC = () => {
       {/* Section Header */}
       <h2
         id="experience-title"
-        className="font-serif text-title text-text-primary"
+        className="text-title font-semibold text-text-primary"
       >
         Experience &amp; Education
       </h2>
 
-      <div className="mt-12 space-y-16 sm:mt-16 sm:space-y-20">
+      {/* Ledger */}
+      <div className="mt-12 space-y-10 border-t border-border pt-8 sm:mt-16">
         {/* Work */}
-        <div>
-          <h3 className="text-[13px] font-medium text-text-muted">Work</h3>
-
-          <div className="mt-5 flex flex-col gap-1.5 sm:flex-row sm:items-baseline sm:justify-between">
-            <h4 className="font-serif text-2xl text-text-primary sm:text-3xl">
+        <LedgerRow label="Work">
+          <div className="flex flex-col gap-1.5 sm:flex-row sm:items-baseline sm:justify-between">
+            <h3 className="text-2xl font-semibold tracking-tight text-text-primary sm:text-3xl">
               {CURRENT_ROLE.role}
               <span className="text-text-muted">, </span>
               {CURRENT_ROLE.company}
-            </h4>
-            <p className="text-[13px] text-text-muted sm:shrink-0">
+            </h3>
+            <p className="text-[13px] tabular-nums text-text-muted sm:shrink-0">
               {CURRENT_ROLE.timeline}
             </p>
           </div>
 
-          <p className="mt-5 max-w-3xl text-lead text-text-secondary">
+          <p className="mt-4 max-w-3xl text-lead text-text-secondary">
             {CURRENT_ROLE.focus}
           </p>
 
-          <p className="mt-5 text-sm text-text-primary">
+          <p className="mt-4 text-sm text-text-primary">
             {CURRENT_ROLE.technologies.join(", ")}
           </p>
-        </div>
+        </LedgerRow>
 
-        {/* Toolkit (working skills, kept close to where they're earned) */}
-        <div>
-          <h3 className="text-[13px] font-medium text-text-muted">Toolkit</h3>
-
-          <div className="mt-6 grid grid-cols-1 gap-x-12 gap-y-8 sm:grid-cols-2">
+        {/* Toolkit */}
+        <LedgerRow label="Toolkit">
+          <div className="grid grid-cols-1 gap-x-12 gap-y-6 sm:grid-cols-2">
             {SKILL_CATEGORIES.map((category) => (
               <div key={category.id} id={`skill-${category.id}`}>
-                <h4 className="text-[13px] font-medium text-text-muted">
+                <p className="text-[13px] font-medium text-text-muted">
                   {category.name}
-                </h4>
-                <p className="mt-2 text-base leading-relaxed text-text-primary">
+                </p>
+                <p className="mt-1.5 text-base text-text-primary">
                   {category.skills.join(", ")}
                 </p>
               </div>
             ))}
           </div>
-        </div>
+        </LedgerRow>
 
         {/* Education */}
-        <div>
-          <h3 className="text-[13px] font-medium text-text-muted">Education</h3>
-
+        <LedgerRow label="Education">
           {EDUCATION_HISTORY.map((edu) => (
-            <div key={edu.institution} className="mt-5">
+            <div key={edu.institution}>
               <div className="flex flex-col gap-1.5 sm:flex-row sm:items-baseline sm:justify-between">
-                <h4 className="max-w-3xl font-serif text-2xl text-text-primary sm:text-3xl">
+                <h3 className="max-w-3xl text-2xl font-semibold tracking-tight text-text-primary sm:text-3xl">
                   {edu.degree}
-                </h4>
-                <p className="text-[13px] text-text-muted sm:shrink-0">
-                  {edu.graduationYear} · CGPA: {edu.cgpa}
+                </h3>
+                <p className="text-[13px] tabular-nums text-text-muted sm:shrink-0">
+                  {edu.graduationYear}, CGPA: {edu.cgpa}
                 </p>
               </div>
 
               <p className="mt-2 text-[15px] text-text-secondary">
-                {edu.institution} · Sylhet, Bangladesh
+                {edu.institution}, Sylhet, Bangladesh
               </p>
 
               {edu.details && (
@@ -86,7 +82,7 @@ export const Experience: FC = () => {
               )}
             </div>
           ))}
-        </div>
+        </LedgerRow>
       </div>
     </section>
   );

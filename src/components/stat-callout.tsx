@@ -7,18 +7,17 @@ interface StatCalloutProps {
 }
 
 /**
- * Verified-figure callout: one oversized serif number in the live green —
- * the accent is spent here because the number is real. No card, no border;
- * the color carries the weight.
+ * Verified-figure callout: one oversized tabular numeral in ledger green —
+ * the accent is spent here because the number is real. No card, no border.
  */
 export const StatCallout: FC<StatCalloutProps> = ({ value, caption, detail }) => {
   return (
     <figure className="max-w-xl">
-      <p className="font-serif text-stat text-accent">{value}</p>
+      <p className="text-stat font-semibold tabular-nums text-accent">{value}</p>
       <figcaption className="mt-3 text-lead text-text-secondary">
         {caption}
         {detail ? (
-          <span className="mt-1 block text-[13px] text-text-muted">
+          <span className="mt-1 block text-[13px] tabular-nums text-text-muted">
             {detail}
           </span>
         ) : null}
