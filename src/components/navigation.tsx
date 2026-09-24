@@ -53,7 +53,7 @@ export function Navigation() {
         {/* Name / Logo Link */}
         <Link
           href="/"
-          className="inline-flex min-h-[44px] items-center font-serif text-lg text-text-primary transition-colors duration-200 hover:text-accent focus-visible:outline-2 focus-visible:outline-accent"
+          className="inline-flex min-h-[44px] items-center font-serif text-xl italic text-text-primary transition-colors duration-200 hover:text-accent focus-visible:outline-2 focus-visible:outline-accent"
           aria-label="Ahsan — Home"
         >
           Ahsan

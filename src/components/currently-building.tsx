@@ -16,7 +16,7 @@ export const CurrentlyBuilding: FC = () => {
       >
         Currently Building
       </h2>
-      <p className="mt-5 max-w-2xl text-lead text-text-secondary">
+      <p className="mt-5 max-w-2xl font-serif text-lead text-text-secondary">
         Work in progress — kept separate from the shipped products above.
       </p>
 
@@ -41,12 +41,12 @@ export const CurrentlyBuilding: FC = () => {
             >
               {project.title}
             </h3>
-            <p className="mt-2 text-[15px] text-text-secondary">
+            <p className="mt-2 font-serif text-lg italic text-text-secondary">
               {project.category}
             </p>
 
             {/* Concept Narrative */}
-            <p className="mt-6 max-w-3xl text-lead text-text-secondary">
+            <p className="mt-6 max-w-3xl font-serif text-lead text-text-secondary">
               {project.concept}
             </p>
 
@@ -56,7 +56,7 @@ export const CurrentlyBuilding: FC = () => {
                 <h4 className="text-[13px] font-medium text-text-muted">
                   Architecture &amp; Systems
                 </h4>
-                <p className="mt-3 max-w-md text-sm leading-relaxed text-text-secondary">
+                <p className="mt-3 max-w-md font-serif text-sm leading-relaxed text-text-secondary">
                   {project.architectureHighlights.join(", ")}
                 </p>
               </div>
@@ -67,7 +67,7 @@ export const CurrentlyBuilding: FC = () => {
                     ? "Core Platform Modules"
                     : "Confirmed Client Features"}
                 </h4>
-                <p className="mt-3 max-w-md text-sm leading-relaxed text-text-secondary">
+                <p className="mt-3 max-w-md font-serif text-sm leading-relaxed text-text-secondary">
                   {project.coreModules.join(", ")}
                 </p>
               </div>

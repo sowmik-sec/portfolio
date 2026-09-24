@@ -18,7 +18,7 @@ export const About: FC = () => {
 
       {/* Main Content */}
       <div className="mt-12 grid grid-cols-1 items-start gap-10 sm:mt-16 lg:grid-cols-12 lg:gap-12">
-        {/* Left Column: framed headshot with caption plate */}
+        {/* Left Column: portrait with caption */}
         <figure className="flex flex-col items-center lg:col-span-4 lg:items-start">
           <div className="w-48 overflow-hidden border border-border bg-surface-muted sm:w-56">
             {/* Note: Can be replaced with actual photo in public/images/headshot.jpg */}
@@ -44,9 +44,9 @@ export const About: FC = () => {
           </figcaption>
         </figure>
 
-        {/* Right Column: Editorial Narrative */}
+        {/* Right Column: serif narrative */}
         <div className="space-y-6 lg:col-span-8">
-          <div className="space-y-4 text-lead text-text-secondary">
+          <div className="max-w-2xl space-y-4 font-serif text-lead text-text-secondary">
             <p>
               I&apos;m a <strong className="font-semibold text-text-primary">Full Stack Developer</strong> who turns product ideas into working web applications and SaaS platforms — software that is fast, maintainable, and built to last.
             </p>

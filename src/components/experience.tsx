@@ -33,7 +33,7 @@ export const Experience: FC = () => {
             </p>
           </div>
 
-          <p className="mt-5 max-w-3xl text-lead text-text-secondary">
+          <p className="mt-5 max-w-3xl font-serif text-lead text-text-secondary">
             {CURRENT_ROLE.focus}
           </p>
 
@@ -42,7 +42,7 @@ export const Experience: FC = () => {
           </p>
         </div>
 
-        {/* Toolkit (working skills, kept close to where they're earned) */}
+        {/* Toolkit */}
         <div>
           <h3 className="text-[13px] font-medium text-text-muted">Toolkit</h3>
 
@@ -52,7 +52,7 @@ export const Experience: FC = () => {
                 <h4 className="text-[13px] font-medium text-text-muted">
                   {category.name}
                 </h4>
-                <p className="mt-2 text-base leading-relaxed text-text-primary">
+                <p className="mt-2 text-base text-text-primary">
                   {category.skills.join(", ")}
                 </p>
               </div>
@@ -71,16 +71,16 @@ export const Experience: FC = () => {
                   {edu.degree}
                 </h4>
                 <p className="text-[13px] text-text-muted sm:shrink-0">
-                  {edu.graduationYear} · CGPA: {edu.cgpa}
+                  {edu.graduationYear}, CGPA: {edu.cgpa}
                 </p>
               </div>
 
               <p className="mt-2 text-[15px] text-text-secondary">
-                {edu.institution} · Sylhet, Bangladesh
+                {edu.institution}, Sylhet, Bangladesh
               </p>
 
               {edu.details && (
-                <p className="mt-4 max-w-3xl text-lead text-text-secondary">
+                <p className="mt-4 max-w-3xl font-serif text-lead text-text-secondary">
                   {edu.details}
                 </p>
               )}

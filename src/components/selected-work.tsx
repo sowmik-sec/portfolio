@@ -3,7 +3,6 @@ import Link from "next/link";
 import { SELECTED_PROJECTS } from "@/data/projects";
 import { ProjectVisual } from "./project-visual";
 import { StatCallout } from "./stat-callout";
-import { Artboard } from "./artboard";
 
 export const SelectedWork: FC = () => {
   return (
@@ -20,7 +19,7 @@ export const SelectedWork: FC = () => {
         Selected Work
       </h2>
 
-      {/* Projects */}
+      {/* Projects as essays */}
       <div className="mt-16 space-y-28 sm:mt-20 sm:space-y-40">
         {SELECTED_PROJECTS.map((project) => (
           <article
@@ -29,7 +28,7 @@ export const SelectedWork: FC = () => {
             aria-labelledby={`project-title-${project.id}`}
             className="relative flex flex-col"
           >
-            {/* Project Header: title, category, live link */}
+            {/* Essay heading: serif title, italic category, live link */}
             <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
               <div>
                 <h3
@@ -38,7 +37,7 @@ export const SelectedWork: FC = () => {
                 >
                   {project.title}
                 </h3>
-                <p className="mt-2 text-[15px] text-text-secondary">
+                <p className="mt-3 font-serif text-lg italic text-text-secondary">
                   {project.category}
                 </p>
               </div>
@@ -71,15 +70,13 @@ export const SelectedWork: FC = () => {
               </a>
             </div>
 
-            {/* Framed product visual with spec-plate caption */}
-            <div className="mt-10 sm:mt-12">
-              <Artboard
-                label={`${project.title} interface preview`}
-                caption={project.technologies.join(", ")}
-              >
-                <ProjectVisual projectId={project.id} projectTitle={project.title} />
-              </Artboard>
+            {/* Inline visual on a quiet hairline frame */}
+            <div className="mt-10 border border-border bg-surface sm:mt-12">
+              <ProjectVisual projectId={project.id} projectTitle={project.title} />
             </div>
+            <p className="mt-3 text-[13px] text-text-muted">
+              {project.technologies.join(", ")}
+            </p>
 
             {/* Project Metric (verified products only) */}
             {project.metric ? (
@@ -92,9 +89,9 @@ export const SelectedWork: FC = () => {
               </div>
             ) : null}
 
-            {/* Narrative & Capabilities */}
+            {/* Essay body & capabilities */}
             <div className="mt-12 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
-              <p className="text-lead text-text-secondary lg:col-span-7">
+              <p className="max-w-2xl font-serif text-lead text-text-secondary lg:col-span-7">
                 {project.description}
               </p>
 
@@ -103,7 +100,7 @@ export const SelectedWork: FC = () => {
                   <h4 className="text-[13px] font-medium text-text-muted">
                     What it does
                   </h4>
-                  <p className="mt-3 text-base leading-relaxed text-text-secondary">
+                  <p className="mt-3 font-serif text-base leading-relaxed text-text-secondary">
                     {project.capabilities.join(", ")}
                   </p>
                 </div>

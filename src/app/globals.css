@@ -3,18 +3,18 @@
 @variant dark (&:where(.dark, .dark *));
 
 :root {
-  /* Light mode palette (gallery white walls, neutral ink, one deep green reserved
-     for "live" states — hover, focus, verified figures, active layers) */
-  --background: #F7F6F3;
+  /* Light mode palette (cool porcelain — deliberately not cream — neutral
+     green-tinted ink, deep green for interactive states and rules) */
+  --background: #FAFAF8;
   --surface: #FFFFFF;
-  --surface-elevated: #F0EFEA;
-  --surface-muted: #E9E8E2;
-  --border: #E1E0D9;
-  --border-subtle: #EBEAE4;
-  --foreground: #17181C;
-  --text-primary: #17181C;
-  --text-secondary: #494B52;
-  --text-muted: #63656D;
+  --surface-elevated: #F2F2EF;
+  --surface-muted: #EAEAE6;
+  --border: #E7E8E4;
+  --border-subtle: #F0F0ED;
+  --foreground: #1A1C1A;
+  --text-primary: #1A1C1A;
+  --text-secondary: #4C504C;
+  --text-muted: #676B67;
   --accent: #166534;
   --accent-hover: #14532D;
   --accent-muted: #E4EFE6;
@@ -22,21 +22,21 @@
 }
 
 .dark {
-  /* Dark mode palette (gallery charcoal with a faint green cast, lit green accent) */
-  --background: #131412;
-  --surface: #1A1B19;
-  --surface-elevated: #22231F;
-  --surface-muted: #2A2B26;
-  --border: #2A2C27;
-  --border-subtle: #1E1F1C;
-  --foreground: #EFEEE9;
-  --text-primary: #EFEEE9;
-  --text-secondary: #A3A49D;
-  --text-muted: #888A82;
-  --accent: #61C08B;
-  --accent-hover: #86D3A6;
-  --accent-muted: #142A1D;
-  --accent-foreground: #0E1811;
+  /* Dark mode palette (green-black, sage-lit green for interactive states) */
+  --background: #111412;
+  --surface: #181C19;
+  --surface-elevated: #1F2420;
+  --surface-muted: #272C27;
+  --border: #272C28;
+  --border-subtle: #1B1F1C;
+  --foreground: #EFF1EC;
+  --text-primary: #EFF1EC;
+  --text-secondary: #A6ABA2;
+  --text-muted: #8A9088;
+  --accent: #8FBF9F;
+  --accent-hover: #AFD4BB;
+  --accent-muted: #16281C;
+  --accent-foreground: #101710;
 }
 
 @theme inline {
@@ -55,39 +55,39 @@
   --color-text-secondary: var(--text-secondary);
   --color-text-muted: var(--text-muted);
   --font-sans: var(--font-instrument-sans);
-  --font-serif: var(--font-instrument-serif);
+  --font-serif: var(--font-newsreader);
   --font-mono: var(--font-geist-mono);
 
   /*
-   * Fluid type scale. Instrument Serif carries display sizes (it is light at
-   * weight 400, so display sizes run slightly larger than the old grotesk);
-   * Instrument Sans carries body, labels, and UI.
+   * Fluid type scale. Newsreader (serif) carries display sizes and lead
+   * prose at book-like measures; Instrument Sans handles labels and UI.
    */
-  --text-display: clamp(2.875rem, 1.6rem + 5.4vw, 6.25rem);
-  --text-display--line-height: 1.04;
-  --text-display--letter-spacing: -0.015em;
+  --text-display: clamp(2.9rem, 1.7rem + 5.2vw, 5.75rem);
+  --text-display--line-height: 1.06;
+  --text-display--letter-spacing: -0.012em;
 
   --text-title: clamp(2.125rem, 1.55rem + 2.4vw, 3.375rem);
-  --text-title--line-height: 1.1;
-  --text-title--letter-spacing: -0.01em;
+  --text-title--line-height: 1.12;
+  --text-title--letter-spacing: -0.008em;
 
   --text-stat: clamp(2.5rem, 1.9rem + 3vw, 4.25rem);
-  --text-stat--line-height: 1.05;
-  --text-stat--letter-spacing: -0.01em;
+  --text-stat--line-height: 1.06;
+  --text-stat--letter-spacing: -0.008em;
 
-  --text-lead: clamp(1.0625rem, 1rem + 0.35vw, 1.21875rem);
-  --text-lead--line-height: 1.65;
+  --text-lead: clamp(1.0625rem, 1rem + 0.4vw, 1.25rem);
+  --text-lead--line-height: 1.68;
 }
 
 /*
  * Micro-typography rules (repo-wide conventions):
- * - Instrument Serif is display-only (hero/section statements, project titles,
- *   stat figures, the contact email) — never below ~2rem, never for body copy.
- * - Labels are sentence case, small, and sans — no uppercase, no letter-spacing,
- *   no monospace eyebrows.
+ * - Newsreader (serif) carries display statements, project titles, and lead
+ *   prose; italics mark emphasis moments (subtitles), never single-word
+ *   headline stunts.
+ * - Instrument Sans handles labels, meta, and UI. Labels are sentence case —
+ *   no uppercase, no letter-spacing, no monospace eyebrows.
  * - Lists join with commas, not middle dots.
- * - Monospace is reserved for genuine technical strings inside product mockups
- *   and code identifiers — never for marketing copy or labels.
+ * - Monospace is reserved for genuine technical strings inside product
+ *   mockups and the case-study pages — never for labels or marketing copy.
  * - Arbitrary font sizes floor at text-[11px]; text-[8px]/[9px]/[10px] are banned.
  * - Body copy is text-base or larger; use text-lead for section descriptions.
  */
@@ -131,6 +131,28 @@ body {
   animation: pageEnter 280ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
+/*
+ * The one motion moment: the hero statement rises softly as a single unit
+ * on load, then the page is completely still. Opacity/transform only — no
+ * layout shift.
+ */
+@keyframes heroRise {
+  from {
+    opacity: 0;
+    transform: translateY(0.35em);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-rise {
+    animation: heroRise 620ms cubic-bezier(0.16, 1, 0.3, 1) 40ms both;
+  }
+}
+
 /* Seamless Theme Transition (applied temporarily during toggle) */
 .theme-transitioning,
 .theme-transitioning *,
@@ -141,9 +163,8 @@ body {
 }
 
 /*
- * Active-layer underline: a neutral hairline rests under the link; on hover or
- * focus the green layer draws over it from the left — the same green a canvas
- * editor gives a selected object.
+ * Editorial underline: a neutral hairline rests under the link; on hover or
+ * focus the green draws over it from the left, slowly.
  */
 .link-draw {
   background-image:
@@ -152,7 +173,7 @@ body {
   background-size: 0% 2px, 100% 1px;
   background-position: left bottom;
   background-repeat: no-repeat;
-  transition: background-size 320ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition: background-size 480ms cubic-bezier(0.16, 1, 0.3, 1);
   padding-bottom: 0.05em;
 }
 
@@ -193,6 +214,12 @@ body {
 
   .animate-page-enter {
     animation: none !important;
+    transform: none !important;
+  }
+
+  .hero-rise {
+    animation: none !important;
+    opacity: 1 !important;
     transform: none !important;
   }
 
