@@ -2,9 +2,9 @@ import type { FC } from "react";
 
 /**
  * Hero as an open statement: a small role line, the positioning statement in
- * large serif hanging in whitespace, and quiet CTAs. No frame, no box — the
- * framing motif belongs to the project artboards below, and the hero gets out
- * of the way.
+ * large serif hanging in whitespace, and quiet CTAs. No frame, no box — but
+ * four registration marks at the statement's corners treat it as the first
+ * artboard, rhyming with the framed project visuals below.
  */
 export const Hero: FC = () => {
   return (
@@ -18,11 +18,16 @@ export const Hero: FC = () => {
         Full Stack Developer
       </p>
 
-      {/* Positioning statement */}
+      {/* Positioning statement — the first artboard */}
       <h1
         id="hero-headline"
-        className="mt-6 max-w-4xl font-serif text-display text-text-primary sm:mt-8"
+        className="relative mt-6 max-w-4xl font-serif text-display text-text-primary sm:mt-8"
       >
+        {/* Registration marks at the statement's corners (decorative) */}
+        <span aria-hidden="true" className="pointer-events-none absolute -left-3 -top-3 h-3.5 w-3.5 border-l border-t border-text-muted/70" />
+        <span aria-hidden="true" className="pointer-events-none absolute -right-3 -top-3 h-3.5 w-3.5 border-r border-t border-text-muted/70" />
+        <span aria-hidden="true" className="pointer-events-none absolute -bottom-3 -left-3 h-3.5 w-3.5 border-b border-l border-text-muted/70" />
+        <span aria-hidden="true" className="pointer-events-none absolute -bottom-3 -right-3 h-3.5 w-3.5 border-b border-r border-text-muted/70" />
         I build fast, scalable web products from idea to production.
       </h1>
 
