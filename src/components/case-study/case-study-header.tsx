@@ -28,21 +28,19 @@ export function CaseStudyHeader({
   techStack,
 }: CaseStudyHeaderProps) {
   return (
-    <header className="border-b border-border/70 pb-10 sm:pb-12">
+    <header className="border-b border-border pb-10 sm:pb-12">
       {/* Category & Status */}
       <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
-        <span className="font-mono text-xs font-semibold uppercase tracking-wider text-accent">
+        <span className="text-[13px] font-medium text-text-muted">
           {category}
         </span>
         {status && (
-          <span className="font-mono text-[11px] uppercase tracking-wider text-text-muted">
-            {status}
-          </span>
+          <span className="text-[13px] text-text-muted">{status}</span>
         )}
       </div>
 
       {/* Main Title & Tagline */}
-      <h1 className="mt-3 text-title font-semibold text-text-primary">
+      <h1 className="mt-3 font-serif text-title text-text-primary">
         {title}
       </h1>
       <p className="mt-4 max-w-3xl text-lead text-text-secondary">
@@ -53,13 +51,13 @@ export function CaseStudyHeader({
       <div className="mt-10 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
         <div className="flex flex-wrap gap-x-12 gap-y-6">
           <div>
-            <span className="font-mono text-[11px] uppercase tracking-wider text-text-muted">
+            <span className="text-[13px] font-medium text-text-muted">
               Role
             </span>
             <p className="mt-1 text-sm font-medium text-text-primary">{role}</p>
           </div>
           <div>
-            <span className="font-mono text-[11px] uppercase tracking-wider text-text-muted">
+            <span className="text-[13px] font-medium text-text-muted">
               Timeline / Status
             </span>
             <p className="mt-1 text-sm font-medium text-text-primary">
@@ -67,11 +65,11 @@ export function CaseStudyHeader({
             </p>
           </div>
           <div>
-            <span className="font-mono text-[11px] uppercase tracking-wider text-text-muted">
+            <span className="text-[13px] font-medium text-text-muted">
               Tech Stack
             </span>
-            <p className="mt-1 font-mono text-sm leading-relaxed text-text-primary">
-              {techStack.join(" · ")}
+            <p className="mt-1 text-sm font-medium leading-relaxed text-text-primary">
+              {techStack.join(", ")}
             </p>
           </div>
         </div>
@@ -83,11 +81,11 @@ export function CaseStudyHeader({
               href={externalLink.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex min-h-[44px] items-center gap-1.5 rounded-md bg-text-primary px-4 py-2 text-sm font-semibold text-background transition-opacity duration-200 hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              className="inline-flex min-h-[44px] items-center gap-1.5 rounded-sm bg-text-primary px-4 py-2 text-sm font-semibold text-background transition-colors duration-200 hover:bg-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               <span>{externalLink.label}</span>
               <svg
-                className="h-3.5 w-3.5 transition-transform duration-200 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5 motion-reduce:transform-none"
+                className="h-3.5 w-3.5"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="none"
@@ -108,7 +106,7 @@ export function CaseStudyHeader({
               href={repoLink.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex min-h-[44px] items-center gap-1.5 text-sm font-medium text-text-primary underline decoration-border underline-offset-8 transition-colors duration-200 hover:decoration-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              className="link-draw inline-flex min-h-[44px] items-center gap-1.5 text-sm font-medium text-text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               <svg
                 className="h-3.5 w-3.5 text-text-muted"

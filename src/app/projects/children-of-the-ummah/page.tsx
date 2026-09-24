@@ -99,7 +99,7 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
         <StatCallout
           value="£43,000+"
           caption="processed in donations"
-          detail="≈ 7.3M BDT · GBP / USD / EUR"
+          detail="≈ 7.3M BDT, GBP / USD / EUR"
         />
       </div>
 
@@ -122,24 +122,24 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
           </div>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-            <div className="rounded-lg border border-border bg-surface p-4">
-              <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-text-primary">
+            <div className="rounded-xs border border-border bg-surface p-4">
+              <h3 className="text-sm font-semibold text-text-primary">
                 Multi-Currency
               </h3>
               <p className="text-sm leading-relaxed text-text-secondary">
                 Native processing in British Pounds (GBP), US Dollars (USD), and Euros (EUR) to eliminate foreign transaction surprises.
               </p>
             </div>
-            <div className="rounded-lg border border-border bg-surface p-4">
-              <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-text-primary">
+            <div className="rounded-xs border border-border bg-surface p-4">
+              <h3 className="text-sm font-semibold text-text-primary">
                 Custom Checkout Forms
               </h3>
               <p className="text-sm leading-relaxed text-text-secondary">
                 Headless payment flows built on Stripe Elements, eliminating offsite redirect drops and reinforcing donor trust.
               </p>
             </div>
-            <div className="rounded-lg border border-border bg-surface p-4">
-              <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-text-primary">
+            <div className="rounded-xs border border-border bg-surface p-4">
+              <h3 className="text-sm font-semibold text-text-primary">
                 Automated Retries &amp; Webhooks
               </h3>
               <p className="text-sm leading-relaxed text-text-secondary">
@@ -166,8 +166,8 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
           </div>
 
           <div className="space-y-4">
-            <div className="rounded-lg border border-border bg-surface-elevated/40 p-5">
-              <h3 className="text-base font-bold text-text-primary">
+            <div className="rounded-xs border border-border bg-surface-elevated p-5">
+              <h3 className="text-base font-semibold text-text-primary">
                 1. Localized Currency Detection &amp; Selection
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-text-secondary">
@@ -175,8 +175,8 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
               </p>
             </div>
 
-            <div className="rounded-lg border border-border bg-surface-elevated/40 p-5">
-              <h3 className="text-base font-bold text-text-primary">
+            <div className="rounded-xs border border-border bg-surface-elevated p-5">
+              <h3 className="text-base font-semibold text-text-primary">
                 2. Explicit Currency Denominations &amp; Impact Matching
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-text-secondary">
@@ -184,8 +184,8 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
               </p>
             </div>
 
-            <div className="rounded-lg border border-border bg-surface-elevated/40 p-5">
-              <h3 className="text-base font-bold text-text-primary">
+            <div className="rounded-xs border border-border bg-surface-elevated p-5">
+              <h3 className="text-base font-semibold text-text-primary">
                 3. Zero-Decimal &amp; Cent Precision Accounting
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-text-secondary">
@@ -209,8 +209,8 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
           </div>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <div className="rounded-lg border border-border bg-surface p-5">
-              <h3 className="font-mono text-sm font-bold text-text-primary">
+            <div className="rounded-xs border border-border bg-surface p-5">
+              <h3 className="text-sm font-semibold text-text-primary">
                 PCI DSS Level 1 Compliance
               </h3>
               <p className="text-sm leading-relaxed text-text-secondary">
@@ -218,8 +218,8 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
               </p>
             </div>
 
-            <div className="rounded-lg border border-border bg-surface p-5">
-              <h3 className="font-mono text-sm font-bold text-text-primary">
+            <div className="rounded-xs border border-border bg-surface p-5">
+              <h3 className="text-sm font-semibold text-text-primary">
                 Dynamic 3D Secure 2 (SCA)
               </h3>
               <p className="text-sm leading-relaxed text-text-secondary">
@@ -227,8 +227,8 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
               </p>
             </div>
 
-            <div className="rounded-lg border border-border bg-surface p-5">
-              <h3 className="font-mono text-sm font-bold text-text-primary">
+            <div className="rounded-xs border border-border bg-surface p-5">
+              <h3 className="text-sm font-semibold text-text-primary">
                 Custom Donation Amount Inputs
               </h3>
               <p className="text-sm leading-relaxed text-text-secondary">
@@ -236,8 +236,8 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
               </p>
             </div>
 
-            <div className="rounded-lg border border-border bg-surface p-5">
-              <h3 className="font-mono text-sm font-bold text-text-primary">
+            <div className="rounded-xs border border-border bg-surface p-5">
+              <h3 className="text-sm font-semibold text-text-primary">
                 Digital Wallet Support
               </h3>
               <p className="text-sm leading-relaxed text-text-secondary">
@@ -261,34 +261,34 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
           </div>
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-            <div className="rounded-lg border border-border bg-surface p-6">
+            <div className="rounded-xs border border-border bg-surface p-6">
               <div className="flex items-center gap-2">
                 <span className="h-2.5 w-2.5 rounded-full bg-accent" />
-                <h3 className="text-base font-bold text-text-primary">
+                <h3 className="text-base font-semibold text-text-primary">
                   One-Off Emergency Contributions
                 </h3>
               </div>
               <p className="mt-3 text-sm leading-relaxed text-text-secondary">
                 Executes via instantaneous <strong>Stripe Payment Intents</strong>. Ideal for immediate disaster response appeals, Ramadan giving, and ad-hoc emergency medical interventions. The transaction completes in a single synchronous cycle.
               </p>
-              <ul className="mt-4 space-y-1.5 font-mono text-xs text-text-muted">
+              <ul className="mt-4 space-y-1.5 text-[13px] text-text-muted">
                 <li>• Single-phase confirmation</li>
                 <li>• Immediate PDF tax invoice receipt</li>
                 <li>• Specific campaign earmarking</li>
               </ul>
             </div>
 
-            <div className="rounded-lg border border-border bg-surface p-6">
+            <div className="rounded-xs border border-border bg-surface p-6">
               <div className="flex items-center gap-2">
                 <span className="h-2.5 w-2.5 rounded-full bg-accent/50" />
-                <h3 className="text-base font-bold text-text-primary">
+                <h3 className="text-base font-semibold text-text-primary">
                   Recurring Monthly Sponsorships
                 </h3>
               </div>
               <p className="mt-3 text-sm leading-relaxed text-text-secondary">
                 Built on <strong>Stripe Subscriptions &amp; Customers API</strong>. Creates a persistent customer record with automated monthly renewal schedules, recurring gift aid tagging, and proactive card expiration reminders.
               </p>
-              <ul className="mt-4 space-y-1.5 font-mono text-xs text-text-muted">
+              <ul className="mt-4 space-y-1.5 text-[13px] text-text-muted">
                 <li>• Automated monthly billing runs</li>
                 <li>• Smart retries for failed card attempts</li>
                 <li>• Self-service donor management link</li>
@@ -311,8 +311,8 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
           </div>
 
           <div className="space-y-4">
-            <div className="rounded-lg border border-border bg-surface-elevated/40 p-5">
-              <h3 className="text-base font-bold text-text-primary">
+            <div className="rounded-xs border border-border bg-surface-elevated p-5">
+              <h3 className="text-base font-semibold text-text-primary">
                 Idempotent Webhook Processing
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-text-secondary">
@@ -320,8 +320,8 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
               </p>
             </div>
 
-            <div className="rounded-lg border border-border bg-surface-elevated/40 p-5">
-              <h3 className="text-base font-bold text-text-primary">
+            <div className="rounded-xs border border-border bg-surface-elevated p-5">
+              <h3 className="text-base font-semibold text-text-primary">
                 UK Gift Aid Declarations
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-text-secondary">
@@ -329,8 +329,8 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
               </p>
             </div>
 
-            <div className="rounded-lg border border-border bg-surface-elevated/40 p-5">
-              <h3 className="text-base font-bold text-text-primary">
+            <div className="rounded-xs border border-border bg-surface-elevated p-5">
+              <h3 className="text-base font-semibold text-text-primary">
                 Automated Transactional Receipts
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-text-secondary">
@@ -348,33 +348,33 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
           subtitle="Reliable technologies powering Children of the Ummah."
         >
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="rounded-lg border border-border bg-surface p-4">
-              <span className="font-mono text-xs font-semibold text-accent">Payment Gateway</span>
-              <p className="mt-1 font-bold text-text-primary">Stripe API</p>
+            <div className="rounded-xs border border-border bg-surface p-4">
+              <span className="text-[13px] font-medium text-text-muted">Payment Gateway</span>
+              <p className="mt-1 font-semibold text-text-primary">Stripe API</p>
               <p className="text-sm text-text-muted">Elements, Payment Intents &amp; Subscriptions</p>
             </div>
 
-            <div className="rounded-lg border border-border bg-surface p-4">
-              <span className="font-mono text-xs font-semibold text-accent">Framework</span>
-              <p className="mt-1 font-bold text-text-primary">Next.js &amp; TypeScript</p>
+            <div className="rounded-xs border border-border bg-surface p-4">
+              <span className="text-[13px] font-medium text-text-muted">Framework</span>
+              <p className="mt-1 font-semibold text-text-primary">Next.js &amp; TypeScript</p>
               <p className="text-sm text-text-muted">Type-safe full-stack routes &amp; SSR</p>
             </div>
 
-            <div className="rounded-lg border border-border bg-surface p-4">
-              <span className="font-mono text-xs font-semibold text-accent">Database</span>
-              <p className="mt-1 font-bold text-text-primary">MongoDB</p>
+            <div className="rounded-xs border border-border bg-surface p-4">
+              <span className="text-[13px] font-medium text-text-muted">Database</span>
+              <p className="mt-1 font-semibold text-text-primary">MongoDB</p>
               <p className="text-sm text-text-muted">Donor records, audit logs &amp; campaigns</p>
             </div>
 
-            <div className="rounded-lg border border-border bg-surface p-4">
-              <span className="font-mono text-xs font-semibold text-accent">Styling</span>
-              <p className="mt-1 font-bold text-text-primary">Tailwind CSS</p>
+            <div className="rounded-xs border border-border bg-surface p-4">
+              <span className="text-[13px] font-medium text-text-muted">Styling</span>
+              <p className="mt-1 font-semibold text-text-primary">Tailwind CSS</p>
               <p className="text-sm text-text-muted">Responsive mobile checkout UI</p>
             </div>
           </div>
 
-          <div className="mt-6 rounded-lg border border-border/70 bg-surface-elevated/40 p-5">
-            <h3 className="text-sm font-bold text-text-primary">Engineering Takeaways</h3>
+          <div className="mt-6 rounded-xs border border-border bg-surface-elevated p-5">
+            <h3 className="text-sm font-semibold text-text-primary">Engineering Takeaways</h3>
             <p className="text-sm leading-relaxed text-text-secondary">
               Building international charity donation infrastructure demands close attention to trust, multi-currency clarity, and reliable payment error handling. By eliminating friction and holding steady under traffic spikes, Children of the Ummah provides a secure lifeline for vulnerable children and communities worldwide.
             </p>
@@ -383,7 +383,7 @@ export default function ChildrenOfTheUmmahCaseStudyPage() {
       </div>
 
       {/* Footer Navigation Back to Work */}
-      <div className="mt-16 border-t border-border/70 pt-8 sm:mt-24">
+      <div className="mt-16 border-t border-border pt-8 sm:mt-24">
         <CaseStudyNav backHref="/#work" backLabel="Return to Selected Work" />
       </div>
     </article>

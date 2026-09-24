@@ -118,24 +118,24 @@ export default function PawPalsRescueCaseStudyPage() {
           </div>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-            <div className="rounded-lg border border-border bg-surface p-4">
-              <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-text-primary">
+            <div className="rounded-xs border border-border bg-surface p-4">
+              <h3 className="text-sm font-semibold text-text-primary">
                 Adoption Directory
               </h3>
               <p className="text-sm leading-relaxed text-text-secondary">
-                Filterable directory powered by <code className="font-mono text-accent">GET /pets</code> with verified status indicators (Available vs. Adopted).
+                Filterable directory powered by <code className="font-mono">GET /pets</code> with verified status indicators (Available vs. Adopted).
               </p>
             </div>
-            <div className="rounded-lg border border-border bg-surface p-4">
-              <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-text-primary">
+            <div className="rounded-xs border border-border bg-surface p-4">
+              <h3 className="text-sm font-semibold text-text-primary">
                 Adoption Workflow
               </h3>
               <p className="text-sm leading-relaxed text-text-secondary">
-                Detailed animal profiles with direct adoption inquiry forms and status transition endpoints (<code className="font-mono text-accent">PATCH /make-adopted/:id</code>).
+                Detailed animal profiles with direct adoption inquiry forms and status transition endpoints (<code className="font-mono">PATCH /make-adopted/:id</code>).
               </p>
             </div>
-            <div className="rounded-lg border border-border bg-surface p-4">
-              <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-text-primary">
+            <div className="rounded-xs border border-border bg-surface p-4">
+              <h3 className="text-sm font-semibold text-text-primary">
                 Donation Campaigns
               </h3>
               <p className="text-sm leading-relaxed text-text-secondary">
@@ -159,8 +159,8 @@ export default function PawPalsRescueCaseStudyPage() {
           </div>
 
           <div className="space-y-4">
-            <div className="rounded-lg border border-border bg-surface-elevated/40 p-5">
-              <h3 className="text-base font-bold text-text-primary">
+            <div className="rounded-xs border border-border bg-surface-elevated p-5">
+              <h3 className="text-base font-semibold text-text-primary">
                 1. Status-Based Pet Filtering (`GET /pets`)
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-text-secondary">
@@ -168,8 +168,8 @@ export default function PawPalsRescueCaseStudyPage() {
               </p>
             </div>
 
-            <div className="rounded-lg border border-border bg-surface-elevated/40 p-5">
-              <h3 className="text-base font-bold text-text-primary">
+            <div className="rounded-xs border border-border bg-surface-elevated p-5">
+              <h3 className="text-base font-semibold text-text-primary">
                 2. Responsive Pet Card Grid
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-text-secondary">
@@ -177,8 +177,8 @@ export default function PawPalsRescueCaseStudyPage() {
               </p>
             </div>
 
-            <div className="rounded-lg border border-border bg-surface-elevated/40 p-5">
-              <h3 className="text-base font-bold text-text-primary">
+            <div className="rounded-xs border border-border bg-surface-elevated p-5">
+              <h3 className="text-base font-semibold text-text-primary">
                 3. Server-State Caching with TanStack Query
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-text-secondary">
@@ -202,8 +202,8 @@ export default function PawPalsRescueCaseStudyPage() {
           </div>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <div className="rounded-lg border border-border bg-surface p-5">
-              <h3 className="font-mono text-sm font-bold text-text-primary">
+            <div className="rounded-xs border border-border bg-surface p-5">
+              <h3 className="text-sm font-semibold text-text-primary">
                 In-Depth Animal Biography
               </h3>
               <p className="text-sm leading-relaxed text-text-secondary">
@@ -211,8 +211,8 @@ export default function PawPalsRescueCaseStudyPage() {
               </p>
             </div>
 
-            <div className="rounded-lg border border-border bg-surface p-5">
-              <h3 className="font-mono text-sm font-bold text-text-primary">
+            <div className="rounded-xs border border-border bg-surface p-5">
+              <h3 className="text-sm font-semibold text-text-primary">
                 Adoption Request Submission
               </h3>
               <p className="text-sm leading-relaxed text-text-secondary">
@@ -220,8 +220,8 @@ export default function PawPalsRescueCaseStudyPage() {
               </p>
             </div>
 
-            <div className="rounded-lg border border-border bg-surface p-5">
-              <h3 className="font-mono text-sm font-bold text-text-primary">
+            <div className="rounded-xs border border-border bg-surface p-5">
+              <h3 className="text-sm font-semibold text-text-primary">
                 Status Tracking Workflow
               </h3>
               <p className="text-sm leading-relaxed text-text-secondary">
@@ -229,8 +229,8 @@ export default function PawPalsRescueCaseStudyPage() {
               </p>
             </div>
 
-            <div className="rounded-lg border border-border bg-surface p-5">
-              <h3 className="font-mono text-sm font-bold text-text-primary">
+            <div className="rounded-xs border border-border bg-surface p-5">
+              <h3 className="text-sm font-semibold text-text-primary">
                 Marking As Adopted (`PATCH /make-adopted/:id`)
               </h3>
               <p className="text-sm leading-relaxed text-text-secondary">
@@ -254,8 +254,8 @@ export default function PawPalsRescueCaseStudyPage() {
           </div>
 
           <div className="space-y-4">
-            <div className="rounded-lg border border-border bg-surface-elevated/40 p-5">
-              <h3 className="text-base font-bold text-text-primary">
+            <div className="rounded-xs border border-border bg-surface-elevated p-5">
+              <h3 className="text-base font-semibold text-text-primary">
                 Campaign Discovery (`GET /all-donations`)
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-text-secondary">
@@ -263,8 +263,8 @@ export default function PawPalsRescueCaseStudyPage() {
               </p>
             </div>
 
-            <div className="rounded-lg border border-border bg-surface-elevated/40 p-5">
-              <h3 className="text-base font-bold text-text-primary">
+            <div className="rounded-xs border border-border bg-surface-elevated p-5">
+              <h3 className="text-base font-semibold text-text-primary">
                 Stripe Contribution Engine
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-text-secondary">
@@ -272,8 +272,8 @@ export default function PawPalsRescueCaseStudyPage() {
               </p>
             </div>
 
-            <div className="rounded-lg border border-border bg-surface-elevated/40 p-5">
-              <h3 className="text-base font-bold text-text-primary">
+            <div className="rounded-xs border border-border bg-surface-elevated p-5">
+              <h3 className="text-base font-semibold text-text-primary">
                 Personal Donation History (`GET /my-donations`)
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-text-secondary">
@@ -319,40 +319,40 @@ export default function PawPalsRescueCaseStudyPage() {
           subtitle="All technologies and packages directly confirmed from the project repository."
         >
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="rounded-lg border border-border bg-surface p-4">
-              <span className="font-mono text-xs font-semibold text-accent">Frontend UI</span>
-              <p className="mt-1 font-bold text-text-primary">React &amp; Tailwind</p>
+            <div className="rounded-xs border border-border bg-surface p-4">
+              <span className="text-[13px] font-medium text-text-muted">Frontend UI</span>
+              <p className="mt-1 font-semibold text-text-primary">React &amp; Tailwind</p>
               <p className="text-sm text-text-muted">Component-driven architecture</p>
             </div>
 
-            <div className="rounded-lg border border-border bg-surface p-4">
-              <span className="font-mono text-xs font-semibold text-accent">Data Fetching</span>
-              <p className="mt-1 font-bold text-text-primary">TanStack Query + Axios</p>
+            <div className="rounded-xs border border-border bg-surface p-4">
+              <span className="text-[13px] font-medium text-text-muted">Data Fetching</span>
+              <p className="mt-1 font-semibold text-text-primary">TanStack Query + Axios</p>
               <p className="text-sm text-text-muted">Cached asynchronous data layer</p>
             </div>
 
-            <div className="rounded-lg border border-border bg-surface p-4">
-              <span className="font-mono text-xs font-semibold text-accent">Authentication</span>
-              <p className="mt-1 font-bold text-text-primary">Firebase Auth</p>
+            <div className="rounded-xs border border-border bg-surface p-4">
+              <span className="text-[13px] font-medium text-text-muted">Authentication</span>
+              <p className="mt-1 font-semibold text-text-primary">Firebase Auth</p>
               <p className="text-sm text-text-muted">Secure user sessions</p>
             </div>
 
-            <div className="rounded-lg border border-border bg-surface p-4">
-              <span className="font-mono text-xs font-semibold text-accent">Backend &amp; DB</span>
-              <p className="mt-1 font-bold text-text-primary">Node.js + Express + MongoDB</p>
+            <div className="rounded-xs border border-border bg-surface p-4">
+              <span className="text-[13px] font-medium text-text-muted">Backend &amp; DB</span>
+              <p className="mt-1 font-semibold text-text-primary">Node.js + Express + MongoDB</p>
               <p className="text-sm text-text-muted">REST API &amp; data persistence</p>
             </div>
           </div>
 
-          <div className="mt-6 rounded-lg border border-border/70 bg-surface-elevated/40 p-5">
-            <h3 className="text-sm font-bold text-text-primary">Verified Code Highlights</h3>
+          <div className="mt-6 rounded-xs border border-border bg-surface-elevated p-5">
+            <h3 className="text-sm font-semibold text-text-primary">Verified Code Highlights</h3>
             <p className="text-sm leading-relaxed text-text-secondary">
               All architectural points, API endpoints, and features documented in this case study are strictly validated against the public GitHub repository at{" "}
               <a
                 href="https://github.com/sowmik-sec/paw-pals-rescue-client"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-accent underline underline-offset-2 hover:text-accent-hover"
+                className="link-draw font-medium text-text-primary"
               >
                 sowmik-sec/paw-pals-rescue-client
               </a>
@@ -363,7 +363,7 @@ export default function PawPalsRescueCaseStudyPage() {
       </div>
 
       {/* Footer Navigation Back to Work */}
-      <div className="mt-16 border-t border-border/70 pt-8 sm:mt-24">
+      <div className="mt-16 border-t border-border pt-8 sm:mt-24">
         <CaseStudyNav backHref="/#work" backLabel="Return to Selected Work" />
       </div>
     </article>

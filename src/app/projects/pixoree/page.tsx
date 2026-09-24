@@ -109,24 +109,24 @@ export default function PixoreeCaseStudyPage() {
           </div>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-            <div className="rounded-lg border border-border bg-surface p-4">
-              <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-text-primary">
+            <div className="rounded-xs border border-border bg-surface p-4">
+              <h3 className="text-sm font-semibold text-text-primary">
                 Direct Manipulation
               </h3>
               <p className="text-sm leading-relaxed text-text-secondary">
                 Sub-pixel coordinate manipulation, freeform rotation, and contextual resize handles directly on canvas elements.
               </p>
             </div>
-            <div className="rounded-lg border border-border bg-surface p-4">
-              <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-text-primary">
+            <div className="rounded-xs border border-border bg-surface p-4">
+              <h3 className="text-sm font-semibold text-text-primary">
                 Layer Hierarchy
               </h3>
               <p className="text-sm leading-relaxed text-text-secondary">
                 Arbitrary z-index ordering, grouping, locking, and visibility controls mirrored across UI panels and the canvas.
               </p>
             </div>
-            <div className="rounded-lg border border-border bg-surface p-4">
-              <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-text-primary">
+            <div className="rounded-xs border border-border bg-surface p-4">
+              <h3 className="text-sm font-semibold text-text-primary">
                 Client-Side Export
               </h3>
               <p className="text-sm leading-relaxed text-text-secondary">
@@ -153,8 +153,8 @@ export default function PixoreeCaseStudyPage() {
           </div>
 
           <div className="space-y-4">
-            <div className="rounded-lg border border-border bg-surface-elevated/40 p-5">
-              <h3 className="text-base font-bold text-text-primary">
+            <div className="rounded-xs border border-border bg-surface-elevated p-5">
+              <h3 className="text-base font-semibold text-text-primary">
                 1. Encapsulated Canvas Host
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-text-secondary">
@@ -162,8 +162,8 @@ export default function PixoreeCaseStudyPage() {
               </p>
             </div>
 
-            <div className="rounded-lg border border-border bg-surface-elevated/40 p-5">
-              <h3 className="text-base font-bold text-text-primary">
+            <div className="rounded-xs border border-border bg-surface-elevated p-5">
+              <h3 className="text-base font-semibold text-text-primary">
                 2. Bidirectional State Synchronization
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-text-secondary">
@@ -171,8 +171,8 @@ export default function PixoreeCaseStudyPage() {
               </p>
             </div>
 
-            <div className="rounded-lg border border-border bg-surface-elevated/40 p-5">
-              <h3 className="text-base font-bold text-text-primary">
+            <div className="rounded-xs border border-border bg-surface-elevated p-5">
+              <h3 className="text-base font-semibold text-text-primary">
                 3. High-DPI &amp; Retina Display Calibration
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-text-secondary">
@@ -196,8 +196,8 @@ export default function PixoreeCaseStudyPage() {
           </div>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <div className="rounded-lg border border-border bg-surface p-5">
-              <h3 className="font-mono text-sm font-bold text-text-primary">
+            <div className="rounded-xs border border-border bg-surface p-5">
+              <h3 className="text-sm font-semibold text-text-primary">
                 Transform Handles &amp; Bounding Boxes
               </h3>
               <p className="text-sm leading-relaxed text-text-secondary">
@@ -205,8 +205,8 @@ export default function PixoreeCaseStudyPage() {
               </p>
             </div>
 
-            <div className="rounded-lg border border-border bg-surface p-5">
-              <h3 className="font-mono text-sm font-bold text-text-primary">
+            <div className="rounded-xs border border-border bg-surface p-5">
+              <h3 className="text-sm font-semibold text-text-primary">
                 Constrained Scaling &amp; Proportions
               </h3>
               <p className="text-sm leading-relaxed text-text-secondary">
@@ -214,8 +214,8 @@ export default function PixoreeCaseStudyPage() {
               </p>
             </div>
 
-            <div className="rounded-lg border border-border bg-surface p-5">
-              <h3 className="font-mono text-sm font-bold text-text-primary">
+            <div className="rounded-xs border border-border bg-surface p-5">
+              <h3 className="text-sm font-semibold text-text-primary">
                 Freeform Rotation with Center Snapping
               </h3>
               <p className="text-sm leading-relaxed text-text-secondary">
@@ -223,8 +223,8 @@ export default function PixoreeCaseStudyPage() {
               </p>
             </div>
 
-            <div className="rounded-lg border border-border bg-surface p-5">
-              <h3 className="font-mono text-sm font-bold text-text-primary">
+            <div className="rounded-xs border border-border bg-surface p-5">
+              <h3 className="text-sm font-semibold text-text-primary">
                 Direct-Manipulation Drag &amp; Drop
               </h3>
               <p className="text-sm leading-relaxed text-text-secondary">
@@ -271,29 +271,29 @@ export default function PixoreeCaseStudyPage() {
         >
           <div className="max-w-3xl space-y-4 text-base leading-relaxed text-text-secondary sm:text-lg sm:leading-relaxed">
             <p>
-              Designing in a browser requires an intuitive and reliable history stack. Users expect standard shortcuts (<kbd className="rounded border border-border bg-surface-elevated px-1 py-0.5 font-mono text-xs">Cmd+Z</kbd> / <kbd className="rounded border border-border bg-surface-elevated px-1 py-0.5 font-mono text-xs">Ctrl+Z</kbd>) to cleanly revert color modifications, text edits, deletions, and layout transformations.
+              Designing in a browser requires an intuitive and reliable history stack. Users expect standard shortcuts (<kbd className="rounded-xs border border-border bg-surface-elevated px-1 py-0.5 font-mono text-xs">Cmd+Z</kbd> / <kbd className="rounded-xs border border-border bg-surface-elevated px-1 py-0.5 font-mono text-xs">Ctrl+Z</kbd>) to cleanly revert color modifications, text edits, deletions, and layout transformations.
             </p>
             <p>
               The state engine implements an <strong>in-memory snapshot ring buffer</strong>:
             </p>
           </div>
 
-          <div className="rounded-lg border border-border bg-surface p-5">
+          <div className="rounded-xs border border-border bg-surface p-5">
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
               <div>
-                <span className="font-mono text-xs font-bold text-accent">01. Snapshot Debouncing</span>
+                <span className="text-[13px] font-medium text-text-muted">01. Snapshot Debouncing</span>
                 <p className="text-sm text-text-secondary">
                   High-frequency actions (like continuous slider color adjustments or dragging) debounce snapshot commits until the mouse release event, preventing the history stack from filling with micro-steps.
                 </p>
               </div>
               <div>
-                <span className="font-mono text-xs font-bold text-accent">02. JSON Serialization</span>
+                <span className="text-[13px] font-medium text-text-muted">02. JSON Serialization</span>
                 <p className="text-sm text-text-secondary">
                   Each committed step serializes the active canvas objects into a lightweight JSON schema. Non-serializable runtime listeners are decoupled from the document payload.
                 </p>
               </div>
               <div>
-                <span className="font-mono text-xs font-bold text-accent">03. Bounded Stack Window</span>
+                <span className="text-[13px] font-medium text-text-muted">03. Bounded Stack Window</span>
                 <p className="text-sm text-text-secondary">
                   History is capped at a sliding window of 50 actions to preserve browser memory and eliminate memory leaks during extended, multi-hour editing sessions.
                 </p>
@@ -324,7 +324,7 @@ export default function PixoreeCaseStudyPage() {
                 <strong>Collapsible Panels:</strong> Sidebars and inspectors collapse into compact slide-overs on smaller displays, preserving precious screen real estate for the primary canvas artboard.
               </li>
               <li>
-                <strong>Keyboard Shortcuts:</strong> Pro designers can navigate common operations (<kbd className="rounded border border-border bg-surface-elevated px-1 py-0.5 font-mono text-xs">Delete</kbd>, <kbd className="rounded border border-border bg-surface-elevated px-1 py-0.5 font-mono text-xs">Cmd+C</kbd>, <kbd className="rounded border border-border bg-surface-elevated px-1 py-0.5 font-mono text-xs">Cmd+V</kbd>, arrow key nudge) without interacting with on-screen buttons.
+                <strong>Keyboard Shortcuts:</strong> Pro designers can navigate common operations (<kbd className="rounded-xs border border-border bg-surface-elevated px-1 py-0.5 font-mono text-xs">Delete</kbd>, <kbd className="rounded-xs border border-border bg-surface-elevated px-1 py-0.5 font-mono text-xs">Cmd+C</kbd>, <kbd className="rounded-xs border border-border bg-surface-elevated px-1 py-0.5 font-mono text-xs">Cmd+V</kbd>, arrow key nudge) without interacting with on-screen buttons.
               </li>
             </ul>
           </div>
@@ -344,8 +344,8 @@ export default function PixoreeCaseStudyPage() {
           </div>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <div className="rounded-lg border border-border bg-surface p-5">
-              <h3 className="font-mono text-sm font-bold text-text-primary">
+            <div className="rounded-xs border border-border bg-surface p-5">
+              <h3 className="text-sm font-semibold text-text-primary">
                 Multi-DPI PNG &amp; JPEG Rasterization
               </h3>
               <p className="text-sm leading-relaxed text-text-secondary">
@@ -353,8 +353,8 @@ export default function PixoreeCaseStudyPage() {
               </p>
             </div>
 
-            <div className="rounded-lg border border-border bg-surface p-5">
-              <h3 className="font-mono text-sm font-bold text-text-primary">
+            <div className="rounded-xs border border-border bg-surface p-5">
+              <h3 className="text-sm font-semibold text-text-primary">
                 Print-Ready PDF Generation
               </h3>
               <p className="text-sm leading-relaxed text-text-secondary">
@@ -372,33 +372,33 @@ export default function PixoreeCaseStudyPage() {
           subtitle="Engineering stack and architectural invariants that make Pixoree fast and maintainable."
         >
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="rounded-lg border border-border bg-surface p-4">
-              <span className="font-mono text-xs font-semibold text-accent">Engine &amp; UI</span>
-              <p className="mt-1 font-bold text-text-primary">Fabric.js 5.3 + React</p>
+            <div className="rounded-xs border border-border bg-surface p-4">
+              <span className="text-[13px] font-medium text-text-muted">Engine &amp; UI</span>
+              <p className="mt-1 font-semibold text-text-primary">Fabric.js 5.3 + React</p>
               <p className="text-sm text-text-muted">Canvas rendering &amp; component state</p>
             </div>
 
-            <div className="rounded-lg border border-border bg-surface p-4">
-              <span className="font-mono text-xs font-semibold text-accent">Framework</span>
-              <p className="mt-1 font-bold text-text-primary">Next.js &amp; TypeScript</p>
+            <div className="rounded-xs border border-border bg-surface p-4">
+              <span className="text-[13px] font-medium text-text-muted">Framework</span>
+              <p className="mt-1 font-semibold text-text-primary">Next.js &amp; TypeScript</p>
               <p className="text-sm text-text-muted">Type-safe routing &amp; optimization</p>
             </div>
 
-            <div className="rounded-lg border border-border bg-surface p-4">
-              <span className="font-mono text-xs font-semibold text-accent">Storage</span>
-              <p className="mt-1 font-bold text-text-primary">MongoDB</p>
+            <div className="rounded-xs border border-border bg-surface p-4">
+              <span className="text-[13px] font-medium text-text-muted">Storage</span>
+              <p className="mt-1 font-semibold text-text-primary">MongoDB</p>
               <p className="text-sm text-text-muted">Template &amp; user asset catalog</p>
             </div>
 
-            <div className="rounded-lg border border-border bg-surface p-4">
-              <span className="font-mono text-xs font-semibold text-accent">Styling</span>
-              <p className="mt-1 font-bold text-text-primary">Tailwind CSS</p>
+            <div className="rounded-xs border border-border bg-surface p-4">
+              <span className="text-[13px] font-medium text-text-muted">Styling</span>
+              <p className="mt-1 font-semibold text-text-primary">Tailwind CSS</p>
               <p className="text-sm text-text-muted">Responsive toolbar &amp; inspector HUD</p>
             </div>
           </div>
 
-          <div className="mt-6 rounded-lg border border-border/70 bg-surface-elevated/40 p-5">
-            <h3 className="text-sm font-bold text-text-primary">Engineering Takeaways</h3>
+          <div className="mt-6 rounded-xs border border-border bg-surface-elevated p-5">
+            <h3 className="text-sm font-semibold text-text-primary">Engineering Takeaways</h3>
             <p className="text-sm leading-relaxed text-text-secondary">
               Pixoree demonstrates that complex desktop-grade creative workflows can run entirely inside the modern web browser. By decoupling high-frequency canvas physics from declarative React state updates, Pixoree achieves native-feeling 60fps performance and zero server rendering overhead.
             </p>
@@ -407,7 +407,7 @@ export default function PixoreeCaseStudyPage() {
       </div>
 
       {/* Footer Navigation Back to Work */}
-      <div className="mt-16 border-t border-border/70 pt-8 sm:mt-24">
+      <div className="mt-16 border-t border-border pt-8 sm:mt-24">
         <CaseStudyNav backHref="/#work" backLabel="Return to Selected Work" />
       </div>
     </article>

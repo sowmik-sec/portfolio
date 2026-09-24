@@ -1,16 +1,16 @@
 export function SkillbentoArchitectureVisual() {
   return (
     <div
-      className="relative w-full overflow-hidden rounded-xl border border-border bg-surface dark:bg-[#111317]"
+      className="relative w-full overflow-hidden rounded-xs border border-border bg-surface"
       aria-label="Skillbento Multi-Tenant System Architecture Diagram"
     >
       {/* Window chrome */}
-      <div className="flex h-11 items-center justify-between border-b border-border/70 px-4">
+      <div className="flex h-11 items-center justify-between border-b border-border px-4">
         <div className="flex items-center gap-2.5">
           <div className="flex items-center gap-1.5" aria-hidden="true">
-            <span className="h-2.5 w-2.5 rounded-full bg-[#EC6A5E]/80" />
-            <span className="h-2.5 w-2.5 rounded-full bg-[#F5BF4F]/80" />
-            <span className="h-2.5 w-2.5 rounded-full bg-[#62C554]/80" />
+            <span className="h-2.5 w-2.5 rounded-full bg-[#EC6A5E]" />
+            <span className="h-2.5 w-2.5 rounded-full bg-[#F5BF4F]" />
+            <span className="h-2.5 w-2.5 rounded-full bg-[#62C554]" />
           </div>
           <span className="ml-2 hidden font-mono text-[11px] text-text-muted sm:inline-block">
             skillbento / architecture-preview
@@ -25,23 +25,23 @@ export function SkillbentoArchitectureVisual() {
         <div className="mx-auto max-w-3xl space-y-5">
           {/* Tier 1: Ingress */}
           <div>
-            <p className="font-mono text-[11px] uppercase tracking-wider text-text-muted">
+            <p className="font-mono text-[11px] text-text-muted">
               01 · Client &amp; Edge Ingress
             </p>
             <div className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-3">
-              <div className="rounded-lg bg-surface-elevated p-3 text-center">
+              <div className="rounded-xs bg-surface-elevated p-3 text-center">
                 <p className="font-mono text-[11px] font-medium text-text-primary">
                   tenant-a.skillbento.com
                 </p>
                 <p className="text-[11px] text-text-muted">Creator A Academy</p>
               </div>
-              <div className="rounded-lg bg-surface-elevated p-3 text-center">
+              <div className="rounded-xs bg-surface-elevated p-3 text-center">
                 <p className="font-mono text-[11px] font-medium text-text-primary">
                   tenant-b.skillbento.com
                 </p>
                 <p className="text-[11px] text-text-muted">Engineering Hub</p>
               </div>
-              <div className="rounded-lg bg-surface-elevated p-3 text-center">
+              <div className="rounded-xs bg-surface-elevated p-3 text-center">
                 <p className="font-mono text-[11px] font-medium text-text-primary">
                   academy.customdomain.org
                 </p>
@@ -58,8 +58,8 @@ export function SkillbentoArchitectureVisual() {
           </div>
 
           {/* Tier 2: Go gateway — the one accent moment */}
-          <div className="rounded-lg border-l-2 border-accent bg-surface-elevated p-4">
-            <p className="font-mono text-[11px] font-semibold text-accent">
+          <div className="rounded-xs border-l-2 border-accent bg-surface-elevated p-4">
+            <p className="font-mono text-[11px] font-medium text-accent">
               02 · Go Service Gateway
             </p>
             <p className="mt-1 text-[11px] text-text-secondary sm:text-xs">
@@ -88,7 +88,7 @@ export function SkillbentoArchitectureVisual() {
 
           {/* Tier 3: Domain modules */}
           <div>
-            <p className="font-mono text-[11px] uppercase tracking-wider text-text-muted">
+            <p className="font-mono text-[11px] text-text-muted">
               03 · Proposed Domain Services
             </p>
             <div className="mt-2 grid grid-cols-2 gap-2 sm:grid-cols-5">
@@ -99,7 +99,7 @@ export function SkillbentoArchitectureVisual() {
                 { title: "Appointments", desc: "1-on-1 availability" },
                 { title: "Payments", desc: "Multi-tenant checkout" },
               ].map((mod) => (
-                <div key={mod.title} className="rounded-lg bg-surface-elevated p-2.5 text-center">
+                <div key={mod.title} className="rounded-xs bg-surface-elevated p-2.5 text-center">
                   <p className="font-mono text-xs font-medium text-text-primary">{mod.title}</p>
                   <p className="mt-0.5 text-[11px] text-text-muted">{mod.desc}</p>
                 </div>
@@ -115,7 +115,7 @@ export function SkillbentoArchitectureVisual() {
           </div>
 
           {/* Tier 4: Data layer */}
-          <div className="rounded-lg bg-surface-elevated p-4">
+          <div className="rounded-xs bg-surface-elevated p-4">
             <p className="font-mono text-xs font-medium text-text-primary">
               04 · MongoDB Multi-Tenant Storage
             </p>
@@ -135,16 +135,16 @@ export function SkillbentoArchitectureVisual() {
 export function PawPalsRescueVisual() {
   return (
     <div
-      className="relative w-full overflow-hidden rounded-xl border border-border bg-surface dark:bg-[#111317]"
+      className="relative w-full overflow-hidden rounded-xs border border-border bg-surface"
       aria-label="Paw Pals Rescue Client Application Mockup"
     >
       {/* Window chrome */}
-      <div className="flex h-11 items-center justify-between border-b border-border/70 px-4">
+      <div className="flex h-11 items-center justify-between border-b border-border px-4">
         <div className="flex items-center gap-2.5">
           <div className="flex items-center gap-1.5" aria-hidden="true">
-            <span className="h-2.5 w-2.5 rounded-full bg-[#EC6A5E]/80" />
-            <span className="h-2.5 w-2.5 rounded-full bg-[#F5BF4F]/80" />
-            <span className="h-2.5 w-2.5 rounded-full bg-[#62C554]/80" />
+            <span className="h-2.5 w-2.5 rounded-full bg-[#EC6A5E]" />
+            <span className="h-2.5 w-2.5 rounded-full bg-[#F5BF4F]" />
+            <span className="h-2.5 w-2.5 rounded-full bg-[#62C554]" />
           </div>
           <span className="ml-2 hidden font-mono text-[11px] text-text-muted sm:inline-block">
             paw-pals-rescue-client / adoption-hub
@@ -157,7 +157,7 @@ export function PawPalsRescueVisual() {
       {/* Interface */}
       <div className="p-4 sm:p-6 md:p-8">
         {/* Filter bar */}
-        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border/60 pb-4">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border pb-4">
           <div className="flex items-center gap-2">
             <span className="font-mono text-[11px] text-text-muted">Status filter:</span>
             <div className="flex rounded-md border border-border p-0.5 text-[11px]">
@@ -177,7 +177,7 @@ export function PawPalsRescueVisual() {
         {/* Pet cards */}
         <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {/* Card 1: Available pet */}
-          <div className="flex flex-col justify-between rounded-lg border border-border bg-surface p-4">
+          <div className="flex flex-col justify-between rounded-xs border border-border bg-surface p-4">
             <div>
               <div className="flex items-start justify-between">
                 <div>
@@ -194,13 +194,13 @@ export function PawPalsRescueVisual() {
             <div className="mt-4 flex items-center justify-between border-t border-border/50 pt-3">
               <span className="font-mono text-[11px] text-text-muted">ID: #pet-104</span>
               <span className="text-xs font-medium text-text-primary underline underline-offset-2">
-                Adopt Milo →
+                Adopt Milo
               </span>
             </div>
           </div>
 
           {/* Card 2: Adopted pet */}
-          <div className="flex flex-col justify-between rounded-lg border border-border/60 bg-surface p-4 opacity-75">
+          <div className="flex flex-col justify-between rounded-xs border border-border/60 bg-surface p-4 opacity-75">
             <div>
               <div className="flex items-start justify-between">
                 <div>
@@ -220,7 +220,7 @@ export function PawPalsRescueVisual() {
           </div>
 
           {/* Card 3: Donation campaign — the one accent moment */}
-          <div className="flex flex-col justify-between rounded-lg border border-border bg-surface p-4 sm:col-span-2 lg:col-span-1">
+          <div className="flex flex-col justify-between rounded-xs border border-border bg-surface p-4 sm:col-span-2 lg:col-span-1">
             <div>
               <div className="flex items-start justify-between">
                 <div>

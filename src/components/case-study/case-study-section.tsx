@@ -23,17 +23,17 @@ export function CaseStudySection({
       as="section"
       id={id}
       aria-labelledby={`${id}-heading`}
-      className={`border-t border-border/60 pt-10 sm:pt-14 ${className}`}
+      className={`border-t border-border pt-10 sm:pt-14 ${className}`}
     >
       <div className="flex flex-col gap-1">
         {badge && (
-          <span className="font-mono text-xs font-semibold uppercase tracking-wider text-accent">
+          <span className="text-[13px] font-medium text-text-muted">
             {badge}
           </span>
         )}
         <h2
           id={`${id}-heading`}
-          className="text-2xl font-semibold tracking-tight text-text-primary sm:text-4xl"
+          className="font-serif text-2xl tracking-[0.01em] text-text-primary sm:text-3xl"
         >
           {title}
         </h2>
