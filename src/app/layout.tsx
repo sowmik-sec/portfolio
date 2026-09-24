@@ -86,9 +86,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  icons: {
-    icon: "/favicon.ico",
-  },
+  // Icons come from the file conventions: src/app/icon.svg (theme-aware
+  // monogram, preferred by SVG-capable browsers) and src/app/favicon.ico
+  // (raster fallback).
   manifest: "/manifest.webmanifest",
 };
 
