@@ -3,39 +3,40 @@
 @variant dark (&:where(.dark, .dark *));
 
 :root {
-  /* Light mode palette (warm off-white paper, near-black ink, one restrained green accent) */
-  --background: #FBFBFA;
+  /* Light mode palette (gallery white walls, neutral ink, one deep green reserved
+     for "live" states — hover, focus, verified figures, active layers) */
+  --background: #F7F6F3;
   --surface: #FFFFFF;
-  --surface-elevated: #F4F4F1;
-  --surface-muted: #EAEAE6;
-  --border: #E5E7EB;
-  --border-subtle: #F0F1F3;
-  --foreground: #111213;
-  --text-primary: #111213;
-  --text-secondary: #4B5563;
-  --text-muted: #5B6575;
+  --surface-elevated: #F0EFEA;
+  --surface-muted: #E9E8E2;
+  --border: #E1E0D9;
+  --border-subtle: #EBEAE4;
+  --foreground: #17181C;
+  --text-primary: #17181C;
+  --text-secondary: #494B52;
+  --text-muted: #63656D;
   --accent: #166534;
   --accent-hover: #14532D;
-  --accent-muted: #DCFCE7;
+  --accent-muted: #E4EFE6;
   --accent-foreground: #FFFFFF;
 }
 
 .dark {
-  /* Dark mode palette (deep charcoal foundation, luminous off-white, muted surfaces) */
-  --background: #0B0C0E;
-  --surface: #131518;
-  --surface-elevated: #1A1D22;
-  --surface-muted: #22262E;
-  --border: #23272F;
-  --border-subtle: #181B21;
-  --foreground: #F4F5F6;
-  --text-primary: #F4F5F6;
-  --text-secondary: #9CA3AF;
-  --text-muted: #94A3B8;
-  --accent: #4ADE80;
-  --accent-hover: #86EFAC;
-  --accent-muted: #052E16;
-  --accent-foreground: #0B0C0E;
+  /* Dark mode palette (gallery charcoal with a faint green cast, lit green accent) */
+  --background: #131412;
+  --surface: #1A1B19;
+  --surface-elevated: #22231F;
+  --surface-muted: #2A2B26;
+  --border: #2A2C27;
+  --border-subtle: #1E1F1C;
+  --foreground: #EFEEE9;
+  --text-primary: #EFEEE9;
+  --text-secondary: #A3A49D;
+  --text-muted: #888A82;
+  --accent: #61C08B;
+  --accent-hover: #86D3A6;
+  --accent-muted: #142A1D;
+  --accent-foreground: #0E1811;
 }
 
 @theme inline {
@@ -53,34 +54,40 @@
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
   --color-text-muted: var(--text-muted);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-instrument-sans);
+  --font-serif: var(--font-instrument-serif);
   --font-mono: var(--font-geist-mono);
 
   /*
-   * Fluid editorial type scale.
-   * Typography is the primary visual element of this design — display sizes
-   * for hero/section statements, a modest lead size for body copy.
+   * Fluid type scale. Instrument Serif carries display sizes (it is light at
+   * weight 400, so display sizes run slightly larger than the old grotesk);
+   * Instrument Sans carries body, labels, and UI.
    */
-  --text-display: clamp(2.75rem, 1.6rem + 5.2vw, 6rem);
-  --text-display--line-height: 1.02;
-  --text-display--letter-spacing: -0.03em;
+  --text-display: clamp(2.875rem, 1.6rem + 5.4vw, 6.25rem);
+  --text-display--line-height: 1.04;
+  --text-display--letter-spacing: -0.015em;
 
-  --text-title: clamp(2rem, 1.4rem + 2.4vw, 3.25rem);
-  --text-title--line-height: 1.08;
-  --text-title--letter-spacing: -0.02em;
+  --text-title: clamp(2.125rem, 1.55rem + 2.4vw, 3.375rem);
+  --text-title--line-height: 1.1;
+  --text-title--letter-spacing: -0.01em;
 
-  --text-stat: clamp(2.75rem, 2rem + 3.5vw, 4.75rem);
+  --text-stat: clamp(2.5rem, 1.9rem + 3vw, 4.25rem);
   --text-stat--line-height: 1.05;
-  --text-stat--letter-spacing: -0.02em;
+  --text-stat--letter-spacing: -0.01em;
 
-  --text-lead: clamp(1.0625rem, 1rem + 0.4vw, 1.25rem);
-  --text-lead--line-height: 1.6;
+  --text-lead: clamp(1.0625rem, 1rem + 0.35vw, 1.21875rem);
+  --text-lead--line-height: 1.65;
 }
 
 /*
  * Micro-typography rules (repo-wide conventions):
- * - Monospace is reserved for genuine technical micro-labels (index numbers,
- *   status labels, technology lists) — never for marketing copy.
+ * - Instrument Serif is display-only (hero/section statements, project titles,
+ *   stat figures, the contact email) — never below ~2rem, never for body copy.
+ * - Labels are sentence case, small, and sans — no uppercase, no letter-spacing,
+ *   no monospace eyebrows.
+ * - Lists join with commas, not middle dots.
+ * - Monospace is reserved for genuine technical strings inside product mockups
+ *   and code identifiers — never for marketing copy or labels.
  * - Arbitrary font sizes floor at text-[11px]; text-[8px]/[9px]/[10px] are banned.
  * - Body copy is text-base or larger; use text-lead for section descriptions.
  */
@@ -131,6 +138,27 @@ body {
 .theme-transitioning *::after {
   transition: background-color 250ms ease-out, border-color 250ms ease-out, color 250ms ease-out, fill 250ms ease-out, stroke 250ms ease-out, box-shadow 250ms ease-out !important;
   transition-delay: 0s !important;
+}
+
+/*
+ * Active-layer underline: a neutral hairline rests under the link; on hover or
+ * focus the green layer draws over it from the left — the same green a canvas
+ * editor gives a selected object.
+ */
+.link-draw {
+  background-image:
+    linear-gradient(var(--accent), var(--accent)),
+    linear-gradient(var(--border), var(--border));
+  background-size: 0% 2px, 100% 1px;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  transition: background-size 320ms cubic-bezier(0.16, 1, 0.3, 1);
+  padding-bottom: 0.05em;
+}
+
+.link-draw:hover,
+.link-draw:focus-visible {
+  background-size: 100% 2px, 100% 1px;
 }
 
 /* Progressive Scroll Reveal (content is fully readable without JS) */

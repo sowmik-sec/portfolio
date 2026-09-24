@@ -1,69 +1,81 @@
 import type { FC } from "react";
 import { CURRENT_ROLE, EDUCATION_HISTORY } from "@/data/experience";
-import { ScrollReveal } from "./scroll-reveal";
+import { SKILL_CATEGORIES } from "@/data/skills";
 
 export const Experience: FC = () => {
   return (
     <section
       id="experience"
       aria-labelledby="experience-title"
-      className="relative border-t border-border/70 py-16 sm:py-24 md:py-32"
+      className="relative scroll-mt-24 py-20 sm:py-28 md:py-36"
     >
       {/* Section Header */}
-      <ScrollReveal>
-        <h2
-          id="experience-title"
-          className="text-title font-semibold text-text-primary"
-        >
-          Experience &amp; Education
-        </h2>
-      </ScrollReveal>
+      <h2
+        id="experience-title"
+        className="font-serif text-title text-text-primary"
+      >
+        Experience &amp; Education
+      </h2>
 
-      <div className="mt-10 space-y-12 sm:mt-12 sm:space-y-14">
+      <div className="mt-12 space-y-16 sm:mt-16 sm:space-y-20">
         {/* Work */}
-        <ScrollReveal>
-          <h3 className="font-mono text-xs uppercase tracking-wider text-text-muted">
-            Work
-          </h3>
+        <div>
+          <h3 className="text-[13px] font-medium text-text-muted">Work</h3>
 
-          <div className="mt-4 flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-            <h4 className="text-2xl font-semibold tracking-tight text-text-primary sm:text-3xl">
+          <div className="mt-5 flex flex-col gap-1.5 sm:flex-row sm:items-baseline sm:justify-between">
+            <h4 className="font-serif text-2xl text-text-primary sm:text-3xl">
               {CURRENT_ROLE.role}
-              <span className="text-text-muted"> · </span>
+              <span className="text-text-muted">, </span>
               {CURRENT_ROLE.company}
             </h4>
-            <p className="font-mono text-sm text-text-muted sm:shrink-0">
+            <p className="text-[13px] text-text-muted sm:shrink-0">
               {CURRENT_ROLE.timeline}
             </p>
           </div>
 
-          <p className="mt-4 max-w-3xl text-lead text-text-secondary">
+          <p className="mt-5 max-w-3xl text-lead text-text-secondary">
             {CURRENT_ROLE.focus}
           </p>
 
-          <p className="mt-5 font-mono text-sm text-text-primary">
-            {CURRENT_ROLE.technologies.join(" · ")}
+          <p className="mt-5 text-sm text-text-primary">
+            {CURRENT_ROLE.technologies.join(", ")}
           </p>
-        </ScrollReveal>
+        </div>
+
+        {/* Toolkit (working skills, kept close to where they're earned) */}
+        <div>
+          <h3 className="text-[13px] font-medium text-text-muted">Toolkit</h3>
+
+          <div className="mt-6 grid grid-cols-1 gap-x-12 gap-y-8 sm:grid-cols-2">
+            {SKILL_CATEGORIES.map((category) => (
+              <div key={category.id} id={`skill-${category.id}`}>
+                <h4 className="text-[13px] font-medium text-text-muted">
+                  {category.name}
+                </h4>
+                <p className="mt-2 text-base leading-relaxed text-text-primary">
+                  {category.skills.join(", ")}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
 
         {/* Education */}
-        <ScrollReveal delay={60}>
-          <h3 className="font-mono text-xs uppercase tracking-wider text-text-muted">
-            Education
-          </h3>
+        <div>
+          <h3 className="text-[13px] font-medium text-text-muted">Education</h3>
 
           {EDUCATION_HISTORY.map((edu) => (
-            <div key={edu.institution} className="mt-4">
-              <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-                <h4 className="text-2xl font-semibold tracking-tight text-text-primary sm:text-3xl">
+            <div key={edu.institution} className="mt-5">
+              <div className="flex flex-col gap-1.5 sm:flex-row sm:items-baseline sm:justify-between">
+                <h4 className="max-w-3xl font-serif text-2xl text-text-primary sm:text-3xl">
                   {edu.degree}
                 </h4>
-                <p className="font-mono text-sm text-text-muted sm:shrink-0">
+                <p className="text-[13px] text-text-muted sm:shrink-0">
                   {edu.graduationYear} · CGPA: {edu.cgpa}
                 </p>
               </div>
 
-              <p className="mt-1.5 text-base text-text-secondary sm:text-lg">
+              <p className="mt-2 text-[15px] text-text-secondary">
                 {edu.institution} · Sylhet, Bangladesh
               </p>
 
@@ -74,7 +86,7 @@ export const Experience: FC = () => {
               )}
             </div>
           ))}
-        </ScrollReveal>
+        </div>
       </div>
     </section>
   );

@@ -6,8 +6,9 @@ interface ProjectVisualProps {
 }
 
 /**
- * Product visual mockups representing production software.
- * Built with responsive SVG and Tailwind styling to communicate production scale.
+ * Product interface mockups representing production software.
+ * Framed by the Artboard component in Selected Work — these render the
+ * product's own interface only (no fake browser chrome).
  *
  * TODO: Replace with high-resolution production screenshots once exported:
  * - Pixoree: public/images/pixoree-hero.webp (from https://pixoree.app/)
@@ -23,7 +24,7 @@ export const ProjectVisual: FC<ProjectVisualProps> = ({ projectId, projectTitle 
   }
 
   return (
-    <div className="flex aspect-16/9 w-full items-center justify-center rounded-xl border border-border bg-surface-elevated text-text-muted">
+    <div className="flex aspect-16/9 w-full items-center justify-center bg-surface-elevated text-text-muted">
       <span>{projectTitle} visual placeholder</span>
     </div>
   );
@@ -36,30 +37,23 @@ export const ProjectVisual: FC<ProjectVisualProps> = ({ projectId, projectTitle 
 function PixoreeVisual() {
   return (
     <div
-      className="group relative w-full overflow-hidden rounded-xl border border-border/80 bg-surface shadow-md transition-all duration-300 hover:border-border dark:bg-[#111317]"
+      className="w-full bg-surface"
       aria-label="Pixoree Interactive Canvas Editor Interface Preview"
     >
       {/* TODO: Replace with high-resolution production screenshot from https://pixoree.app/ in public/images/pixoree-hero.webp */}
 
-      {/* Editor Window Chrome / Header */}
-      <div className="flex h-11 items-center justify-between border-b border-border/70 bg-surface-elevated/70 px-4">
-        <div className="flex items-center gap-2.5">
-          <div className="flex items-center gap-1.5" aria-hidden="true">
-            <span className="h-2.5 w-2.5 rounded-full bg-[#EC6A5E]/80" />
-            <span className="h-2.5 w-2.5 rounded-full bg-[#F5BF4F]/80" />
-            <span className="h-2.5 w-2.5 rounded-full bg-[#62C554]/80" />
-          </div>
-          <span className="ml-2 hidden font-mono text-[11px] text-text-muted sm:inline-block">
-            pixoree.app / studio
-          </span>
-        </div>
+      {/* Editor App Header */}
+      <div className="flex h-11 items-center justify-between border-b border-border/70 bg-surface-elevated/60 px-4">
+        <span className="font-mono text-[11px] text-text-muted">
+          pixoree.app / studio
+        </span>
 
         {/* Project Title & Export Action */}
         <div className="flex items-center gap-3">
-          <span className="font-mono text-xs font-semibold text-text-primary">
+          <span className="hidden font-mono text-xs font-medium text-text-primary sm:inline-block">
             Certificate_Achievement.pxr
           </span>
-          <div className="hidden rounded border border-border bg-surface px-2.5 py-1 text-[11px] font-medium text-text-primary sm:block">
+          <div className="hidden rounded-xs border border-border bg-surface px-2.5 py-1 text-[11px] font-medium text-text-primary sm:block">
             Export PNG / PDF
           </div>
         </div>
@@ -94,7 +88,7 @@ function PixoreeVisual() {
           ].map((tool) => (
             <div
               key={tool.label}
-              className={`rounded-md p-2 transition-colors ${
+              className={`rounded-md p-2 ${
                 tool.active
                   ? "bg-accent/10 text-accent"
                   : "text-text-muted"
@@ -120,7 +114,7 @@ function PixoreeVisual() {
         {/* Center Workspace (Canvas Viewport) */}
         <div className="relative flex flex-1 flex-col items-center justify-center overflow-hidden bg-surface-elevated/40 p-4 sm:p-8">
           {/* Interactive Document Artboard */}
-          <div className="relative aspect-4/3 w-full max-w-sm rounded-lg border border-border bg-surface p-5 shadow-lg transition-transform duration-300 ease-out group-hover:scale-[1.01] motion-reduce:transform-none sm:max-w-md md:max-w-lg">
+          <div className="relative aspect-4/3 w-full max-w-sm border border-border bg-surface p-5 shadow-md sm:max-w-md md:max-w-lg">
             {/* Certificate Decorative Border */}
             <div className="relative flex h-full flex-col justify-between border-2 border-dashed border-accent/30 p-4 sm:p-6">
               {/* Artboard Header */}
@@ -150,7 +144,7 @@ function PixoreeVisual() {
               </div>
 
               {/* Active Selection on Recipient Element (Fabric.js Transformer demo) */}
-              <div className="relative my-2 rounded border border-accent p-2 text-center">
+              <div className="relative my-2 rounded-xs border border-accent p-2 text-center">
                 {/* Transform Corner Handles */}
                 <span className="absolute -top-1.5 -left-1.5 h-3 w-3 rounded-xs border border-accent bg-surface" />
                 <span className="absolute -top-1.5 -right-1.5 h-3 w-3 rounded-xs border border-accent bg-surface" />
@@ -178,7 +172,7 @@ function PixoreeVisual() {
 
         {/* Right Properties Inspector */}
         <div className="hidden w-44 flex-col gap-3 border-l border-border/60 bg-surface/50 p-3 lg:flex">
-          <span className="font-mono text-[11px] font-semibold uppercase tracking-wider text-text-muted">
+          <span className="font-mono text-[11px] font-semibold text-text-muted">
             Object Inspector
           </span>
 
@@ -192,7 +186,7 @@ function PixoreeVisual() {
             <div className="flex items-center justify-between border-b border-border/40 pb-2">
               <span className="text-[11px] text-text-secondary">Font</span>
               <span className="font-mono text-[11px] font-medium text-text-primary">
-                Geist Sans
+                Instrument Sans
               </span>
             </div>
             <div className="flex items-center justify-between">
@@ -215,37 +209,20 @@ function PixoreeVisual() {
 function ChildrenOfTheUmmahVisual() {
   return (
     <div
-      className="group relative w-full overflow-hidden rounded-xl border border-border/80 bg-surface shadow-md transition-all duration-300 hover:border-border dark:bg-[#111317]"
+      className="w-full bg-surface"
       aria-label="Children of the Ummah Charity Platform Interface Preview"
     >
       {/* TODO: Replace with high-resolution production screenshot from https://www.childrenoftheummah.org.uk/ in public/images/children-of-the-ummah-hero.webp */}
 
-      {/* Top Browser / App Navigation Bar */}
-      <div className="flex h-11 items-center justify-between border-b border-border/70 bg-surface-elevated/70 px-4">
-        <div className="flex items-center gap-2.5">
-          <div className="flex items-center gap-1.5" aria-hidden="true">
-            <span className="h-2.5 w-2.5 rounded-full bg-[#EC6A5E]/80" />
-            <span className="h-2.5 w-2.5 rounded-full bg-[#F5BF4F]/80" />
-            <span className="h-2.5 w-2.5 rounded-full bg-[#62C554]/80" />
-          </div>
-          <span className="ml-2 hidden font-mono text-[11px] text-text-muted sm:inline-block">
-            childrenoftheummah.org.uk
-          </span>
-        </div>
-
-        {/* Brand identity */}
-        <div className="hidden items-center gap-2 md:flex">
-          <span className="font-mono text-xs font-semibold tracking-tight text-text-primary">
-            CHILDREN OF THE UMMAH
-          </span>
-          <span className="font-mono text-[11px] text-text-muted">
-            Registered Charity
-          </span>
-        </div>
+      {/* App Header: address & currency switcher */}
+      <div className="flex h-11 items-center justify-between border-b border-border/70 bg-surface-elevated/60 px-4">
+        <span className="font-mono text-[11px] text-text-muted">
+          childrenoftheummah.org.uk
+        </span>
 
         {/* Currency Switcher Demo */}
-        <div className="flex items-center gap-1 rounded-md border border-border bg-surface p-0.5 font-mono text-[11px]">
-          <span className="rounded bg-accent px-1.5 py-0.5 font-bold text-accent-foreground">
+        <div className="flex items-center gap-1 rounded-xs border border-border bg-surface p-0.5 font-mono text-[11px]">
+          <span className="rounded-xs bg-accent px-1.5 py-0.5 font-bold text-accent-foreground">
             GBP £
           </span>
           <span className="px-1.5 py-0.5 text-text-muted">
@@ -263,11 +240,11 @@ function ChildrenOfTheUmmahVisual() {
           {/* Left Column: Campaign Appeal Narrative */}
           <div className="flex flex-col justify-between space-y-4 lg:col-span-5">
             <div>
-              <p className="font-mono text-[11px] uppercase tracking-wider text-text-muted">
+              <p className="text-[11px] font-medium uppercase tracking-wider text-text-muted">
                 Emergency Relief Appeal
               </p>
 
-              <h4 className="mt-3 text-lg font-bold text-text-primary sm:text-xl">
+              <h4 className="mt-3 font-serif text-lg font-bold text-text-primary sm:text-xl">
                 Global Orphan Care &amp; Clean Water Projects
               </h4>
 
@@ -285,27 +262,27 @@ function ChildrenOfTheUmmahVisual() {
           </div>
 
           {/* Right Column: Interactive Multi-Currency Donation Module */}
-          <div className="rounded-xl border border-border bg-surface p-5 shadow-lg transition-transform duration-300 ease-out group-hover:scale-[1.01] motion-reduce:transform-none lg:col-span-7">
+          <div className="rounded-lg border border-border bg-surface p-5 shadow-md lg:col-span-7">
             {/* Frequency Tabs */}
-            <div className="flex rounded-lg border border-border bg-surface-elevated p-1 text-xs font-medium" aria-hidden="true">
-              <span className="flex-1 rounded-md bg-surface py-2 text-center font-semibold text-text-primary shadow-2xs">
+            <div className="flex rounded-md border border-border bg-surface-elevated p-1 text-xs font-medium" aria-hidden="true">
+              <span className="flex-1 rounded-xs bg-surface py-2 text-center font-semibold text-text-primary shadow-2xs">
                 One-Time Gift
               </span>
-              <span className="flex-1 rounded-md py-2 text-center text-text-muted">
+              <span className="flex-1 rounded-xs py-2 text-center text-text-muted">
                 Monthly Recurring
               </span>
             </div>
 
             {/* Amount Selection Grid */}
             <div className="mt-4">
-              <span className="block font-mono text-[11px] uppercase tracking-wider text-text-muted">
+              <span className="block text-[11px] font-medium text-text-muted">
                 Select Donation Amount (GBP)
               </span>
               <div className="mt-2 grid grid-cols-4 gap-2">
                 {["£25", "£50", "£100", "£250"].map((amt, idx) => (
                   <div
                     key={amt}
-                    className={`flex flex-col items-center justify-center rounded-lg border py-2.5 text-center font-mono text-sm transition-all ${
+                    className={`flex flex-col items-center justify-center rounded-md border py-2.5 text-center font-mono text-sm ${
                       idx === 2
                         ? "border-accent bg-accent/10 font-bold text-accent"
                         : "border-border bg-surface text-text-primary"
@@ -319,7 +296,7 @@ function ChildrenOfTheUmmahVisual() {
 
             {/* Custom Amount Field */}
             <div className="mt-3">
-              <div className="flex items-center rounded-lg border border-border bg-surface-elevated/40 px-3 py-2 text-xs text-text-muted">
+              <div className="flex items-center rounded-md border border-border bg-surface-elevated/40 px-3 py-2 text-xs text-text-muted">
                 <span className="mr-2 font-mono font-medium text-text-primary">£</span>
                 <span>Or enter a custom amount</span>
               </div>
@@ -339,9 +316,8 @@ function ChildrenOfTheUmmahVisual() {
                 <span>Powered by Stripe</span>
               </div>
 
-              <div className="inline-flex items-center rounded-md bg-accent px-4 py-2 text-xs font-semibold text-accent-foreground">
+              <div className="inline-flex items-center rounded-sm bg-accent px-4 py-2 text-xs font-semibold text-accent-foreground">
                 <span>Donate £100 Now</span>
-                <span className="ml-1">→</span>
               </div>
             </div>
           </div>
